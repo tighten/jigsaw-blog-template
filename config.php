@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'baseUrl' => '',
+    'baseUrl' => 'http://jigsaw-blog-skeleton.test/',
     'production' => false,
     'collections' => [],
 ];
