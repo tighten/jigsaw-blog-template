@@ -4,7 +4,9 @@
     <h1 class="page-title">{{ $page->title }}</h1>
     <p class="mb-6 text-grey-darker">By {{ $page->author }} • {{ date('F j, Y', $page->date) }}</p>
 
-    @yield('content')
+    <div class="markdown">
+        @yield('content')
+    </div>
 
     <hr class="border mt-8">
 

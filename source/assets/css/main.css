@@ -702,6 +702,70 @@ button,
   margin-bottom: 1.5rem;
 }
 
+body {
+  line-height: 1.5;
+}
+
+.markdown p,
+.markdown ol,
+.markdown ul {
+  max-width: 40em;
+  padding-bottom: 1rem;
+}
+
+.markdown ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: .5rem;
+  list-style-position: outside;
+}
+
+.markdown ul ul {
+  margin-top: .5rem;
+  margin-left: .5rem;
+  margin-bottom: 0;
+}
+
+.markdown ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: .5rem;
+  list-style-position: outside;
+}
+
+.markdown ol li {
+  padding-bottom: .5rem;
+}
+
+.markdown ol li:last-child {
+  padding-bottom: 0;
+}
+
+.markdown h3 {
+  margin-bottom: 1rem;
+}
+
+.markdown pre {
+  background-color: #f1f5f8;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+
+.markdown blockquote {
+  border-left-width: 4px;
+  border-color: #b8c2cc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  color: #3d4852;
+}
+
+.markdown blockquote p {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
 /**
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.

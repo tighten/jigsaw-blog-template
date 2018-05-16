@@ -17,5 +17,5 @@ mix.js('source/_assets/js/main.js', 'js')
     .options({
         processCssUrls: false,
         postCss: [ tailwindcss('./tailwind.js') ],
-    });
-    // .version(); // @todo
+    })
+    .version();

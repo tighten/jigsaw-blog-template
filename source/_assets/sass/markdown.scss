@@ -1,0 +1,55 @@
+.markdown {
+  p, ol, ul {
+    max-width: 40em;
+    @apply .pb-4;
+  }
+
+  ul {
+    @apply .my-4;
+    @apply .ml-2;
+    list-style-position: outside;
+
+    ul {
+      @apply .mt-2;
+      @apply .ml-2;
+      @apply .mb-0;
+    }
+  }
+
+  ol {
+    @apply .my-4;
+    @apply .ml-2;
+    list-style-position: outside;
+
+    li {
+      @apply .pb-2;
+    }
+
+    li:last-child {
+      @apply .pb-0;
+    }
+  }
+
+  h3 {
+    @apply .mb-4;
+  }
+
+  pre {
+    @apply .bg-grey-lighter;
+    @apply .my-6;
+    @apply .p-6;
+    // @todo overlap
+  }
+
+  blockquote {
+    @apply .border-l-4;
+    @apply .border-grey;
+    @apply .pl-6;
+    @apply .mb-6 .ml-4;
+    @apply .text-grey-darkest;
+
+    p {
+      @apply .py-2;
+    }
+  }
+}
