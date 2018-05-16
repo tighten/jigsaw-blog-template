@@ -4,29 +4,32 @@
     @apply .pb-4;
   }
 
-  ul {
-    @apply .my-4;
-    @apply .ml-2;
+  p + ul, p + ol {
+    @apply .mt-0;
+  }
+
+  ul, ol {
+    @apply .mt-4 .mb-2;
+    @apply .ml-0;
     list-style-position: outside;
 
-    ul {
-      @apply .mt-2;
-      @apply .ml-2;
-      @apply .mb-0;
+    ul, ol {
+      @apply .my-2;
+      @apply .pb-1;
     }
   }
 
   ol {
-    @apply .my-4;
-    @apply .ml-2;
-    list-style-position: outside;
-
     li {
       @apply .pb-2;
     }
 
     li:last-child {
       @apply .pb-0;
+    }
+
+    ul, ol {
+      @apply .mb-0;
     }
   }
 
@@ -36,9 +39,9 @@
 
   pre {
     @apply .bg-grey-lighter;
-    @apply .my-6;
+    @apply .mt-4 .mb-6;
     @apply .p-6;
-    // @todo overlap
+    @apply .overflow-scroll;
   }
 
   blockquote {

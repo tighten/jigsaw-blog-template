@@ -1,7 +1,8 @@
 <header class="container mx-auto px-4 border-b border-grey mb-8">
     <div class="sm:flex">
-        <div class="flex items-center w-full sm:w-1/3 lg:w-1/4">
-            <a href="/" class="py-6 w-3/4 font-bold">
+        <div class="flex items-center w-full">
+            <a href="/" class="py-6 w-full font-bold">
+                @include('_components.logo')
                 {{ $page->blogTitle }}
             </a>
         </div>

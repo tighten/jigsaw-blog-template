@@ -11,10 +11,21 @@ Laravel 5.4 introduced a new feature called “real-time facades”, which provi
 
 I also want to have a bulleted list and a numbered list and an image, just to prove this all works.
 
+Here's the list of reasons why Façades are great:
+
 * First item of a bulleted list
 * And second
     * MORE SECOND
 * [And third](https://www.google.com/)
+
+Another list with a subhead:
+
+### Greatest list ever!
+
+* First
+* Second
+
+Here's the order of operations:
 
 1. First item
     * A
@@ -101,6 +112,8 @@ class Session extends Facade
 ```
 
 This is telling the container this: “When I use a static method on the `Session`  facade, call it on an instance of `app('session')`”. The facade functionality pulls an instance out of the container and calls the method directly on that.
+
+> Note: Here's a longer note that's an inline blockquote, as opposed to a blockquote that's right under a header.
 
 Good? Good. Let’s cover what a real-time facade is.
 

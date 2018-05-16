@@ -713,24 +713,26 @@ body {
   padding-bottom: 1rem;
 }
 
-.markdown ul {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: .5rem;
-  list-style-position: outside;
+.markdown p + ul,
+.markdown p + ol {
+  margin-top: 0;
 }
 
-.markdown ul ul {
-  margin-top: .5rem;
-  margin-left: .5rem;
-  margin-bottom: 0;
-}
-
+.markdown ul,
 .markdown ol {
   margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: .5rem;
+  margin-bottom: .5rem;
+  margin-left: 0;
   list-style-position: outside;
+}
+
+.markdown ul ul,
+.markdown ul ol,
+.markdown ol ul,
+.markdown ol ol {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  padding-bottom: .25rem;
 }
 
 .markdown ol li {
@@ -741,15 +743,21 @@ body {
   padding-bottom: 0;
 }
 
+.markdown ol ul,
+.markdown ol ol {
+  margin-bottom: 0;
+}
+
 .markdown h3 {
   margin-bottom: 1rem;
 }
 
 .markdown pre {
   background-color: #f1f5f8;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
   padding: 1.5rem;
+  overflow: scroll;
 }
 
 .markdown blockquote {
