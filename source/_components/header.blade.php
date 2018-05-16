@@ -2,7 +2,7 @@
     <header class="container mx-auto px-4">
         <div class="sm:flex">
             <div class="flex items-center w-full sm:w-1/3 lg:w-1/4">
-                <a href="/" class="py-6 w-3/4">
+                <a href="/" class="py-6 w-3/4 font-bold">
                     {{ $page->title }}
                 </a>
             </div>
