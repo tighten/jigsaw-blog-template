@@ -1,12 +1,12 @@
 <div class="bg-grey-lighter mb-8">
     <header class="container mx-auto px-4">
         <div class="sm:flex">
-            <div class="flex items-center w-full">
-                <a href="/" class="py-6 w-full font-bold">
-                    @include('_components.logo')
+            <a href="/" class="inline-flex items-center w-full py-6 w-full font-bold">
+                @include('_components.logo')
+                <span class="pl-4">
                     {{ $page->blogTitle }}
-                </a>
-            </div>
+                </span>
+            </a>
 
             <nav class="sm:flex sm:flex-wrap sm:justify-end lg:w-full">
                 <a href="/" class="flex items-center p-4">
