@@ -12,31 +12,31 @@
         <form action="https://fieldgoal.io/example" class="w-full max-w-md mt-8">
             <div class="flex flex-wrap -mx-3 mb-2">
                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                    <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+                    <label class="block uppercase tracking-wide text-grey-darkest text-xs font-bold mb-2" for="grid-first-name">
                         First Name
                     </label>
-                    <input class="appearance-none block w-full text-grey-darker border border-grey-light rounded py-3 px-4 mb-2" id="grid-first-name" type="text" placeholder="Jane">
+                    <input class="appearance-none block w-full text-grey-darker border border-grey py-3 px-4 mb-2" id="grid-first-name" type="text" placeholder="Jane">
                 </div>
                 <div class="w-full md:w-1/2 px-3">
-                    <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
+                    <label class="block uppercase tracking-wide text-grey-darkest text-xs font-bold mb-2" for="grid-last-name">
                         Last Name
                     </label>
-                    <input class="appearance-none block w-full text-grey-darker border border-grey-light rounded py-3 px-4" id="grid-last-name" type="text" placeholder="Doe">
+                    <input class="appearance-none block w-full text-grey-darker border border-grey py-3 px-4" id="grid-last-name" type="text" placeholder="Doe">
                 </div>
             </div>
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                    <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-city">
+                    <label class="block uppercase tracking-wide text-grey-darkest text-xs font-bold mb-2" for="grid-city">
                         City
                     </label>
-                    <input class="appearance-none block w-full text-grey-darker border border-grey-light rounded py-3 px-4" id="grid-city" type="text" placeholder="Albuquerque">
+                    <input class="appearance-none block w-full text-grey-darker border border-grey py-3 px-4" id="grid-city" type="text" placeholder="Albuquerque">
                 </div>
                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                    <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
+                    <label class="block uppercase tracking-wide text-grey-darkest text-xs font-bold mb-2" for="grid-state">
                         State
                     </label>
                     <div class="relative">
-                        <select class="block appearance-none w-full border border-grey-light text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                        <select class="block appearance-none w-full border border-grey text-grey-darker py-3 px-4 pr-8" id="grid-state">
                             <option>New Mexico</option>
                             <option>Missouri</option>
                             <option>Texas</option>
@@ -47,15 +47,15 @@
                     </div>
                 </div>
                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                    <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-zip">
+                    <label class="block uppercase tracking-wide text-grey-darkest text-xs font-bold mb-2" for="grid-zip">
                         Zip
                     </label>
-                    <input class="appearance-none block w-full text-grey-darker border border-grey-light rounded py-3 px-4" id="grid-zip" type="text" placeholder="90210">
+                    <input class="appearance-none block w-full text-grey-darker border border-grey py-3 px-4" id="grid-zip" type="text" placeholder="90210">
                 </div>
             </div>
             <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full px-3">
-                    <input class="appearance-none block w-full bg-grey-lighter text-grey-darkest border border-grey-light rounded py-3 px-4 mb-3" id="grid-submit" type="submit" value="Submit">
+                <div class="w-1/2 px-3">
+                    <input class="appearance-none block w-full bg-grey-lighter hover:bg-blue text-grey-darkest hover:text-white border border-grey cursor-pointer py-3 px-4 mb-3" id="grid-submit" type="submit" value="Submit">
                 </div>
             </div>
         </form>

@@ -10,10 +10,10 @@
 
             <nav class="sm:flex sm:flex-wrap sm:justify-end lg:w-full">
                 <a href="/" class="flex items-center p-4">
-                    About
-                </a>
-                <a href="/blog" class="flex items-center p-4">
                     Blog
+                </a>
+                <a href="/about" class="flex items-center p-4">
+                    About
                 </a>
                 <a href="/contact" class="flex items-center p-4">
                     Contact
