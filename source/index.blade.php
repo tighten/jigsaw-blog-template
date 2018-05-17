@@ -12,7 +12,7 @@
             @include('_components.post-preview-inline')
         @endforeach
 
-        <a href="/blog">See all blog posts</a>
+        <a href="{{ $page->url('/blog') }}">See all blog posts</a>
     </div>
     <div class="px-4 md:w-1/4">
         <div class="flex items-center md:block text-center">

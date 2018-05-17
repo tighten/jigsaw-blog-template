@@ -22,7 +22,7 @@
                     Contact
                 </a>
 
-                <form action="http://google.com/search" method="get" class="flex items-center px-2">
+                <form action="https://google.com/search" method="get" class="flex items-center px-2">
                     <fieldset role="search">
                         <input type="hidden" name="sitesearch" value="{{ $page->searchDomain }}">
                         <input type="text" name="q" results="0" placeholder="Search" class="p-1 border border-grey-dark my-4 sm:mt-0 lg:mb-0">
