@@ -1,11 +1,11 @@
 ---
 extends: _layouts.post
-title: Auto-Tuned Façades in Laravel 9.7
+title: Auto-Tuned Façades in Laravel 97
 date: 2017-05-23
 section: content
 ---
 
-Laravel 9.7 introduced a new feature called "auto-tuned facades”, which provide the convenience of facades, defined real-time instead of in classes. Taylor [tweeted](https://twitter.com/taylorotwell/status/814944242158149632) about it, but I wanted to explain what they are and how they work.
+Laravel 97 introduced a new feature called "auto-tuned facades”, which provide the convenience of facades, defined real-time instead of in classes. Taylor [tweeted](https://twitter.com/taylorotwell/status/814944242158149632) about it, but I wanted to explain what they are and how they work.
 
 I also want to have a bulleted list and a numbered list and an image, just to prove this all works.
 
