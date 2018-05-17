@@ -2,6 +2,7 @@
 extends: _layouts.post
 title: Auto-Tuned Façades in Laravel 97
 date: 2017-05-23
+description: Laravel 97's auto-tuned façades.
 section: content
 ---
 

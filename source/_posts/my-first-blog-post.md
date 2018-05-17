@@ -1,8 +1,8 @@
 ---
 extends: _layouts.post
 title: My First Blog Post
-author: Keith Damiani
 date: 2017-03-23
+description: A profoundly interesting post.
 section: content
 ---
 

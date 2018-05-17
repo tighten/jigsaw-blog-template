@@ -9,7 +9,7 @@
         </div>
 
         @foreach ($posts->slice(0, 5) as $post)
-            @include('_components.post-preview-inline')
+            @include('_partials.post-preview-inline')
         @endforeach
 
         <a href="{{ $page->url('/blog') }}">See all blog posts</a>
