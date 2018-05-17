@@ -709,7 +709,6 @@ body {
 .markdown p,
 .markdown ol,
 .markdown ul {
-  max-width: 40em;
   padding-bottom: 1rem;
 }
 
@@ -757,7 +756,9 @@ body {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   padding: 1.5rem;
+  font-size: .875rem;
   overflow: scroll;
+  line-height: 1.25;
 }
 
 .markdown blockquote {

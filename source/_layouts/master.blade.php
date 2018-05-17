@@ -12,8 +12,10 @@
     <body>
         @include('_components.header')
 
-        <div class="container mx-auto px-4">
-            @yield('body')
+        <div class="container mx-auto px-4 pb-8">
+            <div class="mx-auto w-full lg:w-3/4">
+                @yield('body')
+            </div>
         </div>
 
         @include('_components.footer')

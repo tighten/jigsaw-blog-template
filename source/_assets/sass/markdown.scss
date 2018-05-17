@@ -1,6 +1,5 @@
 .markdown {
   p, ol, ul {
-    max-width: 40em;
     @apply .pb-4;
   }
 
@@ -41,7 +40,9 @@
     @apply .bg-grey-lighter;
     @apply .mt-4 .mb-6;
     @apply .p-6;
+    @apply .text-sm;
     @apply .overflow-scroll;
+    @apply .leading-tight;
   }
 
   blockquote {

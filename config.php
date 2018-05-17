@@ -4,6 +4,7 @@ return [
     'blogTitle' => 'My Blog About Jigsaws',
     'author' => 'Matt Stauffer',
     'baseUrl' => 'http://jigsaw-blog-skeleton.test/',
+    'searchDomain' => 'jigsaw-blog-skeleton.text', // for Google search
     'production' => false,
     'collections' => [
         'posts' => [
