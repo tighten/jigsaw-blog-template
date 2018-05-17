@@ -1,7 +1,7 @@
 <div class="bg-grey-lighter mb-8">
     <header class="container mx-auto px-4">
         <div class="sm:flex">
-            <a href="/" class="inline-flex items-center w-full pt-4 pb-2 sm:py-6 w-full font-bold">
+            <a href="{{ $page->baseUrl }}/" class="inline-flex items-center w-full pt-4 pb-2 sm:py-6 w-full font-bold">
                 @include('_components.logo')
                 <span class="pl-4">
                     {{ $page->blogTitle }}
@@ -9,16 +9,16 @@
             </a>
 
             <nav class="sm:flex sm:flex-wrap sm:justify-end lg:w-full">
-                <a href="/" class="lg:flex items-center p-2 sm:p-4 hidden">
+                <a href="{{ $page->baseUrl }}/" class="lg:flex items-center p-2 sm:p-4 hidden">
                     Home
                 </a>
-                <a href="/blog" class="flex items-center p-2 sm:p-4">
+                <a href="{{ $page->baseUrl }}/blog" class="flex items-center p-2 sm:p-4">
                     Blog
                 </a>
-                <a href="/about" class="flex items-center p-2 sm:p-4">
+                <a href="{{ $page->baseUrl }}/about" class="flex items-center p-2 sm:p-4">
                     About
                 </a>
-                <a href="/contact" class="flex items-center p-2 sm:p-4">
+                <a href="{{ $page->baseUrl }}/contact" class="flex items-center p-2 sm:p-4">
                     Contact
                 </a>
 

@@ -12,13 +12,13 @@
 
     @if ($page->getPrevious())
         <p>Read my previous post:
-            <a href="{{ $page->getPrevious()->getPath() }}">{{ $page->getPrevious()->title }}</a>
+            <a href="{{ $page->baseUrl }}{{ $page->getPrevious()->getPath() }}">{{ $page->getPrevious()->title }}</a>
         </p>
     @endif
 
     @if ($page->getNext())
         <p>Read my next post:
-            <a href="{{ $page->getNext()->getPath() }}">{{ $page->getNext()->title }}</a>
+            <a href="{{ $page->baseUrl }}{{ $page->getNext()->getPath() }}">{{ $page->getNext()->title }}</a>
         </p>
     @endif
 @endsection
