@@ -706,9 +706,9 @@ body {
   line-height: 1.5;
 }
 
-.markdown p,
-.markdown ol,
-.markdown ul {
+.content p,
+.content ol,
+.content ul {
   padding-bottom: 1rem;
 }
 

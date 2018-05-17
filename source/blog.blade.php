@@ -3,14 +3,8 @@
 @section('body')
 <div class="md:flex -mx-4">
     <div class="mb-8 lg:mb-0 px-4 md:w-3/4">
-        <div class="mb-6 pb-6 border-b border-light-grey">
-            <p>Welcome to my blog about Jigsaws.</p>
-            <p>Good golly, I love Jigsaws.</p>
-        </div>
-
-        @each ('_components.post-preview-inline', $posts->slice(0, 5), 'post')
-
-        <a href="/blog">See all blog posts</a>
+        <h1 class="page-title">Blog</h1>
+        @each ('_components.post-preview-inline', $posts, 'post')
     </div>
     <div class="px-4 md:w-1/4">
         <div class="flex items-center md:block text-center">

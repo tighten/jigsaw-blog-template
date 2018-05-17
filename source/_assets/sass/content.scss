@@ -1,8 +1,10 @@
-.markdown {
+.content {
   p, ol, ul {
     @apply .pb-4;
   }
+}
 
+.markdown {
   p + ul, p + ol {
     @apply .mt-0;
   }

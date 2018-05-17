@@ -9,7 +9,10 @@
             </a>
 
             <nav class="sm:flex sm:flex-wrap sm:justify-end lg:w-full">
-                <a href="/" class="flex items-center p-2 sm:p-4">
+                <a href="/" class="lg:flex items-center p-2 sm:p-4 hidden">
+                    Home
+                </a>
+                <a href="/blog" class="flex items-center p-2 sm:p-4">
                     Blog
                 </a>
                 <a href="/about" class="flex items-center p-2 sm:p-4">
