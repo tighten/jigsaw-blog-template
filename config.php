@@ -11,7 +11,7 @@ return [
             'author' => 'Matt Stauffer', // Default author if not provided in given post
             'sort' => '-date',
             'path' => 'blog/{filename}',
-            'excerpt' => function ($page, $characters = 50) {
+            'excerpt' => function ($page, $characters = 150) {
                 return substr(strip_tags($page->getContent()), 0, $characters);
             },
         ]
