@@ -8,7 +8,9 @@
             <p>Good golly, I love Jigsaws.</p>
         </div>
 
-        @each ('_components.post-preview-inline', $posts->slice(0, 5), 'post')
+        @foreach ($posts->slice(0, 5) as $post)
+            @include('_components.post-preview-inline')
+        @endforeach
 
         <a href="/blog">See all blog posts</a>
     </div>

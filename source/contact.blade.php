@@ -9,7 +9,7 @@
             service like Tighten's Fieldgoal.io to accept submissions, and
             redirect back to your thanks page
         -->
-        <form action="https://fieldgoal.io/example" class="w-full max-w-md mt-8">
+        <form action="https://fieldgoal.io/" class="w-full max-w-md mt-8">
             <div class="flex flex-wrap -mx-3 mb-2">
                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label class="block uppercase tracking-wide text-grey-darkest text-xs font-bold mb-2" for="grid-first-name">

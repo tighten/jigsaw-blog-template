@@ -20,4 +20,7 @@ return [
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
     },
+    'url' => function ($page, $path) {
+        return rtrim($page->baseUrl, '/') . '/' . ltrim($path, '/');
+    },
 ];
