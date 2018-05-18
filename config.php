@@ -14,7 +14,15 @@ return [
             'excerpt' => function ($page, $characters = 150) {
                 return substr(strip_tags($page->getContent()), 0, $characters);
             },
-        ]
+        ],
+        'categories' => [
+            'path' => '/blog/categories/{filename}',
+            'posts' => function ($page, $allPosts) {
+                return $allPosts->filter(function ($post) use ($page) {
+                    return $post->categories ? in_array($page->getFilename(), $post->categories) : false;
+                });
+            }
+        ],
     ],
     // helpers
     'getDate' => function ($page) {
