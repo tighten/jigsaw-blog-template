@@ -9,6 +9,7 @@
 
         <link rel="home" href="{{ $page->baseUrl }}">
         <link href="{{ $page->url('blog/feed.atom') }}" type="application/atom+xml" rel="alternate" title="{{ $page->blogTitle }} Atom Feed">
+        <link rel="icon" href="{{ $page->url('favicon.ico') }}">
 
         @stack('meta')
 
