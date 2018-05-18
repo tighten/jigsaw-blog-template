@@ -9,9 +9,19 @@
 
 @section('body')
     <h1 class="page-title">{{ $page->title }}</h1>
-    <p class="mb-6 text-grey-darker">By {{ $page->author }} • {{ date('F j, Y', $page->date) }}</p>
+    <p class="mb-6 text-grey-darker">By {{ $page->author }} • {{ date('F j, Y', $page->date) }}
+    @if ($page->categories)
+        • Posted in:
+        @foreach ($page->categories as $i => $category)
+            <a href="{{ $page->url('/blog/categories/' . $category) }}">{{ $category }}</a>
+            @if ($i < count($page->categories) - 1)
+            |
+            @endif
+        @endforeach
+    @endif
+    </p>
 
-    <div class="markdown pb-8 border-b">
+    <div class="markdown pb-8 mb-8 border-b">
         @yield('content')
     </div>
 

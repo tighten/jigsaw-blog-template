@@ -5,5 +5,3 @@ Fork this project and use it to make your own Jigsaw-powered blog.
 
 ## Tasks:
 - [ ] Better design
-- [ ] Add categories
-- [ ] Meta and OG
