@@ -1,5 +1,12 @@
 @extends('_layouts.master')
 
+@push('meta')
+    <meta property="og:title" content="Contact {{ $page->blogTitle }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ $page->getUrl() }}"/>
+    <meta property="og:description" content="Get in touch with {{ $page->blogTitle }}" />
+@endpush
+
 @section('body')
 <div class="md:flex -mx-4">
     <div class="mb-8 lg:mb-0 px-4 md:w-full">
@@ -7,7 +14,7 @@
         <!--
             You can't handle forms with static sites, but you can use a form
             service like Tighten's Fieldgoal.io to accept submissions, and
-            redirect back to your thanks page
+            redirect back to a thanks page
         -->
         <form action="https://fieldgoal.io/" class="w-full max-w-md mt-8">
             <div class="flex flex-wrap -mx-3 mb-2">

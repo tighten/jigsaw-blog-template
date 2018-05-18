@@ -9,6 +9,7 @@
 
 @section('body')
     <h1 class="page-title">{{ $page->title }}</h1>
+
     <p class="mb-6 text-grey-darker">By {{ $page->author }} • {{ date('F j, Y', $page->date) }}
     @if ($page->categories)
         • Posted in:

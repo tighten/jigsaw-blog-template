@@ -1,5 +1,12 @@
 @extends('_layouts.master')
 
+@push('meta')
+    <meta property="og:title" content="About {{ $page->blogTitle }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ $page->getUrl() }}"/>
+    <meta property="og:description" content="A little bit about {{ $page->blogTitle }}" />
+@endpush
+
 @section('body')
 <div class="md:flex -mx-4">
     <div class="mb-8 lg:mb-0 px-4 md:w-3/4">
