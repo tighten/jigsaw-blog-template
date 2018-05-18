@@ -7,6 +7,9 @@
 
         <title>{{ $page->blogTitle }} {{ $page->title ? "| {$page->title}" : "" }}</title>
 
+        <link rel="home" href="{{ $page->baseUrl }}">
+        <link href="{{ $page->url('blog/feed.atom') }}" type="application/atom+xml" rel="alternate" title="{{ $page->blogTitle }} Atom Feed">
+
         @stack('meta')
 
         @if ($page->production)

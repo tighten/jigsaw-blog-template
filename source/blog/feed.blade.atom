@@ -1,0 +1,7 @@
+@extends('_layouts.rss')
+
+@section('entries')
+    @foreach ($posts as $entry)
+        @include('_partials.post-as-rss-item')
+    @endforeach
+@endsection
