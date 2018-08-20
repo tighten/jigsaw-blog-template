@@ -1,7 +1,24 @@
-.page-title {
-    @apply .mb-6;
-}
-
 body {
+    @apply .bg-grey-lightest;
+    @apply .border-blue-darker;
     @apply .leading-normal;
+    @apply .text-grey-darkest;
+    @apply .text-lg;
+
+    a {
+        @apply .no-underline;
+        @apply .text-black;
+
+        &:hover {
+            @apply .text-blue;
+        }
+    }
+
+    code {
+        @apply .px-2;
+    }
+
+    p {
+        @apply .leading-loose;
+    }
 }
