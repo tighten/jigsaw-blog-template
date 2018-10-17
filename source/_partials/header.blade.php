@@ -4,15 +4,15 @@
             <a href="{{ $page->url('/') }}" title="{{ $page->blogTitle }} home" class="inline-flex items-center mr-3 font-bold">
                 <img class="h-8 md:h-10" src="/assets/img/logo.svg" alt="{{ $page->blogTitle }} logo" />
             </a>
-            <h3 class="font-thin"><a href="/" title="Home" class="text-blue-darker">{{ $page->blogTitle }}</a></h3>
+            <h3 class="font-thin hidden sm:block"><a href="/" title="Home" class="text-blue-darker">{{ $page->blogTitle }}</a></h3>
         </div>
 
         <div class="flex flex-1 align-right justify-end items-center">
-            <nav class="flex w-1/2 justify-end">
-                <a class="mr-4 text-base font-thin text-blue-darker" href="/">Home</a>
-                <a class="mr-4 text-base font-thin text-blue-darker" href="/blog">Blog</a>
-                <a class="mr-4 text-base font-thin text-blue-darker" href="/about">About</a>
-                <a class="text-base font-thin text-blue-darker" href="/contact">Contact</a>
+            <nav class="flex w-1/2 justify-end text-base font-thin">
+                <a class="mr-4 text-blue-darker" href="/">Home</a>
+                <a class="mr-4 text-blue-darker" href="/blog">Blog</a>
+                <a class="mr-4 text-blue-darker" href="/about">About</a>
+                <a class="text-blue-darker" href="/contact">Contact</a>
             </nav>
         </div>
     </div>
