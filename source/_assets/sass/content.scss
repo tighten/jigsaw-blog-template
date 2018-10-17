@@ -1,61 +1,79 @@
 .content {
-  p, ol, ul {
-    @apply .pb-4;
-  }
-}
-
-.markdown {
-  p + ul, p + ol {
-    @apply .mt-0;
-  }
-
-  ul, ol {
-    @apply .mt-4 .mb-2;
-    @apply .ml-0;
-    list-style-position: outside;
-
-    ul, ol {
-      @apply .my-2;
-      @apply .pb-1;
+    a {
+        @apply .text-blue;
     }
-  }
 
-  ol {
+    blockquote {
+        @apply .border-blue-light;
+        @apply .border-l-4;
+        @apply .font-normal;
+        @apply .italic;
+        @apply .my-8;
+        @apply .pl-6;
+        @apply .text-grey-darker;
+        @apply .text-xl;
+    }
+
+    code {
+        @apply .bg-grey-lighter;
+        @apply .leading-loose;
+        @apply .px-2;
+        @apply .py-1;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @apply .font-light;
+        @apply .my-2;
+        @apply .text-blue-darkest;
+    }
+
+    h1 {
+        @apply .font-normal;
+        @apply .text-3xl;
+    }
+
+    h2 {
+        @apply .text-2xl;
+    }
+
+    h3 {
+        @apply .text-xl;
+    }
+
+    hr {
+        @apply .border-b-2;
+        @apply .border-grey-light;
+        @apply .my-8;
+        @apply .rounded-full;
+    }
+
     li {
-      @apply .pb-2;
+        ul,
+        ol {
+            @apply .my-0;
+        }
     }
 
-    li:last-child {
-      @apply .pb-0;
+    p > code {
+        @apply .mx-1;
     }
 
-    ul, ol {
-      @apply .mb-0;
+    pre {
+        @apply .bg-grey-lighter;
+        @apply .leading-tight;
+        @apply .mb-6;
+        @apply .mt-4;
+        @apply .overflow-x-auto;
+        @apply .p-4;
+        @apply .rounded;
+        @apply .shadow;
+        @apply .text-sm;
     }
-  }
 
-  h3 {
-    @apply .mb-4;
-  }
-
-  pre {
-    @apply .bg-grey-lighter;
-    @apply .mt-4 .mb-6;
-    @apply .p-6;
-    @apply .text-sm;
-    @apply .overflow-scroll;
-    @apply .leading-tight;
-  }
-
-  blockquote {
-    @apply .border-l-4;
-    @apply .border-grey;
-    @apply .pl-6;
-    @apply .mb-6 .ml-4;
-    @apply .text-grey-darkest;
-
-    p {
-      @apply .py-2;
+    ul,
+    ol {
+        @apply .my-4;
     }
-  }
 }

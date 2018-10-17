@@ -1,15 +1,3 @@
-/**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/preflight";
- */
-
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -537,16 +525,6 @@ ul {
 }
 
 /**
- * Suppress the focus outline on elements that cannot be accessed via keyboard.
- * This prevents an unwanted focus outline from appearing around elements that
- * might still respond to pointer events.
- */
-
-[tabindex="-1"]:focus {
-  outline: none !important;
-}
-
-/**
  * Tailwind custom reset styles
  */
 
@@ -607,6 +585,7 @@ textarea {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 button,
@@ -619,12 +598,6 @@ textarea {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: inherit;
-  opacity: .5;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
   color: inherit;
   opacity: .5;
 }
@@ -646,13 +619,9 @@ button,
   cursor: pointer;
 }
 
-/**
- * This injects any component classes registered by plugins.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/components";
- */
+table {
+  border-collapse: collapse;
+}
 
 .container {
   width: 100%;
@@ -682,125 +651,199 @@ button,
   }
 }
 
-/**
- * Here you would add any of your custom component classes; stuff that you'd
- * want loaded *before* the utilities so that the utilities could still
- * override them.
- *
- * Example:
- *
- * .btn { ... }
- * .form-input { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "components/buttons";
- * @import "components/forms";
- */
-
 body {
   background-color: #f8fafc;
   border-color: #3351d6;
-  line-height: 1.5;
-  color: #3d4852;
-  font-size: 1.125rem;
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 2;
+  color: #12283a;
+  font-size: 1rem;
 }
 
-body a {
+a {
   text-decoration: none;
-  color: #22292f;
-}
-
-body a:hover {
   color: #3490dc;
 }
 
-body code {
+.content a {
+  color: #3490dc;
+}
+
+.content blockquote {
+  border-color: #6cb2eb;
+  border-left-width: 4px;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  color: #606f7b;
+  font-size: 1.25rem;
+}
+
+.content code {
+  background-color: #f1f5f8;
+  line-height: 2;
   padding-left: .5rem;
   padding-right: .5rem;
-}
-
-body p {
-  line-height: 2;
-}
-
-.content p,
-.content ol,
-.content ul {
-  padding-bottom: 1rem;
-}
-
-.markdown p + ul,
-.markdown p + ol {
-  margin-top: 0;
-}
-
-.markdown ul,
-.markdown ol {
-  margin-top: 1rem;
-  margin-bottom: .5rem;
-  margin-left: 0;
-  list-style-position: outside;
-}
-
-.markdown ul ul,
-.markdown ul ol,
-.markdown ol ul,
-.markdown ol ol {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  padding-top: .25rem;
   padding-bottom: .25rem;
 }
 
-.markdown ol li {
-  padding-bottom: .5rem;
+.content h1,
+.content h2,
+.content h3 {
+  font-weight: 300;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  color: #12283a;
 }
 
-.markdown ol li:last-child {
-  padding-bottom: 0;
+.content h1 {
+  font-weight: 400;
+  font-size: 1.875rem;
 }
 
-.markdown ol ul,
-.markdown ol ol {
+.content h2 {
+  font-size: 1.5rem;
+}
+
+.content h3 {
+  font-size: 1.25rem;
+}
+
+.content hr {
+  border-bottom-width: 2px;
+  border-color: #dae1e7;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 9999px;
+}
+
+.content li ul,
+.content li ol {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
-.markdown h3 {
+.content p > code {
+  margin-left: .25rem;
+  margin-right: .25rem;
+}
+
+.content pre {
+  background-color: #f1f5f8;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: .25rem;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+  font-size: .875rem;
+}
+
+.content ul,
+.content ol {
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-.markdown pre {
-  background-color: #f1f5f8;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  padding: 1.5rem;
-  font-size: .875rem;
-  overflow: scroll;
-  line-height: 1.25;
+/*
+
+Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  background: #f0f0f0;
 }
 
-.markdown blockquote {
-  border-left-width: 4px;
-  border-color: #b8c2cc;
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
-  margin-left: 1rem;
-  color: #3d4852;
+/* Base color: saturation 0; */
+
+.hljs,
+.hljs-subst {
+  color: #444;
 }
 
-.markdown blockquote p {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+.hljs-comment {
+  color: #888;
 }
 
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- *
- * If using `postcss-import`, use this import instead:
- *
- * @import "tailwindcss/utilities";
- */
+.hljs-keyword,
+.hljs-attribute,
+.hljs-selector-tag,
+.hljs-meta-keyword,
+.hljs-doctag,
+.hljs-name {
+  font-weight: bold;
+}
+
+/* User color: hue: 0 */
+
+.hljs-type,
+.hljs-string,
+.hljs-number,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #800;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #800;
+  font-weight: bold;
+}
+
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #bc6060;
+}
+
+/* Language color: hue: 90; */
+
+.hljs-literal {
+  color: #78a960;
+}
+
+.hljs-built_in,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #397300;
+}
+
+/* Meta color: hue: 200 */
+
+.hljs-meta {
+  color: #1f7199;
+}
+
+.hljs-meta-string {
+  color: #4d99bf;
+}
+
+/* Misc effects */
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
 
 .list-reset {
   list-style: none;
@@ -1471,6 +1514,14 @@ body p {
 
 .bg-contain {
   background-size: contain;
+}
+
+.border-collapse {
+  border-collapse: collapse;
+}
+
+.border-separate {
+  border-collapse: separate;
 }
 
 .border-transparent {
@@ -3419,6 +3470,26 @@ body p {
   opacity: 1;
 }
 
+.outline-none {
+  outline: 0;
+}
+
+.group:hover .group-hover\:outline-none {
+  outline: 0;
+}
+
+.hover\:outline-none:hover {
+  outline: 0;
+}
+
+.focus\:outline-none:focus {
+  outline: 0;
+}
+
+.active\:outline-none:active {
+  outline: 0;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -3441,6 +3512,22 @@ body p {
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
 }
 
 .overflow-x-scroll {
@@ -3815,6 +3902,14 @@ body p {
 
 .stroke-current {
   stroke: currentColor;
+}
+
+.table-auto {
+  table-layout: auto;
+}
+
+.table-fixed {
+  table-layout: fixed;
 }
 
 .text-left {
@@ -4776,21 +4871,6 @@ body p {
 .z-auto {
   z-index: auto;
 }
-
-/**
- * Here you would add any custom utilities you need that don't come out of the
- * box with Tailwind.
- *
- * Example :
- *
- * .bg-pattern-graph-paper { ... }
- * .skew-45 { ... }
- *
- * Or if using a preprocessor or `postcss-import`:
- *
- * @import "utilities/background-patterns";
- * @import "utilities/skew-transforms";
- */
 
 @media (min-width: 576px) {
   .sm\:list-reset {
@@ -7410,6 +7490,26 @@ body p {
     opacity: 1;
   }
 
+  .sm\:outline-none {
+    outline: 0;
+  }
+
+  .group:hover .sm\:group-hover\:outline-none {
+    outline: 0;
+  }
+
+  .sm\:hover\:outline-none:hover {
+    outline: 0;
+  }
+
+  .sm\:focus\:outline-none:focus {
+    outline: 0;
+  }
+
+  .sm\:active\:outline-none:active {
+    outline: 0;
+  }
+
   .sm\:overflow-auto {
     overflow: auto;
   }
@@ -7432,6 +7532,22 @@ body p {
 
   .sm\:overflow-y-auto {
     overflow-y: auto;
+  }
+
+  .sm\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .sm\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .sm\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .sm\:overflow-y-visible {
+    overflow-y: visible;
   }
 
   .sm\:overflow-x-scroll {
@@ -7798,6 +7914,14 @@ body p {
   .sm\:shadow-none {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+
+  .sm\:table-auto {
+    table-layout: auto;
+  }
+
+  .sm\:table-fixed {
+    table-layout: fixed;
   }
 
   .sm\:text-left {
@@ -11379,6 +11503,26 @@ body p {
     opacity: 1;
   }
 
+  .md\:outline-none {
+    outline: 0;
+  }
+
+  .group:hover .md\:group-hover\:outline-none {
+    outline: 0;
+  }
+
+  .md\:hover\:outline-none:hover {
+    outline: 0;
+  }
+
+  .md\:focus\:outline-none:focus {
+    outline: 0;
+  }
+
+  .md\:active\:outline-none:active {
+    outline: 0;
+  }
+
   .md\:overflow-auto {
     overflow: auto;
   }
@@ -11401,6 +11545,22 @@ body p {
 
   .md\:overflow-y-auto {
     overflow-y: auto;
+  }
+
+  .md\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .md\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .md\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .md\:overflow-y-visible {
+    overflow-y: visible;
   }
 
   .md\:overflow-x-scroll {
@@ -11767,6 +11927,14 @@ body p {
   .md\:shadow-none {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+
+  .md\:table-auto {
+    table-layout: auto;
+  }
+
+  .md\:table-fixed {
+    table-layout: fixed;
   }
 
   .md\:text-left {
@@ -15348,6 +15516,26 @@ body p {
     opacity: 1;
   }
 
+  .lg\:outline-none {
+    outline: 0;
+  }
+
+  .group:hover .lg\:group-hover\:outline-none {
+    outline: 0;
+  }
+
+  .lg\:hover\:outline-none:hover {
+    outline: 0;
+  }
+
+  .lg\:focus\:outline-none:focus {
+    outline: 0;
+  }
+
+  .lg\:active\:outline-none:active {
+    outline: 0;
+  }
+
   .lg\:overflow-auto {
     overflow: auto;
   }
@@ -15370,6 +15558,22 @@ body p {
 
   .lg\:overflow-y-auto {
     overflow-y: auto;
+  }
+
+  .lg\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .lg\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .lg\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .lg\:overflow-y-visible {
+    overflow-y: visible;
   }
 
   .lg\:overflow-x-scroll {
@@ -15736,6 +15940,14 @@ body p {
   .lg\:shadow-none {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+
+  .lg\:table-auto {
+    table-layout: auto;
+  }
+
+  .lg\:table-fixed {
+    table-layout: fixed;
   }
 
   .lg\:text-left {
@@ -19317,6 +19529,26 @@ body p {
     opacity: 1;
   }
 
+  .xl\:outline-none {
+    outline: 0;
+  }
+
+  .group:hover .xl\:group-hover\:outline-none {
+    outline: 0;
+  }
+
+  .xl\:hover\:outline-none:hover {
+    outline: 0;
+  }
+
+  .xl\:focus\:outline-none:focus {
+    outline: 0;
+  }
+
+  .xl\:active\:outline-none:active {
+    outline: 0;
+  }
+
   .xl\:overflow-auto {
     overflow: auto;
   }
@@ -19339,6 +19571,22 @@ body p {
 
   .xl\:overflow-y-auto {
     overflow-y: auto;
+  }
+
+  .xl\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+
+  .xl\:overflow-y-hidden {
+    overflow-y: hidden;
+  }
+
+  .xl\:overflow-x-visible {
+    overflow-x: visible;
+  }
+
+  .xl\:overflow-y-visible {
+    overflow-y: visible;
   }
 
   .xl\:overflow-x-scroll {
@@ -19705,6 +19953,14 @@ body p {
   .xl\:shadow-none {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+
+  .xl\:table-auto {
+    table-layout: auto;
+  }
+
+  .xl\:table-fixed {
+    table-layout: fixed;
   }
 
   .xl\:text-left {

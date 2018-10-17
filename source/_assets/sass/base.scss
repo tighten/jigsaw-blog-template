@@ -1,24 +1,13 @@
 body {
     @apply .bg-grey-lightest;
     @apply .border-blue-darker;
-    @apply .leading-normal;
-    @apply .text-grey-darkest;
-    @apply .text-lg;
+    @apply .font-sans;
+    @apply .leading-loose;
+    @apply .text-blue-darkest;
+    @apply .text-base;
+}
 
-    a {
-        @apply .no-underline;
-        @apply .text-black;
-
-        &:hover {
-            @apply .text-blue;
-        }
-    }
-
-    code {
-        @apply .px-2;
-    }
-
-    p {
-        @apply .leading-loose;
-    }
+a {
+    @apply .no-underline;
+    @apply .text-blue;
 }

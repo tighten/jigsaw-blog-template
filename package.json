@@ -12,6 +12,7 @@
         "browser-sync-webpack-plugin": "^2.0.1",
         "cross-env": "^3.2.3",
         "hasbin": "^1.2.3",
+        "highlightjs": "^9.10.0",
         "laravel-mix": "^2.1.14",
         "node-cmd": "^3.0.0",
         "on-build-webpack": "^0.1.0",
