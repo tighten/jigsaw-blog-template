@@ -20,14 +20,17 @@
         <link rel="stylesheet" href="{{ $page->url(mix('css/main.css')) }}">
     </head>
     <body>
-        @include('_partials.header')
+        <div id="vue-app">
+            @include('_partials.header')
 
-        <div class="container mx-auto px-4 pb-8 content">
-            <div class="mx-auto w-full lg:w-3/4">
-                @yield('body')
+            <div class="container mx-auto px-4 pb-8 content">
+                <div class="mx-auto w-full lg:w-3/4">
+                    @yield('body')
+                </div>
             </div>
         </div>
 
+        <script src="{{ $page->url(mix('js/main.js')) }}"></script>
         @include('_partials.footer')
     </body>
 </html>

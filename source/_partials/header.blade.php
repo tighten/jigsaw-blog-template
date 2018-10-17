@@ -1,34 +1,19 @@
-<div class="bg-grey-lighter mb-8">
-    <header class="container mx-auto px-4">
-        <div class="sm:flex">
-            <a href="{{ $page->url('/') }}" class="inline-flex items-center w-full pt-4 pb-2 sm:py-6 w-full font-bold">
-                @include('_partials.logo')
-                <span class="pl-4">
-                    {{ $page->blogTitle }}
-                </span>
+<header class="bg-white border-b mb-8 py-4 flex shadow-lg" role="banner">
+    <div class="container max-w-2xl flex mx-auto px-6">
+        <div class="flex items-center">
+            <a href="{{ $page->url('/') }}" title="{{ $page->blogTitle }} home" class="inline-flex items-center mr-3 font-bold">
+                <img class="h-8 md:h-10" src="/assets/img/logo.svg" alt="{{ $page->blogTitle }} logo" />
             </a>
+            <h3 class="font-thin"><a href="/" title="Home" class="text-blue-darker">{{ $page->blogTitle }}</a></h3>
+        </div>
 
-            <nav class="sm:flex sm:flex-wrap sm:justify-end lg:w-full">
-                <a href="{{ $page->url('/') }}" class="lg:flex items-center p-2 sm:p-4 hidden">
-                    Home
-                </a>
-                <a href="{{ $page->url('/blog') }}" class="flex items-center p-2 sm:p-4">
-                    Blog
-                </a>
-                <a href="{{ $page->url('/about') }}" class="flex items-center p-2 sm:p-4">
-                    About
-                </a>
-                <a href="{{ $page->url('/contact') }}" class="flex items-center p-2 sm:p-4">
-                    Contact
-                </a>
-
-                <form action="https://google.com/search" method="get" class="flex items-center px-2">
-                    <fieldset role="search">
-                        <input type="hidden" name="sitesearch" value="{{ $page->searchDomain }}">
-                        <input type="text" name="q" results="0" placeholder="Search" class="p-1 border border-grey-dark my-4 sm:mt-0 lg:mb-0">
-                    </fieldset>
-                </form>
+        <div class="flex flex-1 align-right justify-end items-center">
+            <nav class="flex w-1/2 justify-end">
+                <a class="mr-4 text-base font-thin text-blue-darker" href="/">Home</a>
+                <a class="mr-4 text-base font-thin text-blue-darker" href="/blog">Blog</a>
+                <a class="mr-4 text-base font-thin text-blue-darker" href="/about">About</a>
+                <a class="text-base font-thin text-blue-darker" href="/contact">Contact</a>
             </nav>
         </div>
-    </header>
-</div>
+    </div>
+</header>

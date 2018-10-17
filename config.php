@@ -20,11 +20,12 @@ return [
             'path' => '/blog/categories/{filename}',
             'posts' => function ($page, $allPosts) {
                 return $allPosts->filter(function ($post) use ($page) {
-                    return $post->categories ? in_array($page->getFilename(), $post->categories) : false;
+                    return $post->categories ? in_array($page->getFilename(), $post->categories, true) : false;
                 });
-            }
+            },
         ],
     ],
+
     // helpers
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
