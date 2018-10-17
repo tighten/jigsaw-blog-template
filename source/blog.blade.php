@@ -6,10 +6,10 @@ pagination:
 @extends('_layouts.master')
 
 @push('meta')
-    <meta property="og:title" content="{{ $page->blogTitle }} Blog" />
+    <meta property="og:title" content="{{ $page->siteName }} Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ $page->getUrl() }}"/>
-    <meta property="og:description" content="The list of blog posts for {{ $page->blogTitle }}" />
+    <meta property="og:description" content="The list of blog posts for {{ $page->siteName }}" />
 @endpush
 
 @section('body')
