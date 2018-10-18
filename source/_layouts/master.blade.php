@@ -23,7 +23,7 @@
         <div id="vue-app">
             @include('_partials.header')
 
-            <div class="container mx-auto px-4 pb-8 content min-h-screen">
+            <div class="container mx-auto px-4 pb-8 min-h-screen">
                 <div class="mx-auto w-full lg:w-3/4">
                     @yield('body')
                 </div>

@@ -22,7 +22,7 @@
     @endif
     </p>
 
-    <div class="markdown pb-8 mb-8 border-b">
+    <div class="content pb-8 mb-8 border-b">
         @yield('content')
     </div>
 

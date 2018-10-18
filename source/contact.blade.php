@@ -67,11 +67,10 @@
                 </div>
             </div>
 
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-1/2 px-3">
-                    <input class="appearance-none block bg-blue-light font-light text-xs tracking-wide uppercase text-white rounded-lg cursor-pointer py-4 px-4 mb-3"
+            <hr class="block bg-grey-light">
+            <div class="flex justify-end w-full">
+                <input class="appearance-none block bg-blue-light font-light text-xs tracking-wide uppercase text-white rounded-lg cursor-pointer py-4 px-8"
                         id="grid-submit" type="submit" value="Submit">
-                </div>
             </div>
         </form>
     </div>
