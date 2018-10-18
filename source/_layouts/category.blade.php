@@ -8,7 +8,7 @@
 @endpush
 
 @section('body')
-    <h1 class="page-title">{{ $page->title }}</h1>
+    <h1>{{ $page->title }}</h1>
 
     <div class="markdown pb-8">
         @yield('content')

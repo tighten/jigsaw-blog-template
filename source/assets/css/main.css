@@ -6286,7 +6286,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 }
 
 .tracking-tight {
-  letter-spacing: -0.05em;
+  letter-spacing: -0.08em;
 }
 
 .tracking-normal {
@@ -6294,7 +6294,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
 }
 
 .tracking-wide {
-  letter-spacing: .05em;
+  letter-spacing: .08em;
 }
 
 .select-none {
@@ -12065,7 +12065,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 
   .sm\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.08em;
   }
 
   .sm\:tracking-normal {
@@ -12073,7 +12073,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 
   .sm\:tracking-wide {
-    letter-spacing: .05em;
+    letter-spacing: .08em;
   }
 
   .sm\:select-none {
@@ -17835,7 +17835,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 
   .md\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.08em;
   }
 
   .md\:tracking-normal {
@@ -17843,7 +17843,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 
   .md\:tracking-wide {
-    letter-spacing: .05em;
+    letter-spacing: .08em;
   }
 
   .md\:select-none {
@@ -23605,7 +23605,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 
   .lg\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.08em;
   }
 
   .lg\:tracking-normal {
@@ -23613,7 +23613,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 
   .lg\:tracking-wide {
-    letter-spacing: .05em;
+    letter-spacing: .08em;
   }
 
   .lg\:select-none {
@@ -29375,7 +29375,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 
   .xl\:tracking-tight {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.08em;
   }
 
   .xl\:tracking-normal {
@@ -29383,7 +29383,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   }
 
   .xl\:tracking-wide {
-    letter-spacing: .05em;
+    letter-spacing: .08em;
   }
 
   .xl\:select-none {
