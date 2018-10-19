@@ -22,7 +22,7 @@
     @endif
     </p>
 
-    <div class="content pb-8 mb-8 border-b">
+    <div class="pb-8 mb-8 border-b content" v-pre>
         @yield('content')
     </div>
 
