@@ -24,13 +24,12 @@
     h1,
     h2,
     h3 {
-        @apply .font-light;
+        @apply .font-normal;
         @apply .my-2;
         @apply .text-blue-darkest;
     }
 
     h1 {
-        @apply .font-normal;
         @apply .text-3xl;
     }
 
