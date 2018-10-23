@@ -24,14 +24,14 @@
             @include('_partials.header')
 
             <div class="container mx-auto px-4 pb-8 min-h-screen">
-                <div class="mx-auto w-full lg:w-3/4">
+                <div class="w-full mx-auto pt-10 lg:w-3/4">
                     @yield('body')
                 </div>
             </div>
         </div>
 
         <script src="{{ $page->url(mix('js/main.js')) }}"></script>
-        <footer class="bg-white text-center py-4 mt-12" role="contentinfo">
+        <footer class="bg-white mt-12 py-4 text-center" role="contentinfo">
             <p class="text-sm">&copy; {{ $page->copyrightHolder}} {{ date('Y') }}. Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a> and <a href="https://tailwindcss.com" title="Tailwindcss a utility-first css framework">Tailwind CSS</a>.</p>
         </footer>
     </body>

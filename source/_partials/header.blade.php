@@ -8,11 +8,11 @@
         </div>
 
         <div class="flex flex-1 align-right justify-end items-center">
-            <nav class="flex w-1/2 justify-end text-base font-thin">
-                <a class="mr-4 text-blue-darker" href="/">Home</a>
-                <a class="mr-4 text-blue-darker" href="/blog">Blog</a>
-                <a class="mr-4 text-blue-darker" href="/about">About</a>
-                <a class="text-blue-darker" href="/contact">Contact</a>
+            <nav class="flex w-1/2 justify-end text-base font-semibold">
+                <a class="mr-4 text-grey text-blue-darkest" href="/">Home</a>
+                <a class="mr-4 text-grey" href="/blog">Blog</a>
+                <a class="mr-4 text-grey" href="/about">About</a>
+                <a class="text-grey" href="/contact">Contact</a>
             </nav>
         </div>
     </div>
