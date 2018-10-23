@@ -666,6 +666,7 @@ a {
 }
 
 a {
+  font-weight: 600;
   color: #3490dc;
 }
 
@@ -727,10 +728,13 @@ li::before {
   color: #3490dc;
 }
 
+li {
+  margin-bottom: .5rem;
+}
+
 li > ul,
 li > ol {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: .5rem;
 }
 
 p {
@@ -746,7 +750,7 @@ p > code {
 pre {
   background-color: #eff2f5;
   line-height: 1.25;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   margin-top: 1rem;
   overflow-x: auto;
   padding: 1rem;

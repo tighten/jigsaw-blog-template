@@ -1,4 +1,5 @@
 a {
+    @apply .font-semibold;
     @apply .text-blue;
 }
 
@@ -55,9 +56,13 @@ li::before {
     @apply .text-blue;
 }
 
+li {
+    @apply .mb-2;
+}
+
 li > ul,
 li > ol {
-    @apply .my-0;
+    @apply .mb-2;
 }
 
 p {
@@ -71,7 +76,7 @@ p > code {
 pre {
     @apply .bg-grey-lighter;
     @apply .leading-tight;
-    @apply .mb-6;
+    @apply .mb-8;
     @apply .mt-4;
     @apply .overflow-x-auto;
     @apply .p-4;
