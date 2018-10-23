@@ -8,21 +8,21 @@
 @endpush
 
 @section('body')
-    <h1>{{ $page->title }}</h1>
+    <h1 class="mb-0">{{ $page->title }}</h1>
 
-    <p class="mb-6 text-grey-darker">By {{ $page->author }} • {{ date('F j, Y', $page->date) }}
+    <p class="text-grey font-semibold text-lg mb-4">{{ $page->author }} • {{ date('F j, Y', $page->date) }}</p>
+
     @if ($page->categories)
-        • Posted in:
         @foreach ($page->categories as $i => $category)
-            <a href="{{ $page->url('/blog/categories/' . $category) }}">{{ $category }}</a>
-            @if ($i < count($page->categories) - 1)
-            |
-            @endif
+            <a href="{{ $page->url('/blog/categories/' . $category) }}"
+                title="View posts in {{ $category }}"
+                class="bg-grey-lighter border text-blue-darker uppercase text-xs font-semibold mr-4 px-4 py-2 rounded-lg">
+                {{ $category }}
+            </a>
         @endforeach
     @endif
-    </p>
 
-    <div class="pb-8 mb-8 border-b content" v-pre>
+    <div class="mb-8 py-8 border-b" v-pre>
         @yield('content')
     </div>
 

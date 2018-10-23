@@ -1,78 +1,87 @@
-.content {
-    a {
-        @apply .text-blue;
-    }
+a {
+    @apply .text-blue;
+}
 
-    blockquote {
-        @apply .border-blue-light;
-        @apply .border-l-4;
-        @apply .font-normal;
-        @apply .italic;
-        @apply .my-8;
-        @apply .pl-6;
-        @apply .text-grey-darker;
-        @apply .text-xl;
-    }
+blockquote {
+    @apply .border-blue-light;
+    @apply .border-l-4;
+    @apply .font-normal;
+    @apply .italic;
+    @apply .my-8;
+    @apply .pl-6;
+    @apply .text-blue-darker;
+    @apply .text-xl;
+}
 
-    code {
-        @apply .bg-grey-lighter;
-        @apply .leading-loose;
-        @apply .px-2;
-        @apply .py-1;
-    }
+code {
+    @apply .bg-grey-lighter;
+    @apply .leading-loose;
+    @apply .px-2;
+    @apply .py-1;
+}
 
-    h1,
-    h2,
-    h3 {
-        @apply .font-normal;
-        @apply .my-2;
-        @apply .text-blue-darkest;
-    }
+h1,
+h2,
+h3 {
+    @apply .font-semibold;
+    @apply .my-2;
+    @apply .text-blue-darkest;
+}
 
-    h1 {
-        @apply .text-3xl;
-    }
+h1 {
+    @apply .font-extrabold;
+    @apply .text-5xl;
+}
 
-    h2 {
-        @apply .text-2xl;
-    }
+h2 {
+    @apply .text-4xl;
+}
 
-    h3 {
-        @apply .text-xl;
-    }
+h3 {
+    @apply .text-3xl;
+}
 
-    hr {
-        @apply .border-b-2;
-        @apply .border-grey-light;
-        @apply .my-8;
-        @apply .rounded-full;
-    }
+hr {
+    @apply .border-b-2;
+    @apply .border-grey-light;
+    @apply .my-8;
+    @apply .rounded-full;
+}
 
-    li {
-        ul,
-        ol {
-            @apply .my-0;
-        }
-    }
+li::before {
+    content: '\2022'; /* unicode bullet symbol */
 
-    p > code {
-        @apply .mx-1;
-    }
+    @apply .mr-2;
+    @apply .text-blue;
+}
 
-    pre {
-        @apply .bg-grey-lighter;
-        @apply .leading-tight;
-        @apply .mb-6;
-        @apply .mt-4;
-        @apply .overflow-x-auto;
-        @apply .p-4;
-        @apply .rounded;
-        @apply .shadow;
-        @apply .text-sm;
-    }
+li > ul,
+li > ol {
+    @apply .my-0;
+}
 
-    ul,
-    ol {
-        @apply .my-4;
-    }
+p {
+    @apply .my-4;
+}
+
+p > code {
+    @apply .mx-1;
+}
+
+pre {
+    @apply .bg-grey-lighter;
+    @apply .leading-tight;
+    @apply .mb-6;
+    @apply .mt-4;
+    @apply .overflow-x-auto;
+    @apply .p-4;
+    @apply .rounded;
+    @apply .shadow;
+    @apply .text-sm;
+}
+
+ul,
+ol {
+    @apply .list-reset;
+    @apply .my-4;
 }
