@@ -4,15 +4,31 @@
             <a href="{{ $page->url('/') }}" title="{{ $page->siteName }} home" class="inline-flex items-center mr-3 font-bold">
                 <img class="h-8 md:h-10" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
             </a>
-            <h3 class="font-thin hidden sm:block"><a href="/" title="Home" class="text-blue-darker">{{ $page->siteName }}</a></h3>
+            <h1 class="font-normal text-xl hidden sm:block"><a href="/" title="Home" class="text-blue-darker">{{ $page->siteName }}</a></h1>
         </div>
 
         <div class="flex flex-1 align-right justify-end items-center">
             <nav class="flex w-1/2 justify-end text-base font-semibold">
-                <a class="mr-4 text-grey text-blue-darkest" href="/">Home</a>
-                <a class="mr-4 text-grey" href="/blog">Blog</a>
-                <a class="mr-4 text-grey" href="/about">About</a>
-                <a class="text-grey" href="/contact">Contact</a>
+                <a title="{{ $page->siteName }} Home" href="/"
+                    class="mr-4 text-grey hover:text-blue-darkest" >Home</a>
+                <a title="{{ $page->siteName }} Blog"
+                    href="/blog"
+                    class="mr-4 text-grey hover:text-blue-darkest"
+                    :class="{ 'text-blue-darkest' : urlIsActive('/blog') }">
+                    Blog
+                </a>
+                <a title="{{ $page->siteName }} About"
+                    href="/about"
+                    class="mr-4 text-grey hover:text-blue-darkest"
+                    :class="{ 'text-blue-darkest' : urlIsActive('/about') }">
+                    About
+                </a>
+                <a title="{{ $page->siteName }} Contact"
+                    href="/contact"
+                    class="text-grey"
+                    :class="{ 'text-blue-darkest' : urlIsActive('/contact') }">
+                    Contact
+                </a>
             </nav>
         </div>
     </div>
