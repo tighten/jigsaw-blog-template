@@ -11523,7 +11523,13 @@ window.Vue = __webpack_require__("./node_modules/vue/dist/vue.common.js");
 
 Vue.config.productionTip = false;
 
-new Vue({}).$mount('#vue-app');
+new Vue({
+    methods: {
+        urlIsActive: function urlIsActive(url) {
+            return window.location.href.indexOf(url) > -1;
+        }
+    }
+}).$mount('#vue-app');
 
 /***/ }),
 

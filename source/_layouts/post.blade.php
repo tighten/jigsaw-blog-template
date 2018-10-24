@@ -8,15 +8,15 @@
 @endpush
 
 @section('body')
-    <h1 class="mb-0">{{ $page->title }}</h1>
+    <h1 class="mb-0 leading-none">{{ $page->title }}</h1>
 
-    <p class="text-grey font-semibold text-lg mb-4">{{ $page->author }} • {{ date('F j, Y', $page->date) }}</p>
+    <p class="mb-4 mt-2 text-grey font-semibold text-lg">{{ $page->author }} • {{ date('F j, Y', $page->date) }}</p>
 
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)
             <a href="{{ $page->url('/blog/categories/' . $category) }}"
                 title="View posts in {{ $category }}"
-                class="bg-grey-lighter border text-blue-darker uppercase text-xs font-semibold mr-4 px-4 py-2 rounded-lg">
+                class="bg-grey-lighter border border-grey-light tracking-wide text-blue-darker uppercase text-xs font-semibold mr-4 px-3 py-1 rounded-lg">
                 {{ $category }}
             </a>
         @endforeach

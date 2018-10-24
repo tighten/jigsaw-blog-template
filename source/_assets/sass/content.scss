@@ -67,6 +67,8 @@ li > ol {
 
 p {
     @apply .my-4;
+    @apply .text-blue-darker;
+    @apply .text-xl;
 }
 
 p > code {
