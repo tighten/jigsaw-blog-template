@@ -1,11 +1,10 @@
 <?php
 
 return [
-    'siteName' => 'My Jigsaw Blog',
-    'siteAuthor' => 'Matt Stauffer',
-    'siteDescription' => 'The personal blog of Matt Stauffer, a deep lover of Jigsaws.',
+    'siteName' => 'Jigsaw Blog',
+    'siteDescription' => 'Generate an elegant blog with Jigsaw',
+    'title' => 'Blog powered by Jigsaw',
     'baseUrl' => 'http://jigsaw-blog-skeleton.test/',
-    'copyrightHolder' => 'Tighten',
     'searchDomain' => 'jigsaw-blog-skeleton.text', // for Google search
     'production' => false,
     'collections' => [

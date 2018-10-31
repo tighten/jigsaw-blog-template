@@ -651,22 +651,9 @@ table {
   }
 }
 
-body {
-  background-color: #f8fafc;
-  border-color: #334152;
-  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.75;
-  color: #334152;
-  font-size: 1.125rem;
-}
-
-a {
-  text-decoration: none;
-  color: #338cd6;
-}
-
 a {
   font-weight: 600;
+  text-decoration: none;
   color: #338cd6;
 }
 
