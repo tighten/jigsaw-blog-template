@@ -8,9 +8,9 @@
 @endpush
 
 @section('body')
-    <h1 class="mb-0 leading-none">{{ $page->title }}</h1>
+    <h1 class="mb-2 leading-none">{{ $page->title }}</h1>
 
-    <p class="mb-4 mt-2 text-grey font-semibold text-lg">{{ $page->author }} • {{ date('F j, Y', $page->date) }}</p>
+    <p class="mb-6 mt-2 text-grey font-semibold text-lg">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
 
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)

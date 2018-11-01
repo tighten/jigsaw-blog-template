@@ -662,11 +662,14 @@ blockquote {
   border-left-width: 4px;
   font-weight: 400;
   font-style: italic;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   padding-left: 1.5rem;
-  color: #334152;
-  font-size: 1.25rem;
+}
+
+blockquote p {
+  color: #748294;
+  font-size: 1.5rem;
 }
 
 code {
@@ -674,8 +677,10 @@ code {
   line-height: 1.75;
   padding-left: .5rem;
   padding-right: .5rem;
-  padding-top: .25rem;
-  padding-bottom: .25rem;
+}
+
+code.hljs {
+  background-color: transparent;
 }
 
 h1,
@@ -760,8 +765,12 @@ pre {
   line-height: 1.25;
   margin-bottom: 2rem;
   margin-top: 1rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
   overflow-x: auto;
   padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-radius: .25rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);

@@ -9,17 +9,23 @@ blockquote {
     @apply .border-l-4;
     @apply .font-normal;
     @apply .italic;
-    @apply .my-8;
+    @apply .my-10;
     @apply .pl-6;
-    @apply .text-blue-darker;
-    @apply .text-xl;
+
+    p {
+        @apply .text-grey;
+        @apply .text-2xl;
+    }
 }
 
 code {
     @apply .bg-grey-lighter;
     @apply .leading-loose;
     @apply .px-2;
-    @apply .py-1;
+}
+
+code.hljs {
+    @apply .bg-transparent;
 }
 
 h1,
@@ -100,8 +106,10 @@ pre {
     @apply .leading-tight;
     @apply .mb-8;
     @apply .mt-4;
+    @apply .-mx-8;
     @apply .overflow-x-auto;
     @apply .p-4;
+    @apply .px-8;
     @apply .rounded;
     @apply .shadow;
     @apply .text-sm;
