@@ -8,7 +8,7 @@
 @endpush
 
 @section('body')
-<div class="px-4 w-full max-w-xl mx-auto transition-sm md:px-0">
+<div class="w-full max-w-xl mx-auto px-6 transition-sm md:px-0">
     <h1 class="font-bold text-black">About</h1>
 
     <p class="mb-6">
