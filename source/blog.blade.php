@@ -13,34 +13,32 @@ pagination:
 @endpush
 
 @section('body')
-<div class="px-4 w-full max-w-xl mx-auto text-grey-darkest transition-sm md:px-0">
-    <p class="mb-4">{{ $page->siteDescription }}</p>
+<p class="mb-4">{{ $page->siteDescription }}</p>
 
-    <hr class="border-b mb-4">
+<hr class="border-b mb-4">
 
-    @foreach ($pagination->items as $post)
-        @include('_partials.post-preview-inline')
-    @endforeach
+@foreach ($pagination->items as $post)
+    @include('_partials.post-preview-inline')
+@endforeach
 
-    @if ($previous = $pagination->previous)
-        <a href="{{ $page->url($pagination->first) }}">&lt;&lt;</a>
-        <a href="{{ $page->url($previous) }}" class="mr-1">&lt;</a>
-    @else
-        <span class="text-grey mr-1">&lt;&lt; &lt;</span>
+@if ($previous = $pagination->previous)
+    <a href="{{ $page->url($pagination->first) }}">&lt;&lt;</a>
+    <a href="{{ $page->url($previous) }}" class="mr-1">&lt;</a>
+@else
+    <span class="text-grey mr-1">&lt;&lt; &lt;</span>
+@endif
+
+@foreach ($pagination->pages as $pageNumber => $path)
+    <a href="{{ $page->url($path) }}"
+        class="{{ $pagination->currentPage == $pageNumber ? 'selected' : '' }}">{{ $pageNumber }}</a>&nbsp;
+@endforeach
+
+@if ($next = $pagination->next)
+    <a href="{{ $page->url($next) }}">&gt;</a>
+    @if($next !== $pagination->last)
+        <a href="{{ $page->url($pagination->last) }}">&gt;&gt;</a>
     @endif
-
-    @foreach ($pagination->pages as $pageNumber => $path)
-        <a href="{{ $page->url($path) }}"
-            class="{{ $pagination->currentPage == $pageNumber ? 'selected' : '' }}">{{ $pageNumber }}</a>&nbsp;
-    @endforeach
-
-    @if ($next = $pagination->next)
-        <a href="{{ $page->url($next) }}">&gt;</a>
-        @if($next !== $pagination->last)
-            <a href="{{ $page->url($pagination->last) }}">&gt;&gt;</a>
-        @endif
-    @else
-        <span class="text-grey">&gt; &gt;&gt;</span>
-    @endif
-</div>
+@else
+    <span class="text-grey">&gt; &gt;&gt;</span>
+@endif
 @endsection

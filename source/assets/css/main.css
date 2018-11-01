@@ -6671,7 +6671,7 @@ Original highlight.js style (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
   z-index: auto;
 }
 
-.transition-sm {
+.transition-fast {
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
 }

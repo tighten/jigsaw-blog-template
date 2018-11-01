@@ -65,7 +65,7 @@
                 </div>
             </header>
 
-            <main role="main" class="min-h-screen max-w-2xl container mx-auto px-6">
+            <main role="main" class="w-full min-h-screen max-w-xl container mx-auto transition px-6">
                 @yield('body')
             </main>
         </div>
