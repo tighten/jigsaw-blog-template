@@ -1,9 +1,9 @@
-<div class="flex flex-col mb-6 border-b-2">
-    <p class="text-grey font-medium -mb-1">
+<div class="flex flex-col mb-6 border-b">
+    <p class="-mb-4 text-grey font-medium">
         {{ $post->getDate()->format('F j, Y') }}
     </p>
 
-    <h2 class="mt-0 text-3xl">
+    <h2 class="text-3xl">
         <a href="{{ $page->url($post->getPath()) }}"
             title="Read more - {{ $post->title }}"
             class="text-black font-extrabold">

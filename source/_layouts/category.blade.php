@@ -8,16 +8,13 @@
 @endpush
 
 @section('body')
-    <h1>{{ $page->title }}</h1>
+    <h1 class="mb-4">{{ $page->title }}</h1>
 
-    <div class="markdown pb-8">
+    <div class="pb-4 mb-16 border-b">
         @yield('content')
     </div>
 
-    <p>Posts in this category:</p>
-    <ul>
     @foreach ($page->posts($posts) as $post)
-        <li><a href="{{ $page->url($post->getPath()) }}">{{ $post->title }}</a></li>
+        @include('_partials.post-preview-inline')
     @endforeach
-    </ul>
-@endsection
+@stop

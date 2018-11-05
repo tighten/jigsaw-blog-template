@@ -26,15 +26,13 @@
         @yield('content')
     </div>
 
-    @if ($page->getPrevious())
-        <p>Read my previous post:
-            <a href="{{ $page->url($page->getPrevious()->getPath()) }}">{{ $page->getPrevious()->title }}</a>
-        </p>
-    @endif
+    <div class="flex justify-between">
+        @if ($page->getPrevious())
+            <a href="{{ $page->url($page->getPrevious()->getPath()) }}">Previous Post</a>
+        @endif
 
-    @if ($page->getNext())
-        <p>Read my next post:
-            <a href="{{ $page->url($page->getNext()->getPath()) }}">{{ $page->getNext()->title }}</a>
-        </p>
-    @endif
+        @if ($page->getNext())
+            <a href="{{ $page->url($page->getNext()->getPath()) }}" class="flex justify-end">Next Post</a>
+        @endif
+    </div>
 @endsection
