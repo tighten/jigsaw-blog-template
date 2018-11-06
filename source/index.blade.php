@@ -13,6 +13,10 @@
     <p>Good golly, I love Jigsaws.</p>
 </div>
 
+<div class="w-full my-8">
+   <img src="" alt="">
+</div>
+
 @foreach ($posts->slice(0, 5) as $post)
     @include('_partials.post-preview-inline')
 @endforeach

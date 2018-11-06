@@ -15,6 +15,9 @@ return [
             'excerpt' => function ($page, $characters = 150) {
                 return substr(strip_tags($page->getContent()), 0, $characters);
             },
+            'featured' => function ($page) {
+                return isset($page->featured) && true === $page->featured;
+            },
         ],
         'categories' => [
             'path' => '/blog/categories/{filename}',
