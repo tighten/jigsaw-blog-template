@@ -5,17 +5,18 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ $page->getUrl() }}"/>
     <meta property="og:description" content="Get in touch with {{ $page->siteName }}" />
-@endpush
+    @endpush
 
 @section('body')
 <h1 class="mb-6">Contact</h1>
-<!--
-    You can't handle forms with static sites, but you can use a form
-    service like Tighten's Fieldgoal.io to accept submissions, and
-    redirect back to a thanks page
--->
-<form action="https://fieldgoal.io/">
-    <div class="flex flex-wrap -mx-3 mb-6">
+
+<p class="mb-8">
+    Static sites are unable to handle form submissions. Services, like Tighten's <a href="https://fieldgoal.io" title="FieldGoal">FieldGoal</a>,
+    can accept the submission and redirect to a thank you page.
+</p>
+
+<form action="https://fieldgoal.io/" class="mb-12">
+    <div class="flex flex-wrap mb-6 -mx-3">
         <div class="w-full px-3 mb-6 md:mb-0 md:w-1/2">
             <label class="block mb-2 text-grey-darkest text-sm font-semibold" for="contact-name">
                 Name
@@ -50,4 +51,4 @@
             class="block px-8 py-4 bg-blue-light hover:bg-blue-dark text-white text-sm font-semibold tracking-wide uppercase shadow rounded-lg cursor-pointer transition">
     </div>
 </form>
-@endsection
+@stop
