@@ -37,7 +37,7 @@
 
                     <div class="flex flex-1 justify-end items-center">
                         <nav class="hidden md:flex w-1/3 justify-end text-base font-semibold lg:justify-around">
-                            @include('_partials.navigation-links')
+                            @include('_components.navigation-links')
                         </nav>
 
                         <navigation-toggle></navigation-toggle>
@@ -46,7 +46,7 @@
             </header>
 
             <nav class="hidden md:hidden flex-col bg-grey-lighter p-6" :class="{ flex:  displayMobileNav }">
-                @include('_partials.navigation-links')
+                @include('_components.navigation-links')
             </nav>
 
             <main role="main" class="w-full min-h-screen max-w-xl container mx-auto pt-8 px-6">

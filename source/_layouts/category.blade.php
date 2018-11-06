@@ -15,6 +15,6 @@
     </div>
 
     @foreach ($page->posts($posts) as $post)
-        @include('_partials.post-preview-inline')
+        @include('_components.post-preview-inline')
     @endforeach
 @stop

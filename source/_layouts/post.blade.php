@@ -14,7 +14,7 @@
 
     <h1 class="mb-2 leading-none">{{ $page->title }}</h1>
 
-    <p class="mb-6 mt-2 text-grey font-semibold text-lg">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
+    <p class="my-2 text-grey font-semibold text-lg">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
 
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)
@@ -26,7 +26,7 @@
         @endforeach
     @endif
 
-    <div class="mb-8 py-8 border-b" v-pre>
+    <div class="mb-8 py-4 border-b" v-pre>
         @yield('content')
     </div>
 

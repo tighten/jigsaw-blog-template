@@ -2,6 +2,6 @@
 
 @section('entries')
     @foreach ($posts as $entry)
-        @include('_partials.post-as-rss-item')
+        @include('_components.post-as-rss-item')
     @endforeach
 @endsection

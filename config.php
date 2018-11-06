@@ -9,7 +9,7 @@ return [
     'production' => false,
     'collections' => [
         'posts' => [
-            'author' => 'Matt Stauffer', // Default author if not provided in given post
+            'author' => 'Author Name', // Default author if not provided in given post
             'sort' => '-date',
             'path' => 'blog/{filename}',
             'coverImage' => function ($page) {
