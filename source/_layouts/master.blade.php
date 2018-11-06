@@ -32,18 +32,20 @@
                         <a href="{{ $page->url('/') }}" title="{{ $page->siteName }} home" class="inline-flex items-center mr-3 font-bold">
                             <img class="h-8" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
                         </a>
-                        <h1 class="hidden my-0 font-normal text-xl sm:inline-block"><a href="/" title="Home" class="text-blue-darker">{{ $page->siteName }}</a></h1>
+                        <h1 class="my-0 font-normal text-xl"><a href="/" title="Home" class="text-blue-darker">{{ $page->siteName }}</a></h1>
                     </div>
 
                     <div class="flex flex-1 justify-end items-center">
                         <nav class="hidden md:flex w-1/3 justify-end text-base font-semibold lg:justify-around">
                             @include('_partials.navigation-links')
                         </nav>
+
+                        <navigation-toggle></navigation-toggle>
                     </div>
                 </div>
             </header>
 
-            <nav class="flex md:hidden flex-col bg-grey-lighter p-6">
+            <nav class="hidden md:hidden flex-col bg-grey-lighter p-6" :class="{ flex:  displayMobileNav }">
                 @include('_partials.navigation-links')
             </nav>
 
