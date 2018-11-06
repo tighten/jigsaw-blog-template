@@ -41,7 +41,8 @@
             Message
         </label>
 
-        <textarea id="contact-message" rows="4" class="block w-full mb-2 px-4 py-6 border shadow rounded-lg outline-none appearance-none"></textarea>
+        <textarea id="contact-message" rows="4"
+            class="block w-full mb-2 px-4 py-6 border shadow rounded-lg outline-none appearance-none" placeholder="A lovely message here."></textarea>
     </div>
 
     <hr class="my-8">

@@ -12,6 +12,9 @@ return [
             'author' => 'Matt Stauffer', // Default author if not provided in given post
             'sort' => '-date',
             'path' => 'blog/{filename}',
+            'coverImage' => function($page) {
+                return $page->cover_image ?? null;
+            },
             'excerpt' => function ($page, $characters = 150) {
                 return substr(strip_tags($page->getContent()), 0, $characters);
             },

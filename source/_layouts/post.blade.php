@@ -8,6 +8,10 @@
 @endpush
 
 @section('body')
+    @if($page->coverImage())
+        <img src="{{ $page->coverImage() }}" alt="{{ $page->title }} cover image" class="mb-4">
+    @endif
+
     <h1 class="mb-2 leading-none">{{ $page->title }}</h1>
 
     <p class="mb-6 mt-2 text-grey font-semibold text-lg">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>

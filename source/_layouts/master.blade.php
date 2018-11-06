@@ -26,7 +26,7 @@
     </head>
     <body class="bg-grey-lightest text-grey-darker leading-normal text-lg font-sans font-normal">
         <div id="vue-app">
-            <header class="bg-white border-b mb-8 py-4 flex shadow-lg" role="banner">
+            <header class="bg-white border-b py-4 flex shadow-lg" role="banner">
                 <div class="container max-w-4xl flex mx-auto px-6 py-2">
                     <div class="flex items-center">
                         <a href="{{ $page->url('/') }}" title="{{ $page->siteName }} home" class="inline-flex items-center mr-3 font-bold">
@@ -36,34 +36,16 @@
                     </div>
 
                     <div class="flex flex-1 justify-end items-center">
-                        <nav class="flex w-1/3 justify-end text-base font-semibold lg:justify-around">
-                            <a title="{{ $page->siteName }} Home" href="/"
-                                class="mr-6 text-grey hover:text-blue-darkest lg:mr-0" >Home</a>
-
-                            <a title="{{ $page->siteName }} Blog"
-                                href="/blog"
-                                class="mr-6 text-grey hover:text-blue-darkest lg:mr-0"
-                                :class="{ 'text-blue-darkest' : urlIsActive('/blog') }">
-                                Blog
-                            </a>
-
-                            <a title="{{ $page->siteName }} About"
-                                href="/about"
-                                class="mr-6 text-grey hover:text-blue-darkest lg:mr-0"
-                                :class="{ 'text-blue-darkest' : urlIsActive('/about') }">
-                                About
-                            </a>
-
-                            <a title="{{ $page->siteName }} Contact"
-                                href="/contact"
-                                class="text-grey hover:text-blue-darkest"
-                                :class="{ 'text-blue-darkest' : urlIsActive('/contact') }">
-                                Contact
-                            </a>
+                        <nav class="hidden md:flex w-1/3 justify-end text-base font-semibold lg:justify-around">
+                            @include('_partials.navigation-links')
                         </nav>
                     </div>
                 </div>
             </header>
+
+            <nav class="flex md:hidden flex-col bg-grey-lighter p-6">
+                @include('_partials.navigation-links')
+            </nav>
 
             <main role="main" class="w-full min-h-screen max-w-xl container mx-auto pt-8 px-6">
                 @yield('body')
