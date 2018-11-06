@@ -1,7 +1,7 @@
 ---
 pagination:
     collection: posts
-    perPage: 10
+    perPage: 1
 ---
 @extends('_layouts.master')
 
@@ -21,26 +21,24 @@ pagination:
     @include('_partials.post-preview-inline')
 @endforeach
 
-<div class="flex justify-center">
-    @if ($previous = $pagination->previous)
-        <a href="{{ $page->url($pagination->first) }}">&lt;&lt;</a>
-        <a href="{{ $page->url($previous) }}" class="mr-2">&lt;</a>
-    @else
-        <span class="text-grey mr-2">&lt;&lt; &lt;</span>
-    @endif
-
-    @foreach ($pagination->pages as $pageNumber => $path)
-        <a href="{{ $page->url($path) }}"
-            class="{{ $pagination->currentPage == $pageNumber ? 'selected' : '' }}">{{ $pageNumber }}</a>&nbsp;
-    @endforeach
-
-    @if ($next = $pagination->next)
-        <a href="{{ $page->url($next) }}" class="ml-2">&gt;</a>
-        @if($next !== $pagination->last)
-            <a href="{{ $page->url($pagination->last) }}" class="ml-2">&gt;&gt;</a>
+@if($pagination->pages->count() > 1)
+    <div class="flex my-8 text-base">
+        @if ($previous = $pagination->previous)
+            <a href="{{ $page->url($previous) }}" title="Previous Page"
+                class="bg-grey-lighter hover:bg-grey-light mr-3 px-5 py-3 rounded">&LeftArrow;</a>
         @endif
-    @else
-        <span class="ml-2 text-grey">&gt; &gt;&gt;</span>
-    @endif
-</div>
-@endsection
+
+        @foreach ($pagination->pages as $pageNumber => $path)
+            <a href="{{ $page->url($path) }}" title="Go to Page {{ $pageNumber }}"
+                class="bg-grey-lighter hover:bg-grey-light mr-3 px-5 py-3 text-grey-darker hover:text-blue-dark rounded {{ $pagination->currentPage == $pageNumber ? 'text-blue-dark' : '' }}">
+                {{ $pageNumber }}
+            </a>
+        @endforeach
+
+        @if ($next = $pagination->next)
+            <a href="{{ $page->url($next) }}" title="Next Page"
+                class="bg-grey-lighter hover:bg-grey-light mr-3 px-5 py-3 rounded">&RightArrow;</a>
+        @endif
+    </div>
+@endif
+@stop
