@@ -19,6 +19,8 @@ pagination:
 
 @foreach ($pagination->items as $post)
     @include('_components.post-preview-inline')
+
+    <hr class="-mt-1 mb-2 border-b border-grey-light">
 @endforeach
 
 @if($pagination->pages->count() > 1)

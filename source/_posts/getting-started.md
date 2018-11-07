@@ -4,7 +4,7 @@ section: content
 title: Getting Started
 date: 2018-11-21
 description: Getting started with the Jigsaw Blog theme
-cover_image: https://source.unsplash.com/1600x500/?computer,digital,business
+cover_image: /assets/img/post-cover-image.svg
 featured: true
 ---
 
