@@ -1,13 +1,19 @@
-let AOS = require('aos');
+window.axios = require('axios');
 window.Vue = require('vue');
 window.hljs = require('highlightjs');
 
-import NavigationToggle from './components/navigation-toggle.vue';
+let AOS = require('aos');
+
+import NavigationToggle from './components/NavigationToggle.vue';
+import Search from './components/Search.vue';
 
 Vue.config.productionTip = false;
 
 new Vue({
-    components: { NavigationToggle },
+    components: {
+        Search,
+        NavigationToggle
+    },
 
     data() {
         return {

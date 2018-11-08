@@ -14,6 +14,8 @@
         @yield('content')
     </div>
 
+    @include('_components.newsletter-signup')
+
     @foreach ($page->posts($posts) as $post)
         @include('_components.post-preview-inline')
     @endforeach

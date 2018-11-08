@@ -5,7 +5,8 @@ return [
     'siteDescription' => 'Generate an elegant blog with Jigsaw',
     'title' => 'Blog powered by Jigsaw',
     'baseUrl' => 'http://jigsaw-blog-skeleton.test/',
-    'searchDomain' => 'jigsaw-blog-skeleton.text', // for Google search
+    'googleSearchAPIKey' => '',
+    'googleSearchEngineId' => '',
     'production' => false,
     'collections' => [
         'posts' => [
@@ -36,7 +37,13 @@ return [
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
     },
+    'googleSearchUrl' => function($page) {
+        return 'https://www.googleapis.com/customsearch/v1' . '?' . http_build_query([
+            'key' => $page->googleSearchAPIKey,
+            'cx' => $page->googleSearchEngineId
+        ]);
+    },
     'url' => function ($page, $path) {
         return rtrim($page->baseUrl, '/') . '/' . ltrim($path, '/');
-    },
+    }
 ];
