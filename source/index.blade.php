@@ -27,13 +27,21 @@
     </div>
 @endif
 
-<div class="flex -mx-6">
+<div class="flex flex-col md:flex-row md:-mx-6">
     @foreach($posts->take(2) as $post)
-        <div class="w-1/2 mx-6">
+        <div class="w-full md:w-1/2 md:mx-6">
             @include('_components.post-preview-inline')
         </div>
     @endforeach
 </div>
 
 @include('_components.newsletter-signup')
+
+<div class="flex flex-col md:flex-row md:-mx-6">
+    @foreach($posts->take(2) as $post)
+        <div class="w-full md:w-1/2 md:mx-6">
+            @include('_components.post-preview-inline')
+        </div>
+    @endforeach
+</div>
 @stop

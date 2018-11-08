@@ -1,11 +1,12 @@
 @tailwind preflight;
 @tailwind components;
 
-@import 'base';
-@import 'blog';
-
 // Code syntax highlighting,
 // powered by https://highlightjs.org
 @import '~highlightjs/styles/default';
+
+@import 'base';
+@import 'mailchimp';
+@import 'blog';
 
 @tailwind utilities;
