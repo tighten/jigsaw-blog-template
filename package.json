@@ -23,5 +23,8 @@
         "vue-router": "^3.0.1",
         "webpack-watch": "^0.2.0",
         "yargs": "^4.6.0"
+    },
+    "dependencies": {
+        "aos": "^2.3.4"
     }
 }

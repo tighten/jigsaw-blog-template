@@ -49,12 +49,15 @@
                 @include('_components.navigation-links')
             </nav>
 
-            <main role="main" class="w-full min-h-screen max-w-xl container mx-auto pt-8 px-6">
+            <main role="main" class="w-full min-h-screen max-w-xl container mx-auto pt-16 px-6">
                 @yield('body')
             </main>
         </div>
 
         <script src="{{ $page->url(mix('js/main.js')) }}"></script>
+
+        @stack('scripts')
+
         <footer class="bg-white text-center py-4 mt-12" role="contentinfo">
             <p class="text-sm">
                 &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.

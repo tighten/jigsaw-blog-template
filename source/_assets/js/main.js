@@ -1,3 +1,4 @@
+let AOS = require('aos');
 window.Vue = require('vue');
 window.hljs = require('highlightjs');
 
@@ -21,6 +22,10 @@ new Vue({
     },
 
     mounted() {
+        AOS.init({
+            once: true,
+        });
+
         document.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightBlock(block);
         });

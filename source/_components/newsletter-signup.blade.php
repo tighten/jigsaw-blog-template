@@ -1,4 +1,5 @@
-<div class="flex justify-center -mx-6 md:-mx-12 my-12 p-6 md:px-12 bg-grey-light text-sm md:rounded shadow">
+<div class="flex justify-center -mx-6 md:-mx-12 my-12 p-6 md:px-12 bg-grey-lighter border border-grey-light text-sm md:rounded shadow"
+data-aos="fade-right">
     <!-- Begin Mailchimp Signup Form -->
     <div id="mc_embed_signup">
         <form action="https://your-mail-chimp-list-manage-url" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -18,9 +19,12 @@
             </div>
         </form>
     </div>
+    <!--End mc_embed_signup-->
+</div>
+
+@push('scripts')
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>(function($) {
         window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
     </script>
-    <!--End mc_embed_signup-->
-</div>
+@endpush
