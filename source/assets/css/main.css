@@ -2153,7 +2153,14 @@ ol {
   width: 50%;
 }
 
-#mc_embed_signup_scroll > h2 {
+#mc_embed_signup div.mc-field-group > div.mce_inline_error {
+  background-color: transparent;
+  float: left;
+  font-weight: 500;
+  color: #3e4852;
+}
+
+#mc_embed_signup_scroll > h2:first-of-type {
   display: block;
   font-weight: 900;
   margin-bottom: 1.5rem;
@@ -2162,7 +2169,6 @@ ol {
 }
 
 .mc-field-group input {
-  height: 2.5rem;
   float: left;
   line-height: 1.5;
   margin-bottom: 1.5rem;
@@ -2180,15 +2186,15 @@ ol {
 }
 
 #mc-embedded-subscribe {
-  height: 2.5rem;
   background-color: #338cd6;
+  cursor: pointer;
   line-height: 1.5;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  color: #fff;
   border-radius: .25rem;
+  color: #fff;
 }
 
 @media (min-width: 768px) {
