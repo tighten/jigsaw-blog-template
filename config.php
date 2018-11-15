@@ -37,13 +37,16 @@ return [
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
     },
-    'googleSearchUrl' => function($page) {
+    'googleSearchUrl' => function ($page) {
         return 'https://www.googleapis.com/customsearch/v1' . '?' . http_build_query([
             'key' => $page->googleSearchAPIKey,
-            'cx' => $page->googleSearchEngineId
+            'cx' => $page->googleSearchEngineId,
         ]);
+    },
+    'isActive' => function ($page, $path) {
+        return ends_with(trimPath($page->getPath()), trimPath($path));
     },
     'url' => function ($page, $path) {
         return rtrim($page->baseUrl, '/') . '/' . ltrim($path, '/');
-    }
+    },
 ];

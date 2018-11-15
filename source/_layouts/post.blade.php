@@ -9,7 +9,7 @@
 
 @section('body')
     @if($page->coverImage())
-        <img src="{{ $page->coverImage() }}" alt="{{ $page->title }} cover image" class="mb-4">
+        <img src="{{ $page->coverImage() }}" alt="{{ $page->title }} cover image" class="mb-4" data-aos="zoom-in">
     @endif
 
     <h1 class="mb-2 leading-none">{{ $page->title }}</h1>

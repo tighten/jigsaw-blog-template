@@ -35,11 +35,13 @@
     @endforeach
 </div>
 
-@include('_components.newsletter-signup')
+<div data-aos="fade-right">
+    @include('_components.newsletter-signup')
+</div>
 
 <div class="flex flex-col md:flex-row md:-mx-6">
     @foreach($posts->take(2) as $post)
-        <div class="w-full md:w-1/2 md:mx-6" data-aos="fade-up">
+        <div class="w-full md:w-1/2 md:mx-6">
             @include('_components.post-preview-inline')
         </div>
     @endforeach
