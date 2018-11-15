@@ -1,30 +1,47 @@
 @extends('_layouts.master')
 
 @push('meta')
-    <meta property="og:title" content="{{ $page->blogTitle }}" />
+    <meta property="og:title" content="{{ $page->siteName }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ $page->getUrl() }}"/>
     <meta property="og:description" content="{{ $page->blogDescription }}" />
 @endpush
 
 @section('body')
-<div class="md:flex -mx-4">
-    <div class="mb-8 lg:mb-0 px-4 md:w-3/4">
-        <div class="my-6 pb-6 border-b border-light-grey">
-            <p>Welcome to my blog about Jigsaws.</p>
-            <p>Good golly, I love Jigsaws.</p>
-        </div>
+@if($featuredPost = $posts->where('featured')->first())
+    <div class="w-full pb-8 mb-4 border-b">
+        @if($featuredPost->coverImage())
+            <img src="{{ $featuredPost->coverImage() }}" alt="{{ $featuredPost->title }} cover image">
+        @endif
 
-        @foreach ($posts->slice(0, 5) as $post)
-            @include('_partials.post-preview-inline')
-        @endforeach
+        <h2 class="text-3xl">
+            <a href="{{ $page->url($featuredPost->getPath()) }}" title="Read {{ $featuredPost->title }}" class="text-black font-extrabold">
+                {{ $featuredPost->title }}
+            </a>
+        </h2>
 
-        <a href="{{ $page->url('/blog') }}">See all blog posts</a>
+        <p class="mt-0 mb-4 text-xl font-light">{!! $featuredPost->excerpt() !!}</p>
+
+        <a href="{{ $page->url($featuredPost->getPath()) }}" title="Read - {{ $featuredPost->title }}"
+            class="mb-4 text-blue uppercase font-semibold tracking-wide">Read</a>
     </div>
-    <div class="px-4 md:w-1/4">
-        <div class="flex items-center md:block text-center">
-            <!-- Side bar stuff -->
+@endif
+
+<div class="flex flex-col md:flex-row md:-mx-6">
+    @foreach($posts->take(2) as $post)
+        <div class="w-full md:w-1/2 md:mx-6">
+            @include('_components.post-preview-inline')
         </div>
-    </div>
+    @endforeach
 </div>
-@endsection
+
+@include('_components.newsletter-signup')
+
+<div class="flex flex-col md:flex-row md:-mx-6">
+    @foreach($posts->take(2) as $post)
+        <div class="w-full md:w-1/2 md:mx-6" data-aos="fade-up">
+            @include('_components.post-preview-inline')
+        </div>
+    @endforeach
+</div>
+@stop

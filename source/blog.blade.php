@@ -6,43 +6,59 @@ pagination:
 @extends('_layouts.master')
 
 @push('meta')
-    <meta property="og:title" content="{{ $page->blogTitle }} Blog" />
+    <meta property="og:title" content="{{ $page->siteName }} Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ $page->getUrl() }}"/>
-    <meta property="og:description" content="The list of blog posts for {{ $page->blogTitle }}" />
+    <meta property="og:description" content="The list of blog posts for {{ $page->siteName }}" />
 @endpush
 
 @section('body')
-<div class="md:flex -mx-4">
-    <div class="mb-8 lg:mb-0 px-4 md:w-3/4">
-        <h1 class="page-title">Blog</h1>
-        @foreach ($pagination->items as $post)
-            @include('_partials.post-preview-inline')
-        @endforeach
+    <p class="mb-4">{{ $page->siteDescription }}</p>
 
-        @if ($previous = $pagination->previous)
-            <a href="{{ $page->url($pagination->first) }}">&lt;&lt;</a>
-            <a href="{{ $page->url($previous) }}" class="mr-1">&lt;</a>
-        @else
-            <span class="text-grey mr-1">&lt;&lt; &lt;</span>
-        @endif
+    <hr class="border-b mb-4">
+<!--
+    <gcse:searchresults-only></gcse:searchresults-only> -->
 
-        @foreach ($pagination->pages as $pageNumber => $path)
-            <a href="{{ $page->url($path) }}"
-                class="{{ $pagination->currentPage == $pageNumber ? 'selected' : '' }}">{{ $pageNumber }}</a>&nbsp;
-        @endforeach
+    <search url="{{ $page->googleSearchUrl() }}"></search>
 
-        @if ($next = $pagination->next)
-            <a href="{{ $page->url($next) }}">&gt;</a>
-            <a href="{{ $page->url($pagination->last) }}">&gt;&gt;</a>
-        @else
-            <span class="text-grey">&gt; &gt;&gt;</span>
-        @endif
-    </div>
-    <div class="px-4 md:w-1/4">
-        <div class="flex items-center md:block text-center">
-            <!-- Side bar stuff -->
+    @foreach ($pagination->items as $post)
+        @include('_components.post-preview-inline')
+
+        <hr class="-mt-1 mb-2 border-b border-grey-light">
+    @endforeach
+
+    @if($pagination->pages->count() > 1)
+        <div class="flex my-8 text-base">
+            @if ($previous = $pagination->previous)
+                <a href="{{ $page->url($previous) }}" title="Previous Page"
+                    class="bg-grey-lighter hover:bg-grey-light mr-3 px-5 py-3 rounded">&LeftArrow;</a>
+            @endif
+
+            @foreach ($pagination->pages as $pageNumber => $path)
+                <a href="{{ $page->url($path) }}" title="Go to Page {{ $pageNumber }}"
+                    class="bg-grey-lighter hover:bg-grey-light mr-3 px-5 py-3 text-grey-darker hover:text-blue-dark rounded {{ $pagination->currentPage == $pageNumber ? 'text-blue-dark' : '' }}">
+                    {{ $pageNumber }}
+                </a>
+            @endforeach
+
+            @if ($next = $pagination->next)
+                <a href="{{ $page->url($next) }}" title="Next Page"
+                    class="bg-grey-lighter hover:bg-grey-light mr-3 px-5 py-3 rounded">&RightArrow;</a>
+            @endif
         </div>
-    </div>
-</div>
-@endsection
+    @endif
+@stop
+
+@push('scripts')
+<!-- <script>
+  (function() {
+    var cx = '016729959824919017994:itej59d4jlu';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> -->
+@endpush
