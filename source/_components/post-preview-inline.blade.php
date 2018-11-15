@@ -11,7 +11,7 @@
         </a>
     </h2>
 
-    <p class="mt-0 mb-4 text-xl font-light">{!! $post->excerpt() !!}</p>
+    <p class="mt-0 mb-4 font-light">{!! $post->excerpt() !!}</p>
 
     <a href="{{ $page->url($post->getPath()) }}"
         title="Read more - {{ $post->title }}"

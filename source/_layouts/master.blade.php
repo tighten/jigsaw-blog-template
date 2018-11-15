@@ -22,7 +22,8 @@
             <!-- Insert analytics code here -->
         @endif
 
-        <link rel="stylesheet" href="{{ $page->url(mix('css/main.css')) }}">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
     <body class="bg-grey-lightest text-grey-darker leading-normal text-lg font-sans font-normal">
         <div id="vue-app">
@@ -54,7 +55,7 @@
             </main>
         </div>
 
-        <script src="{{ $page->url(mix('js/main.js')) }}"></script>
+        <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
 
         @stack('scripts')
 
