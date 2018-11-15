@@ -1706,6 +1706,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: {
@@ -1734,7 +1736,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			var _this = this;
 
 			axios.get(this.searchUrl).then(function (response) {
-				_this.results = response.data.items;
+				_this.results = response.data.items.slice(0, 5);
 			});
 
 			console.log(this.results);
@@ -19090,7 +19092,7 @@ var render = function() {
           }
         ],
         staticClass:
-          "w-1/2 focus:w-3/4 px-6 py-4 bg-grey-lightest focus:bg-grey-lighter border rounded outline-none cursor-pointer transition-fast focus:shadow",
+          "w-3/4 px-6 py-4 bg-white focus:bg-grey-lighter border rounded outline-none cursor-pointer transition-fast focus:rounded-b-none",
         attrs: {
           type: "text",
           name: "search",
@@ -19120,17 +19122,23 @@ var render = function() {
       _vm.results
         ? _c(
             "div",
-            { staticClass: "flex flex-col w-3/4" },
+            { staticClass: "absolute w-3/4 mt-16 flex flex-col" },
             _vm._l(_vm.results, function(result) {
               return _c(
                 "div",
                 {
                   staticClass:
-                    "w-full px-6 py-4 bg-grey-lightest border border-t-0"
+                    "px-6 py-2 bg-grey-lightest border border-t-0 cursor-pointer hover:bg-grey-lighter transition-fast"
                 },
                 [
-                  _c("h5", { staticClass: "my-2 text-base" }, [
-                    _vm._v(_vm._s(result.title))
+                  _c(
+                    "a",
+                    { attrs: { href: result.link, title: result.title } },
+                    [_vm._v(_vm._s(result.title))]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "my-1 text-grey text-xs" }, [
+                    _vm._v(_vm._s(result.snippet))
                   ])
                 ]
               )

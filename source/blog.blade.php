@@ -16,8 +16,10 @@ pagination:
     <p class="mb-4">{{ $page->siteDescription }}</p>
 
     <hr class="border-b mb-4">
+<!--
+    <gcse:searchresults-only></gcse:searchresults-only> -->
 
-    <search url='{{ $page->googleSearchUrl() }}'></search>
+    <search url="{{ $page->googleSearchUrl() }}"></search>
 
     @foreach ($pagination->items as $post)
         @include('_components.post-preview-inline')
@@ -46,3 +48,17 @@ pagination:
         </div>
     @endif
 @stop
+
+@push('scripts')
+<!-- <script>
+  (function() {
+    var cx = '016729959824919017994:itej59d4jlu';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> -->
+@endpush

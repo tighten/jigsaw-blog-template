@@ -6,11 +6,13 @@
 			name="search"
 			placeholder="Search"
 			autocomplete="off"
-			class="w-1/2 focus:w-3/4 px-6 py-4 bg-grey-lightest focus:bg-grey-lighter border rounded outline-none cursor-pointer transition-fast focus:shadow">
+			class="w-3/4 px-6 py-4 bg-white focus:bg-grey-lighter border rounded outline-none cursor-pointer transition-fast focus:rounded-b-none">
 
-		<div v-if="results" class="flex flex-col w-3/4">
-			<div v-for="result in results" class="w-full px-6 py-4 bg-grey-lightest border border-t-0">
-				<h5 class="my-2 text-base">{{ result.title }}</h5>
+		<div v-if="results" class="absolute w-3/4 mt-16 flex flex-col">
+			<div v-for="result in results" class="px-6 py-2 bg-grey-lightest border border-t-0 cursor-pointer hover:bg-grey-lighter transition-fast">
+				<a :href="result.link" :title="result.title">{{ result.title }}</a>
+
+				<p class="my-1 text-grey text-xs">{{ result.snippet }}</p>
 			</div>
 
 
@@ -47,7 +49,7 @@ export default {
 		search() {
 			axios.get(this.searchUrl)
 		    	.then((response)  => {
-		    	this.results = response.data.items;
+		    	this.results = response.data.items.slice(0,5);
 	      	});
 
 		   console.log(this.results);
