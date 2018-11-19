@@ -11,7 +11,7 @@
 @if($featuredPost = $posts->where('featured')->first())
     <div class="w-full pb-8 mb-4 border-b">
         @if($featuredPost->coverImage())
-            <img src="{{ $featuredPost->coverImage() }}" alt="{{ $featuredPost->title }} cover image">
+            <img src="{{ $featuredPost->coverImage() }}" alt="{{ $featuredPost->title }} cover image" data-aos="zoom-out">
         @endif
 
         <h2 class="text-3xl">
