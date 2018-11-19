@@ -1,25 +1,27 @@
 <template>
-	<div class="flex flex-col my-12 items-center" data-aos="fade-left">
-		<input v-model="query"
-			@keyup.enter="search"
-			type="text"
-			name="search"
+	<div class="flex flex-col my-12 items-center" data-aos="fade-left" data-aos-easing="ease-out-back">
+		<input type="text"
+			v-model="query"
+			@keyup="search"
+			@keyup.esc="resetSearch"
 			placeholder="Search"
 			autocomplete="off"
-			class="w-3/4 px-6 py-4 bg-white focus:bg-grey-lighter border rounded outline-none cursor-pointer transition-fast focus:rounded-b-none">
+			class="w-3/4 px-6 py-4 bg-grey-lighter focus:bg-grey-lightest border focus:border-blue-light outline-none cursor-pointer transition-fast">
 
-		<div v-if="results" class="absolute w-3/4 mt-16 flex flex-col">
-			<div v-for="result in results" class="px-6 py-2 bg-grey-lightest border border-t-0 cursor-pointer hover:bg-grey-lighter transition-fast">
-				<a :href="result.link" :title="result.title">{{ result.title }}</a>
+		<div v-if="results" class="absolute w-3/4 pt-4 mt-8 pt-1 flex flex-col text-grey text-sm">
+			<div :key="result.link"
+				v-for="result in results"
+				class="px-6 py-3 bg-white border border-blue-light border-t-0 cursor-pointer hover:bg-grey-lighter transition-fast shadow">
+				<a :href="result.link" :title="result.title" class="text-xl">{{ result.title }}</a>
 
-				<p class="my-1 text-grey text-xs">{{ result.snippet }}</p>
+				<p class="my-1">{{ result.snippet }}</p>
 			</div>
 
-
+			<div v-if="(! results.length) && query != ''"
+				class="px-6 py-3 bg-white border border-blue-light border-t-0 cursor-pointer hover:bg-grey-lighter transition-fast shadow">
+				<p class="">We didn't find anything for <span class="p-2 bg-grey-lightest font-bold">{{ query }}</span>. Please try searching again.</p>
+			</div>
 		</div>
-	<!-- 	<div v-else="!results && query != ''" class="flex flex-col w-3/4">
-			<h5>We didn't find anything for <span>query</span>. Please try again</h5>
-		</div> -->
 	</div>
 </template>
 
@@ -28,7 +30,7 @@ export default {
 	data() {
 		return {
 			query: '',
-			results : null,
+			results : [],
 			searchIndex : [],
 		}
 	},
@@ -44,7 +46,12 @@ export default {
 
 	methods: {
 		search() {
-			this.results = this.fuse.search(this.query);
+			this.results = this.query != '' ? this.fuse.search(this.query) : [];
+		},
+
+		resetSearch() {
+			this.results = [];
+			this.query = '';
 		}
 	},
 

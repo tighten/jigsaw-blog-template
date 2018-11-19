@@ -12,7 +12,7 @@ class GenerateIndex
             return [
                 'title' => $page->title,
                 'categories' => $page->categories ? implode(', ', $page->categories) : '',
-                'link' => $jigsaw->getConfig('baseUrl') . $page->getPath(),
+                'link' => rtrim($jigsaw->getConfig('baseUrl'), '/') . $page->getPath(),
                 'snippet' => $page->excerpt(),
             ];
         })->values();
