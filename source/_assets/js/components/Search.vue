@@ -25,35 +25,33 @@
 
 <script type="text/javascript">
 export default {
-	props: {
-		url: {
-			type: String,
-			required: true
-		}
-	},
-
 	data() {
 		return {
-			query : '',
+			query: '',
 			results : null,
+			searchIndex : [],
 		}
 	},
 
 	computed: {
-		searchUrl() {
-			return this.url + '&q=' + this.query;
+		fuse() {
+			return new fuse(this.searchIndex, {
+				minMatchCharLength: 6,
+				keys: ['title', 'snippet', 'categories']
+			});
 		}
 	},
 
 	methods: {
 		search() {
-			axios.get(this.searchUrl)
-		    	.then((response)  => {
-		    	this.results = response.data.items.slice(0,5);
-	      	});
-
-		   console.log(this.results);
+			this.results = this.fuse.search(this.query);
 		}
+	},
+
+	mounted() {
+		axios('/index.json').then(response => {
+			this.searchIndex = response.data[0];
+		})
 	}
 }
 </script>
