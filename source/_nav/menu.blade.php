@@ -1,6 +1,8 @@
-<nav class="hidden lg:flex w-1/3 justify-end text-base font-semibold lg:justify-around">
+<nav class="hidden lg:flex w-1/3 justify-end lg:justify-around text-base font-semibold">
     <a title="{{ $page->siteName }} Home" href="/"
-        class="mr-6 text-grey hover:text-blue-darkest lg:mr-0" >Home</a>
+        class="mr-6 text-grey hover:text-blue-darkest lg:mr-0">
+        Home
+    </a>
 
     <a title="{{ $page->siteName }} Blog" href="/blog"
         class="mr-6 text-grey hover:text-blue-darkest lg:mr-0 {{ $page->isActive('/blog') ? 'active text-blue' : '' }}">
