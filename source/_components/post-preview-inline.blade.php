@@ -1,9 +1,9 @@
 <div class="flex flex-col mb-4">
-    <p class="-mb-4 text-grey font-medium">
+    <p class="text-grey-dark font-medium my-2">
         {{ $post->getDate()->format('F j, Y') }}
     </p>
 
-    <h2 class="text-3xl">
+    <h2 class="text-3xl mt-0">
         <a href="{{ $page->url($post->getPath()) }}"
             title="Read more - {{ $post->title }}"
             class="text-black font-extrabold">
@@ -11,7 +11,7 @@
         </a>
     </h2>
 
-    <p class="mt-0 mb-4 text-xl font-light">{!! $post->excerpt() !!}</p>
+    <p class="mt-0 mb-4 font-light">{!! $post->excerpt() !!}</p>
 
     <a href="{{ $page->url($post->getPath()) }}"
         title="Read more - {{ $post->title }}"

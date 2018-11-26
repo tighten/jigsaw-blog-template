@@ -2,11 +2,11 @@
 @tailwind components;
 
 // Code syntax highlighting,
-// powered by https://highlightjs.org
+// https://highlightjs.org
 @import '~highlightjs/styles/default';
-@import '~aos/dist/aos';
 
 @import 'base';
+@import 'navigation';
 @import 'mailchimp';
 @import 'blog';
 
