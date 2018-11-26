@@ -11,14 +11,12 @@ class GenerateIndex
         $data = collect($jigsaw->getCollection('posts')->map(function ($page) use ($jigsaw) {
             return [
                 'title' => $page->title,
-                'categories' => $page->categories ? implode(', ', $page->categories) : '',
-                'link' => rtrim($jigsaw->getConfig('baseUrl'), '/') . $page->getPath(),
+                'categories' => $page->categories,
+                'link' => rightTrimPath($jigsaw->getConfig('baseUrl')) . $page->getPath(),
                 'snippet' => $page->excerpt(),
             ];
         })->values());
 
-        $index = fopen($jigsaw->getDestinationPath() . '/index.json', 'w');
-        fwrite($index, json_encode($data));
-        fclose($index);
+        file_put_contents($jigsaw->getDestinationPath() . '/index.json', json_encode($data));
     }
 }
