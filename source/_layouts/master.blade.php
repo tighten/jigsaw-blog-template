@@ -22,7 +22,8 @@
             <!-- Insert analytics code here -->
         @endif
 
-        <link rel="stylesheet" href="{{ $page->url(mix('css/main.css')) }}">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+        <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
     <body class="bg-grey-lightest text-grey-darker leading-normal text-lg font-sans font-normal">
         <div id="vue-app">
@@ -32,31 +33,30 @@
                         <a href="{{ $page->url('/') }}" title="{{ $page->siteName }} home" class="inline-flex items-center mr-3 font-bold">
                             <img class="h-8" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
                         </a>
-                        <h1 class="my-0 font-normal text-xl"><a href="/" title="Home" class="text-blue-darker">{{ $page->siteName }}</a></h1>
+
+                        <h3 class="my-0 text-xl">
+                            <a href="/" title="Home" class="text-2xl text-blue-darker">{{ $page->siteName }}</a>
+                        </h3>
                     </div>
 
                     <div class="flex flex-1 justify-end items-center">
-                        <nav class="hidden md:flex w-1/3 justify-end text-base font-semibold lg:justify-around">
-                            @include('_components.navigation-links')
-                        </nav>
+                        @include('_nav.menu')
 
-                        <navigation-toggle></navigation-toggle>
+                        @include('_nav.menu-toggle')
                     </div>
                 </div>
             </header>
 
-            <nav class="hidden md:hidden flex-col bg-grey-lighter p-6" :class="{ flex:  displayMobileNav }">
-                @include('_components.navigation-links')
-            </nav>
+            @include('_nav.menu-responsive')
 
             <main role="main" class="w-full min-h-screen max-w-xl container mx-auto pt-16 px-6">
                 @yield('body')
             </main>
         </div>
 
-        <script src="{{ $page->url(mix('js/main.js')) }}"></script>
+        <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
 
-        @stack('scripts')
+        @yield('scripts')
 
         <footer class="bg-white text-center py-4 mt-12" role="contentinfo">
             <p class="text-sm">
