@@ -9,6 +9,7 @@
             placeholder="Search"
             type="text"
             @keyup.esc="reset"
+            @blur="reset"
         >
 
         <div v-if="query" class="flex flex-col w-3/4 pt-4 -mt-4">
@@ -47,7 +48,7 @@ export default {
     },
     methods: {
         reset() {
-            this.query = '';
+            setTimeout(() => this.query = '', 100);
         },
     },
     created() {
