@@ -16,10 +16,6 @@ pagination:
     <p class="mb-4">{{ $page->siteDescription }}</p>
 
     <hr class="border-b mb-4">
-<!--
-    <gcse:searchresults-only></gcse:searchresults-only> -->
-
-    <search url="{{ $page->googleSearchUrl() }}"></search>
 
     @foreach ($pagination->items as $post)
         @include('_components.post-preview-inline')
