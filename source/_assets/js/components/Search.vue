@@ -57,7 +57,7 @@ export default {
 
 	mounted() {
 		axios('/index.json').then(response => {
-			this.searchIndex = response.data[0];
+			this.searchIndex = response.data;
 		})
 	}
 }
