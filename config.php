@@ -1,21 +1,16 @@
 <?php
 
 return [
-    'siteName' => 'Jigsaw Blog',
+    'siteName' => 'Blog Skeleton',
     'siteDescription' => 'Generate an elegant blog with Jigsaw',
     'title' => 'Blog powered by Jigsaw',
     'baseUrl' => 'http://jigsaw-blog-skeleton.test/',
-    'googleSearchAPIKey' => '',
-    'googleSearchEngineId' => '',
     'production' => false,
     'collections' => [
         'posts' => [
             'author' => 'Author Name', // Default author if not provided in given post
             'sort' => '-date',
             'path' => 'blog/{filename}',
-            'coverImage' => function ($page) {
-                return $page->cover_image ?? null;
-            },
             'excerpt' => function ($page, $characters = 150) {
                 return substr(strip_tags($page->getContent()), 0, $characters);
             },

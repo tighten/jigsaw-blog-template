@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col my-12 items-center" data-aos="fade-left">
+	<div class="flex flex-col my-12 items-center">
 		<input v-model="query"
 			@keyup.enter="search"
 			type="text"

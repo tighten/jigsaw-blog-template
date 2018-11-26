@@ -10,8 +10,8 @@
 @section('body')
 @if($featuredPost = $posts->where('featured')->first())
     <div class="w-full pb-8 mb-4 border-b">
-        @if($featuredPost->coverImage())
-            <img src="{{ $featuredPost->coverImage() }}" alt="{{ $featuredPost->title }} cover image" data-aos="zoom-out">
+        @if($featuredPost->cover_image)
+            <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image">
         @endif
 
         <h2 class="text-3xl">
@@ -35,9 +35,7 @@
     @endforeach
 </div>
 
-<div data-aos="fade-right">
-    @include('_components.newsletter-signup')
-</div>
+@include('_components.newsletter-signup')
 
 <div class="flex flex-col md:flex-row md:-mx-6">
     @foreach($posts->take(2) as $post)
