@@ -16,9 +16,7 @@
             v-if="query"
             class="flex justify-end w-3/4 text-grey-darker appearance-none -mt-10 mb-4 mr-10 "
             @click="reset"
-        >
-            x
-        </button>
+        >x</button>
 
         <div v-if="query" class="flex flex-col w-3/4 pt-4 -mt-4">
             <div
