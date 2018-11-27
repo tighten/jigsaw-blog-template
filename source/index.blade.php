@@ -9,7 +9,7 @@
 
 @section('body')
 @if($featuredPost = $posts->where('featured')->first())
-    <div class="w-full pb-8 mb-4 border-b">
+    <div class="w-full border-b mb-4 pb-8">
         @if($featuredPost->cover_image)
             <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image">
         @endif
@@ -20,7 +20,7 @@
             </a>
         </h2>
 
-        <p class="mt-0 mb-4 font-light">{!! $featuredPost->excerpt() !!}</p>
+        <p class="font-light mt-0 mb-4">{!! $featuredPost->excerpt() !!}</p>
 
         <a href="{{ $page->url($featuredPost->getPath()) }}" title="Read - {{ $featuredPost->title }}"
             class="mb-4 text-blue uppercase font-semibold tracking-wide">Read</a>

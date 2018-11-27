@@ -8,15 +8,15 @@
 @endpush
 
 @section('body')
-    <h1 class="mb-4">{{ $page->title }}</h1>
+    <h1>{{ $page->title }}</h1>
 
-    <div class="pb-4 mb-16 border-b">
+    <div class="border-b mb-8 pb-4">
         @yield('content')
     </div>
-
-    @include('_components.newsletter-signup')
 
     @foreach ($page->posts($posts) as $post)
         @include('_components.post-preview-inline')
     @endforeach
+
+    @include('_components.newsletter-signup')
 @stop
