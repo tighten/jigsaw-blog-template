@@ -61,6 +61,9 @@
         <footer class="bg-white text-center text-xs py-4 mt-12" role="contentinfo">
             <p>
                 &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
+
+                <br class="lg:hidden">
+
                 Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
                 and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
             </p>
