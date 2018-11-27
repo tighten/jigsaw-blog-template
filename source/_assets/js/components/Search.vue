@@ -14,20 +14,23 @@
 
         <button
             v-if="query"
-            class="flex justify-end w-3/4 text-grey-darker appearance-none -mt-10 mr-10 mb-4"
+            class="flex justify-end w-3/4 text-grey-darker appearance-none active:border-0 -mt-10 mr-10 mb-4"
             @click="reset"
         >x</button>
 
         <div v-if="query" class="flex flex-col w-3/4 -mt-4 pt-4">
-            <div
+            <a
                 v-for="result in results"
-                class="bg-white hover:bg-grey-lighter border border-blue-light border-t-0 cursor-pointer shadow transition-fast px-6 py-3"
+                :href="result.link"
+                :title="result.title"
+                class="bg-white hover:bg-grey-lighter border border-blue-light border-t-0 text-xl cursor-pointer shadow transition-fast px-6 py-3"
                 :key="result.link"
+                @mousedown.prevent
             >
-                <a :href="result.link" :title="result.title" class="text-xl">{{ result.title }}</a>
+                {{ result.title }}
 
-                <p class="text-grey-dark text-sm my-1">{{ result.snippet }}</p>
-            </div>
+                <span class="block text-grey-dark text-sm my-1">{{ result.snippet }}</span>
+            </a>
 
             <div
                 v-if="! results.length"
@@ -54,7 +57,7 @@ export default {
     },
     methods: {
         reset() {
-            setTimeout(() => this.query = '', 100);
+            this.query = '';
         },
     },
     created() {
