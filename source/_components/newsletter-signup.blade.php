@@ -18,7 +18,7 @@
             </div>
         </form>
     </div>
-    <!--End mc_embed_signup-->
+    <!--End Mailchimp Signup Form -->
 </div>
 
 @push('scripts')

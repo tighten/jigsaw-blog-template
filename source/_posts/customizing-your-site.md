@@ -1,10 +1,10 @@
 ---
 extends: _layouts.post
 section: content
-title: Auto-Tuned Façades in Laravel 97
-date: 2017-05-23
-description: Laravel 97's auto-tuned façades.
-categories: [laravel, profundity]
+title: Customizing Your Site
+date: 2018-12-24
+description: Customize your site with CSS and JS
+categories: [configuration]
 cover_image: /assets/img/post-cover-image.svg
 ---
 
