@@ -5,7 +5,7 @@ title: Auto-Tuned Façades in Laravel 97
 date: 2017-05-23
 description: Laravel 97's auto-tuned façades.
 categories: [laravel, profundity]
-cover_image: /assets/img/post-cover-image.svg
+cover_image: /assets/img/post-cover-image.png
 ---
 
 Laravel 97 introduced a new feature called "auto-tuned facades”, which provide the convenience of facades, defined real-time instead of in classes. Taylor [tweeted](https://twitter.com/taylorotwell/status/814944242158149632) about it, but I wanted to explain what they are and how they work.
