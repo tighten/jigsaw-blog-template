@@ -9,9 +9,9 @@ categories: [feature]
 featured: true
 ---
 
-To provide fast local search, this skeleton comes with a Vue.js component that uses Fuse.js. [FuseJS](http://fusejs.io/) is a lightweight fuzzy-search library with _no_ dependencies. It works by running queries against a JSON index. 
+To provide fast local search, the Jigsaw Blog skeleton comes with a pre-built Vue.js component that uses Fuse.js. [Fuse.js](http://fusejs.io/) is a "lightweight fuzzy-search library with _no_ dependencies." It works by running queries against a JSON index. 
 
-During the build process, the skeleton automatically builds an `index.json` file with the content from `source/_posts`. The `Search.vue` component consumes this index, and uses the input for querying. 
+During the [build process](http://jigsaw.tighten.co/docs/building-and-previewing/), a `index.json` file is generated in the build directory, with the content from `source/_posts`. The `Search.vue` component then consumes this index file, and uses the search input for querying. 
 
 There's no configuration, just search results.
 

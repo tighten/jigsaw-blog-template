@@ -8,12 +8,13 @@ description: Mailchimp newsletter signups, just add a url.
 featured: true
 ---
 
-When it comes to marketing platforms, few are better than Mailchimp. Mailchimp takes the pain out of managing email lists and campaigns. The Blog skeleton comes with a beautiful pre-built newsletter form, that only needs a Mailchimp list URL to send to. 
+[Mailchimp](https://mailchimp.com/) is a fantastic marketing platform, and takes the pain out of managing email lists and campaigns. The Blog skeleton comes with a beautiful pre-built newsletter form, that only needs a Mailchimp list URL to send to. 
 
-To begin accepting subscribers, simply add your list URL to the form `action` in the `newsletter-signup.blade.php` file.
+To begin accepting subscribers, simply add your list URL to the form `action` in the `source/_components/newsletter-signup.blade.php` file.
 
 ```html
 <!-- source/_components/newsletter-signup.blade.php -->
+
 <div id="mc_embed_signup">
     <form action="https://your-mail-chimp-list-manage-url" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
         <div id="mc_embed_signup_scroll">
@@ -33,5 +34,9 @@ To begin accepting subscribers, simply add your list URL to the form `action` in
     </form>
 </div>
 ```
+
+### Example
+
+<img src="/assets/img/newsletter.png">
 
 [See how to get your Mailchimp list URL](https://mailchimp.com/help/host-your-own-signup-forms/#Edit_your_Custom_Signup_Form)
