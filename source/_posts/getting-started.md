@@ -8,7 +8,7 @@ cover_image: /assets/img/post-cover-image.svg
 featured: true
 ---
 
-This template is a front-end theme for your Jigsaw projects, giving you a starting point for creating a beautiful blog. Getting started is easy and only requires minimal configuration.
+This skeleton is a front-end theme for your Jigsaw projects, giving you a starting point for creating a beautiful blog. Getting started is easy and only requires minimal configuration.
 
 ## Configuration
 
@@ -39,11 +39,12 @@ The top of every content page contains a YAML header that specifies how it shoul
 extends: _layouts.post
 section: content
 title: Getting Started
-description: Getting started with the Jigsaw Blog theme
+date: 2018-12-25
+description: Getting started with the Jigsaw Blog skeleton
+cover_image: /assets/img/post-cover-image.svg
+featured: true
 ---
 ```
-
-[Read more about adding post metadata.](/blog/post-metadata)
 
 ---
 

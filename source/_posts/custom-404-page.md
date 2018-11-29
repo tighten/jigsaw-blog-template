@@ -11,6 +11,7 @@ This skeleton includes a custom __404 Not Found__ error page, located at `/sourc
 
 ```html
 <!-- source/404.blade.php -->
+
 @extends('_layouts.master')
 
 @section('body')
