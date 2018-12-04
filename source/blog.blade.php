@@ -13,33 +13,40 @@ pagination:
 @endpush
 
 @section('body')
-    <p class="mb-4">{{ $page->siteDescription }}</p>
+    <h1>Blog</h1>
 
-    <hr class="border-b mb-4">
+    <hr class="border-b my-6">
 
     @foreach ($pagination->items as $post)
         @include('_components.post-preview-inline')
 
-        <hr class="-mt-1 mb-2 border-b border-grey-light">
+        <hr class="border-b my-6">
     @endforeach
 
-    @if($pagination->pages->count() > 1)
-        <div class="flex my-8 text-base">
+    @if ($pagination->pages->count() > 1)
+        <div class="flex text-base my-8">
             @if ($previous = $pagination->previous)
-                <a href="{{ $page->url($previous) }}" title="Previous Page"
-                    class="bg-grey-lighter hover:bg-grey-light mr-3 px-5 py-3 rounded">&LeftArrow;</a>
+                <a
+                    href="{{ $page->url($previous) }}"
+                    title="Previous Page"
+                    class="bg-grey-lighter hover:bg-grey-light rounded mr-3 px-5 py-3"
+                >&LeftArrow;</a>
             @endif
 
             @foreach ($pagination->pages as $pageNumber => $path)
-                <a href="{{ $page->url($path) }}" title="Go to Page {{ $pageNumber }}"
-                    class="bg-grey-lighter hover:bg-grey-light mr-3 px-5 py-3 text-grey-darker hover:text-blue-dark rounded {{ $pagination->currentPage == $pageNumber ? 'text-blue-dark' : '' }}">
-                    {{ $pageNumber }}
-                </a>
+                <a
+                    href="{{ $page->url($path) }}"
+                    title="Go to Page {{ $pageNumber }}"
+                    class="bg-grey-lighter hover:bg-grey-light text-grey-darker hover:text-blue-dark rounded mr-3 px-5 py-3 {{ $pagination->currentPage == $pageNumber ? 'text-blue-dark' : '' }}"
+                >{{ $pageNumber }}</a>
             @endforeach
 
             @if ($next = $pagination->next)
-                <a href="{{ $page->url($next) }}" title="Next Page"
-                    class="bg-grey-lighter hover:bg-grey-light mr-3 px-5 py-3 rounded">&RightArrow;</a>
+                <a
+                    href="{{ $page->url($next) }}"
+                    title="Next Page"
+                    class="bg-grey-lighter hover:bg-grey-light rounded mr-3 px-5 py-3"
+                >&RightArrow;</a>
             @endif
         </div>
     @endif

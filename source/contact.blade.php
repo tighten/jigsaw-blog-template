@@ -5,10 +5,10 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ $page->getUrl() }}"/>
     <meta property="og:description" content="Get in touch with {{ $page->siteName }}" />
-    @endpush
+@endpush
 
 @section('body')
-<h1 class="mb-6">Contact</h1>
+<h1>Contact</h1>
 
 <p class="mb-8">
     Static sites are unable to handle form submissions. Services, like Tighten's <a href="https://fieldgoal.io" title="FieldGoal">FieldGoal</a>,
@@ -17,13 +17,18 @@
 
 <form action="https://fieldgoal.io/" class="mb-12">
     <div class="flex flex-wrap mb-6 -mx-3">
-        <div class="w-full px-3 mb-6 md:mb-0 md:w-1/2">
+        <div class="w-full md:w-1/2 mb-6 md:mb-0 px-3">
             <label class="block mb-2 text-grey-darkest text-sm font-semibold" for="contact-name">
                 Name
             </label>
 
-            <input type="text" id="contact-name" placeholder="Jane Doe"
-                class="block w-full mb-2 p-4 border shadow rounded-lg outline-none">
+            <input
+                type="text"
+                id="contact-name"
+                placeholder="Jane Doe"
+                name="name"
+                class="block w-full border shadow rounded-lg outline-none mb-2 p-4"
+            >
         </div>
 
         <div class="w-full px-3 md:w-1/2">
@@ -31,25 +36,36 @@
                 Email Address
             </label>
 
-            <input type="text" id="contact-email"  placeholder="email@domain.com"
-                class="block w-full mb-2 p-4 border shadow rounded-lg outline-none">
+            <input
+                type="text"
+                id="contact-email"
+                placeholder="email@domain.com"
+                name="email"
+                class="block w-full border shadow rounded-lg outline-none mb-2 p-4"
+            >
         </div>
     </div>
 
-    <div class="w-full">
+    <div class="w-full mb-12">
         <label class="block text-grey-darkest text-sm font-semibold mb-2" for="contact-message">
             Message
         </label>
 
-        <textarea id="contact-message" rows="4"
-            class="block w-full mb-2 px-4 py-6 border shadow rounded-lg outline-none appearance-none" placeholder="A lovely message here."></textarea>
+        <textarea
+            id="contact-message"
+            rows="4"
+            name="message"
+            class="block w-full border shadow rounded-lg outline-none appearance-none mb-2 px-4 py-6"
+            placeholder="A lovely message here."
+        ></textarea>
     </div>
 
-    <hr class="my-8">
-
     <div class="flex justify-end w-full">
-        <input type="submit" id="contact-submit" value="Submit"
-            class="block px-8 py-4 bg-blue-light hover:bg-blue-dark text-white text-sm font-semibold tracking-wide uppercase shadow rounded-lg cursor-pointer transition">
+        <input
+            type="submit"
+            value="Submit"
+            class="block bg-blue hover:bg-blue-dark text-white text-sm font-semibold tracking-wide uppercase shadow rounded-lg cursor-pointer transition px-8 py-4"
+        >
     </div>
 </form>
 @stop

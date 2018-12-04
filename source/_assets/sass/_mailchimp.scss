@@ -1,5 +1,9 @@
 #mc_embed_signup {
-    @apply .w-1/2;
+    @apply .w-full;
+
+    @screen md {
+        @apply .w-1/2;
+    }
 
     // increase selector specificity for
     // in-line errors

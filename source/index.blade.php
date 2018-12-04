@@ -8,9 +8,9 @@
 @endpush
 
 @section('body')
-@if($featuredPost = $posts->where('featured')->first())
-    <div class="w-full pb-8 mb-4 border-b">
-        @if($featuredPost->cover_image)
+@if ($featuredPost = $posts->where('featured')->first())
+    <div class="w-full border-b border-blue-lighter mb-6 pb-8">
+        @if ($featuredPost->cover_image)
             <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image">
         @endif
 
@@ -20,7 +20,7 @@
             </a>
         </h2>
 
-        <p class="mt-0 mb-4 font-light">{!! $featuredPost->excerpt() !!}</p>
+        <p class="font-light mt-0 mb-4">{!! $featuredPost->excerpt() !!}</p>
 
         <a href="{{ $page->url($featuredPost->getPath()) }}" title="Read - {{ $featuredPost->title }}"
             class="mb-4 text-blue uppercase font-semibold tracking-wide">Read</a>
@@ -28,7 +28,7 @@
 @endif
 
 <div class="flex flex-col md:flex-row md:-mx-6">
-    @foreach($posts->take(2) as $post)
+    @foreach ($posts->take(2) as $post)
         <div class="w-full md:w-1/2 md:mx-6">
             @include('_components.post-preview-inline')
         </div>
@@ -38,7 +38,7 @@
 @include('_components.newsletter-signup')
 
 <div class="flex flex-col md:flex-row md:-mx-6">
-    @foreach($posts->take(2) as $post)
+    @foreach ($posts->take(2) as $post)
         <div class="w-full md:w-1/2 md:mx-6">
             @include('_components.post-preview-inline')
         </div>

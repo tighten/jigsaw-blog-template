@@ -3,7 +3,7 @@
     <div id="mc_embed_signup">
         <form action="https://your-mail-chimp-list-manage-url" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
-                <h2>Sign up for our weekly newsletter</h2>
+                <h2>Sign up to our newsletter</h2>
                 <div class="mc-field-group">
                     <label for="mce-EMAIL">Email Address </label>
                     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address">
@@ -22,8 +22,8 @@
 </div>
 
 @push('scripts')
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-    <script type='text/javascript'>(function($) {
+    <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script>(function($) {
         window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
     </script>
 @endpush
