@@ -2,7 +2,7 @@
     <div class="relative flex flex-col w-full items-end mr-4">
         <input
             v-model="query"
-            class="w-1/2 focus:w-3/4 bg-grey-lighter focus:bg-grey-lightest border border-grey focus:border-blue-light rounded-full outline-none cursor-pointer transition-fast px-6 py-2"
+            class="w-1/2 focus:w-3/4 bg-grey-lighter focus:bg-grey-lightest border border-grey focus:border-blue-light rounded-full outline-none cursor-pointer transition-fast px-4 py-2"
             :class="{ 'bg-grey-lightest border-blue-light': query }"
             autocomplete="off"
             name="search"
@@ -70,3 +70,13 @@ export default {
     },
 };
 </script>
+
+<style>
+input {
+    background: url('/assets/img/magnifying-glass.svg');
+    background-position: 0.8em;
+    background-repeat: no-repeat;
+    text-indent: 1.2em;
+}
+
+</style>
