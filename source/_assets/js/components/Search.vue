@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style>
-input {
+input[name='search'] {
     background: url('/assets/img/magnifying-glass.svg');
     background-position: 0.8em;
     background-repeat: no-repeat;
