@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <div class="w-full">
+    <div class="w-full mb-12">
         <label class="block text-grey-darkest text-sm font-semibold mb-2" for="contact-message">
             Message
         </label>
@@ -60,13 +60,11 @@
         ></textarea>
     </div>
 
-    <hr class="my-8">
-
     <div class="flex justify-end w-full">
         <input
             type="submit"
             value="Submit"
-            class="block bg-blue-light hover:bg-blue-dark text-white text-sm font-semibold tracking-wide uppercase shadow rounded-lg cursor-pointer transition px-8 py-4"
+            class="block bg-blue hover:bg-blue-dark text-white text-sm font-semibold tracking-wide uppercase shadow rounded-lg cursor-pointer transition px-8 py-4"
         >
     </div>
 </form>

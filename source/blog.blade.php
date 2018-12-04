@@ -13,14 +13,14 @@ pagination:
 @endpush
 
 @section('body')
-    <p class="mb-4">{{ $page->siteDescription }}</p>
+    <h1>Blog</h1>
 
-    <hr class="border-b mb-8">
+    <hr class="border-b my-6">
 
     @foreach ($pagination->items as $post)
         @include('_components.post-preview-inline')
 
-        <hr class="border-b -mt-1 mb-2">
+        <hr class="border-b my-6">
     @endforeach
 
     @if ($pagination->pages->count() > 1)

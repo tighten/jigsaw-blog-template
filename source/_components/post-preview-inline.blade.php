@@ -16,6 +16,6 @@
     <a
         href="{{ $page->url($post->getPath()) }}"
         title="Read more - {{ $post->title }}"
-        class="mb-4 text-blue uppercase font-semibold tracking-wide"
+        class="mb-2 text-blue uppercase font-semibold tracking-wide"
     >Read</a>
 </div>

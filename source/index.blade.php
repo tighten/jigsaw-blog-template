@@ -8,9 +8,9 @@
 @endpush
 
 @section('body')
-@if($featuredPost = $posts->where('featured')->first())
-    <div class="w-full border-b mb-4 pb-8">
-        @if($featuredPost->cover_image)
+@if ($featuredPost = $posts->where('featured')->first())
+    <div class="w-full border-b border-blue-lighter mb-6 pb-8">
+        @if ($featuredPost->cover_image)
             <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image">
         @endif
 
@@ -28,7 +28,7 @@
 @endif
 
 <div class="flex flex-col md:flex-row md:-mx-6">
-    @foreach($posts->take(2) as $post)
+    @foreach ($posts->take(2) as $post)
         <div class="w-full md:w-1/2 md:mx-6">
             @include('_components.post-preview-inline')
         </div>
@@ -38,7 +38,7 @@
 @include('_components.newsletter-signup')
 
 <div class="flex flex-col md:flex-row md:-mx-6">
-    @foreach($posts->take(2) as $post)
+    @foreach ($posts->take(2) as $post)
         <div class="w-full md:w-1/2 md:mx-6">
             @include('_components.post-preview-inline')
         </div>

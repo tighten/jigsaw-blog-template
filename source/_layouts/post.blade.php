@@ -14,19 +14,19 @@
 
     <h1 class="mb-2 leading-none">{{ $page->title }}</h1>
 
-    <p class="text-grey font-semibold text-lg">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
+    <p class="text-grey-dark text-xl">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
 
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)
             <a
                 href="{{ $page->url('/blog/categories/' . $category) }}"
                 title="View posts in {{ $category }}"
-                class="bg-grey-lighter border border-grey-light tracking-wide text-blue-darker uppercase text-xs font-semibold rounded-lg mr-4 px-3 py-1"
+                class="inline-block bg-blue-lighter leading-loose tracking-wide text-blue-darker uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
             >{{ $category }}</a>
         @endforeach
     @endif
 
-    <div class="border-b mb-10 py-4" v-pre>
+    <div class="border-b border-blue-lighter mb-10 py-4" v-pre>
         @yield('content')
     </div>
 
