@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col w-full items-end mr-4">
+    <div class="relative flex flex-col w-full items-end mr-4">
         <input
             v-model="query"
             class="w-1/2 focus:w-3/4 bg-grey-lighter focus:bg-grey-lightest border border-grey focus:border-blue-light rounded-full outline-none cursor-pointer transition-fast px-6 py-2"
@@ -14,11 +14,11 @@
 
         <button
             v-if="query"
-            class="flex justify-end w-3/4 text-grey-darker appearance-none active:border-0 -mt-8 mr-10"
+            class="flex justify-end text-blue-darker appearance-none active:border-0 -mt-8 mr-10"
             @click="reset"
         >x</button>
 
-        <div v-if="query" class="absolute w-1/2 flex flex-col mt-8 pt-4">
+        <div v-if="query" class="absolute flex flex-col z-9 w-3/4 mt-8 pt-4">
             <a
                 v-for="result in results"
                 :href="result.link"
