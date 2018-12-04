@@ -4,7 +4,7 @@ section: content
 title: Getting Started
 date: 2018-12-25
 description: Getting started with the Jigsaw Blog skeleton
-cover_image: /assets/img/post-cover-image.svg
+cover_image: /assets/img/post-cover-image-2.png
 featured: true
 ---
 
@@ -41,7 +41,7 @@ section: content
 title: Getting Started
 date: 2018-12-25
 description: Getting started with the Jigsaw Blog skeleton
-cover_image: /assets/img/post-cover-image.svg
+cover_image: /assets/img/post-cover-image-2.png
 featured: true
 ---
 ```

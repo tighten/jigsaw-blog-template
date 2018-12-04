@@ -27,19 +27,25 @@
     </head>
     <body class="bg-grey-lightest text-grey-darker leading-normal text-lg font-sans font-normal">
         <div id="vue-app">
-            <header class="bg-white border-b py-4 flex shadow-lg" role="banner">
-                <div class="container max-w-4xl flex mx-auto px-6 py-2">
+            <header class="bg-white border-b flex shadow-lg py-4" role="banner">
+                <div class="flex container max-w-4xl mx-auto px-6 py-2">
                     <div class="flex items-center">
-                        <a href="{{ $page->url('/') }}" title="{{ $page->siteName }} home" class="inline-flex items-center mr-3 font-bold">
+                        <a
+                            href="{{ $page->url('/') }}"
+                            title="{{ $page->siteName }} home"
+                            class="inline-flex items-center font-bold mr-3"
+                        >
                             <img class="h-8" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
                         </a>
 
-                        <h3 class="my-0 text-xl">
+                        <h3 class="text-xl my-0">
                             <a href="/" title="Home" class="text-2xl text-blue-darker">{{ $page->siteName }}</a>
                         </h3>
                     </div>
 
                     <div class="flex flex-1 justify-end items-center">
+
+                        <search></search>
                         @include('_nav.menu')
 
                         @include('_nav.menu-toggle')
@@ -49,7 +55,7 @@
 
             @include('_nav.menu-responsive')
 
-            <main role="main" class="w-full min-h-screen max-w-xl container mx-auto pt-16 px-6">
+            <main role="main" class="w-full min-h-screen container max-w-xl mx-auto pt-16 px-6">
                 @yield('body')
             </main>
         </div>
@@ -58,9 +64,12 @@
 
         @yield('scripts')
 
-        <footer class="bg-white text-center text-xs py-4 mt-12" role="contentinfo">
+        <footer class="bg-white text-center text-xs mt-12 py-4" role="contentinfo">
             <p>
                 &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
+
+                <br class="md:hidden">
+
                 Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
                 and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
             </p>
