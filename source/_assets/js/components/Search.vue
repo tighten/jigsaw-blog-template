@@ -78,5 +78,4 @@ input[name='search'] {
     background-repeat: no-repeat;
     text-indent: 1.2em;
 }
-
 </style>
