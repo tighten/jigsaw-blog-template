@@ -1,59 +1,72 @@
 <template>
-	<div class="flex flex-col my-12 items-center">
-		<input v-model="query"
-			@keyup.enter="search"
-			type="text"
-			name="search"
-			placeholder="Search"
-			autocomplete="off"
-			class="w-3/4 px-6 py-4 bg-white focus:bg-grey-lighter border rounded outline-none cursor-pointer transition-fast focus:rounded-b-none">
+    <div class="flex flex-col w-full items-end mr-4">
+        <input
+            v-model="query"
+            class="w-1/2 focus:w-3/4 bg-grey-lighter focus:bg-grey-lightest border border-grey focus:border-blue-light rounded-full outline-none cursor-pointer transition-fast px-6 py-2"
+            :class="{ 'bg-grey-lightest border-blue-light': query }"
+            autocomplete="off"
+            name="search"
+            placeholder="Search"
+            type="text"
+            @keyup.esc="reset"
+            @blur="reset"
+        >
 
-		<div v-if="results" class="absolute w-3/4 mt-16 flex flex-col">
-			<div v-for="result in results" class="px-6 py-2 bg-grey-lightest border border-t-0 cursor-pointer hover:bg-grey-lighter transition-fast">
-				<a :href="result.link" :title="result.title">{{ result.title }}</a>
+        <button
+            v-if="query"
+            class="flex justify-end w-3/4 text-grey-darker appearance-none active:border-0 -mt-8 mr-10"
+            @click="reset"
+        >x</button>
 
-				<p class="my-1 text-grey text-xs">{{ result.snippet }}</p>
-			</div>
+        <div v-if="query" class="absolute w-1/2 flex flex-col mt-8 pt-4">
+            <a
+                v-for="result in results"
+                :href="result.link"
+                :title="result.title"
+                class="bg-white hover:bg-grey-lighter border border-blue-light border-t-0 text-xl cursor-pointer shadow transition-fast px-10 py-3"
+                :key="result.link"
+                @mousedown.prevent
+            >
+                {{ result.title }}
 
+                <span class="block text-grey-dark text-sm my-1">{{ result.snippet }}</span>
+            </a>
 
-		</div>
-	<!-- 	<div v-else="!results && query != ''" class="flex flex-col w-3/4">
-			<h5>We didn't find anything for <span>query</span>. Please try again</h5>
-		</div> -->
-	</div>
+            <div
+                v-if="! results.length"
+                class="bg-white hover:bg-grey-lighter border border-t-0 border-blue-light cursor-pointer shadow transition-fast px-6 py-3"
+            >
+                <p>No results for <strong>{{ query }}</strong></p>
+            </div>
+        </div>
+    </div>
 </template>
 
-<script type="text/javascript">
+<script>
 export default {
-	props: {
-		url: {
-			type: String,
-			required: true
-		}
-	},
-
-	data() {
-		return {
-			query : '',
-			results : null,
-		}
-	},
-
-	computed: {
-		searchUrl() {
-			return this.url + '&q=' + this.query;
-		}
-	},
-
-	methods: {
-		search() {
-			axios.get(this.searchUrl)
-		    	.then((response)  => {
-		    	this.results = response.data.items.slice(0,5);
-	      	});
-
-		   console.log(this.results);
-		}
-	}
-}
+    data() {
+        return {
+            fuse: null,
+            query: '',
+        };
+    },
+    computed: {
+        results() {
+            return this.query ? this.fuse.search(this.query) : [];
+        },
+    },
+    methods: {
+        reset() {
+            this.query = '';
+        },
+    },
+    created() {
+        axios('/index.json').then(response => {
+            this.fuse = new fuse(response.data, {
+                minMatchCharLength: 6,
+                keys: ['title', 'snippet', 'categories'],
+            });
+        });
+    },
+};
 </script>
