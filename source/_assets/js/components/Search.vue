@@ -14,11 +14,11 @@
 
         <button
             v-if="query"
-            class="flex justify-end text-blue-darker appearance-none active:border-0 -mt-8 mr-10"
+            class="absolute flex justify-end text-blue-darker appearance-none active:border-0 mt-2 -ml-6"
             @click="reset"
         >x</button>
 
-        <div v-if="query" class="absolute flex flex-col z-9 w-3/4 mt-8 pt-4">
+        <div v-if="query" class="absolute flex flex-col w-3/4 mt-8 pt-4">
             <a
                 v-for="result in results"
                 :href="result.link"
