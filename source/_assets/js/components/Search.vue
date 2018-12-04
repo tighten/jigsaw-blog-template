@@ -1,8 +1,8 @@
 <template>
-    <div class="flex flex-col my-12 items-center">
+    <div class="flex flex-col w-full items-end mr-4">
         <input
             v-model="query"
-            class="w-3/4 bg-grey-lighter focus:bg-grey-lightest border border-grey focus:border-blue-light outline-none cursor-pointer transition-fast px-6 py-4"
+            class="w-1/2 focus:w-3/4 bg-grey-lighter focus:bg-grey-lightest border border-grey focus:border-blue-light rounded-full outline-none cursor-pointer transition-fast px-6 py-2"
             :class="{ 'bg-grey-lightest border-blue-light': query }"
             autocomplete="off"
             name="search"
@@ -14,16 +14,16 @@
 
         <button
             v-if="query"
-            class="flex justify-end w-3/4 text-grey-darker appearance-none active:border-0 -mt-10 mr-10 mb-4"
+            class="flex justify-end w-3/4 text-grey-darker appearance-none active:border-0 -mt-8 mr-10"
             @click="reset"
         >x</button>
 
-        <div v-if="query" class="flex flex-col w-3/4 -mt-4 pt-4">
+        <div v-if="query" class="absolute w-1/2 flex flex-col mt-8 pt-4">
             <a
                 v-for="result in results"
                 :href="result.link"
                 :title="result.title"
-                class="bg-white hover:bg-grey-lighter border border-blue-light border-t-0 text-xl cursor-pointer shadow transition-fast px-6 py-3"
+                class="bg-white hover:bg-grey-lighter border border-blue-light border-t-0 text-xl cursor-pointer shadow transition-fast px-10 py-3"
                 :key="result.link"
                 @mousedown.prevent
             >
