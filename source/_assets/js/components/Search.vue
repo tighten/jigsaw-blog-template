@@ -2,8 +2,8 @@
     <div class="relative flex flex-col w-full items-end mr-4">
         <input
             v-model="query"
-            class="w-1/2 focus:w-3/4 bg-grey-lighter focus:bg-grey-lightest border border-grey focus:border-blue-light rounded-full outline-none cursor-pointer transition-fast px-4 py-2"
-            :class="{ 'bg-grey-lightest border-blue-light': query }"
+            class="w-1/2 focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer transition-fast px-4 py-2"
+            :class="{ 'transition-border' : query }"
             autocomplete="off"
             name="search"
             placeholder="Search"
@@ -18,27 +18,30 @@
             @click="reset"
         >x</button>
 
-        <div v-if="query" class="absolute flex flex-col w-3/4 mt-8 pt-4">
-            <a
-                v-for="result in results"
-                :href="result.link"
-                :title="result.title"
-                class="bg-white hover:bg-grey-lighter border border-blue-light border-t-0 text-xl cursor-pointer shadow transition-fast px-10 py-3"
-                :key="result.link"
-                @mousedown.prevent
-            >
-                {{ result.title }}
+        <transition name="fade">
+            <div v-if="query" class="absolute flex flex-col w-3/4 bg-white border border-b-0 border-blue-light rounded-b-lg shadow mt-9">
+                <a
+                    v-for="(result, index) in results"
+                    :href="result.link"
+                    :title="result.title"
+                    class="bg-white hover:bg-grey-lightest border-b border-blue-light text-xl cursor-pointer transition-fast px-10 py-3"
+                    :key="result.link"
+                    :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
+                    @mousedown.prevent
+                >
+                    {{ result.title }}
 
-                <span class="block text-grey-dark text-sm my-1">{{ result.snippet }}</span>
-            </a>
+                    <span class="block text-grey-dark text-sm my-1">{{ result.snippet }}</span>
+                </a>
 
-            <div
-                v-if="! results.length"
-                class="bg-white hover:bg-grey-lighter border border-t-0 border-blue-light cursor-pointer shadow transition-fast px-6 py-3"
-            >
-                <p>No results for <strong>{{ query }}</strong></p>
+                <div
+                    v-if="! results.length"
+                    class="bg-white hover:bg-grey-lightest  border-b border-blue-light rounded-b-lg shadow cursor-pointer transition-fast px-6 py-3"
+                >
+                    <p>No results for <strong>{{ query }}</strong></p>
+                </div>
             </div>
-        </div>
+        </transition>
     </div>
 </template>
 
@@ -73,9 +76,30 @@ export default {
 
 <style>
 input[name='search'] {
-    background: url('/assets/img/magnifying-glass.svg');
+    background: url('/assets/img/magnifying-glass.svg') #eef3f7;
     background-position: 0.8em;
     background-repeat: no-repeat;
+    border-radius: 25px;
     text-indent: 1.2em;
+}
+
+input[name='search'].transition-border {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+.fade-enter-active {
+    transition: opacity .9s;
+}
+
+.fade-leave-active {
+    transition: opacity 0s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
 </style>
