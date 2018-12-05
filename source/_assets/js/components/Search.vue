@@ -2,7 +2,7 @@
     <div class="relative flex flex-col w-full items-end mr-4">
         <input
             v-model="query"
-            class="w-1/2 focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer transition-fast px-4 py-2"
+            class="transition-fast w-1/2 focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer px-4 py-2"
             :class="{ 'transition-border' : query }"
             autocomplete="off"
             name="search"
@@ -24,7 +24,7 @@
                     v-for="(result, index) in results"
                     :href="result.link"
                     :title="result.title"
-                    class="bg-white hover:bg-grey-lightest border-b border-blue-light text-xl cursor-pointer transition-fast px-10 py-3"
+                    class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light text-xl cursor-pointer px-10 py-3"
                     :key="result.link"
                     :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
                     @mousedown.prevent
@@ -36,7 +36,7 @@
 
                 <div
                     v-if="! results.length"
-                    class="bg-white hover:bg-grey-lightest  border-b border-blue-light rounded-b-lg shadow cursor-pointer transition-fast px-6 py-3"
+                    class="transition-fast bg-white hover:bg-grey-lightest  border-b border-blue-light rounded-b-lg shadow cursor-pointer px-6 py-3"
                 >
                     <p>No results for <strong>{{ query }}</strong></p>
                 </div>
