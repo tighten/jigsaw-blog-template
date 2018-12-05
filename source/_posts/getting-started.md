@@ -35,8 +35,6 @@ You can write your content using a [variety of file types](http://jigsaw.tighten
 
 The top of each content page contains a YAML header that specifies how it should be rendered. The `title` attribute is used to dynamically generate HTML `title` and OpenGraph tags for each page. The `extends` attribute defines which parent Blade layout this content file will render with (e.g. `_layouts.post` will render with `source/_layouts/post.blade.php`), and the `section` attribute defines the Blade "section" that expects this content to be placed into it.
 
-### Adding Content
-
 ```yaml
 ---
 extends: _layouts.post
@@ -48,8 +46,6 @@ cover_image: /assets/img/post-cover-image-2.png
 featured: true
 ---
 ```
-
----
 
 ### Adding Assets
 

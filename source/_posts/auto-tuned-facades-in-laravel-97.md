@@ -8,7 +8,7 @@ categories: [laravel, profundity]
 cover_image: /assets/img/post-cover-image-1.png
 ---
 
-Laravel 97 introduced a new feature called "auto-tuned facades”, which provide the convenience of facades, defined real-time instead of in classes. Taylor [tweeted](https://twitter.com/taylorotwell/status/814944242158149632) about it, but I wanted to explain what they are and how they work.
+Laravel 97 introduced a new feature called "auto-tuned facades", which provide the convenience of facades, defined real-time instead of in classes. Taylor [tweeted](https://twitter.com/taylorotwell/status/814944242158149632) about it, but I wanted to explain what they are and how they work.
 
 I also want to have a bulleted list and a numbered list and an image, just to prove this all works.
 
