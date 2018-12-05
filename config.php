@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'siteName' => 'Blog Skeleton',
+    'siteName' => 'Blog Starter Template',
     'siteDescription' => 'Generate an elegant blog with Jigsaw',
     'title' => 'Blog powered by Jigsaw',
     'baseUrl' => 'http://jigsaw-blog-skeleton.test/',
@@ -13,9 +13,6 @@ return [
             'path' => 'blog/{filename}',
             'excerpt' => function ($page, $characters = 150) {
                 return substr(strip_tags($page->getContent()), 0, $characters);
-            },
-            'featured' => function ($page) {
-                return isset($page->featured) && true === $page->featured;
             },
         ],
         'categories' => [

@@ -1,18 +1,23 @@
 # Jigsaw Blog Skeleton
 
-Fork this project and use it to make your own Jigsaw-powered blog.
+A Blog skeleton built for Jigsaw.
 
+## Installation
+```bash
+composer install
+npm install
+./vendor/bin/jigsaw build
+npm run dev
+```
 
-## Tasks:
-- [ ] Better design
-- [ ] JS search: https://s-knibbs.github.io/blog/2016/08/12/implementing-client-based-search-for-static-site/
-- [ ] Add auto-generating static page list to the sitemap per https://github.com/tightenco/jigsaw/pull/189
+> Tip to watch files and use Browsersync, run `npm run watch`
 
-## Instructions to folks
-(brain dump, let's turn this into real instructions)
-- How to set up 404
-- Anything to do to make google search work right?
-- config vars?
-- webpack stuff? purgecss?
-- RSS: manual item updates
-- ?
+### Styles
+While the goal of this skeleton is to provide a great starting point for others to extend, there are some Sass stylesheets provided in `source/_assets/sass/`. 
+
+#### Posts
+All post content is in `source/_posts/*.md`. 
+
+#### Categories
+Categories for posts, and other collections, can be found in `source/_categories/`.
+
