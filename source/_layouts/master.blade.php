@@ -25,6 +25,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
+
     <body class="bg-grey-lightest text-grey-darker leading-normal text-lg font-sans font-normal">
         <div id="vue-app">
             <header class="bg-white border-b flex shadow-lg py-4" role="banner">
@@ -43,9 +44,9 @@
                         </h3>
                     </div>
 
-                    <div class="flex flex-1 justify-end items-center">
-
+                    <div class="flex flex-1 justify-end items-center h-16">
                         <search></search>
+
                         @include('_nav.menu')
 
                         @include('_nav.menu-toggle')
