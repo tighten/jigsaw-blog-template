@@ -4,7 +4,7 @@ section: content
 title: Custom 404 Pages
 date: 2018-12-23
 description: Add a custom 404 page is easy with Jigsaw
-categories: [configuration]
+categories: [configuration, feature]
 ---
 
 This starter template includes a custom __404 Not Found__ error page, located at `/source/404.blade.php`. [To preview the 404 page](/404), you can visit `/404` in your browser.

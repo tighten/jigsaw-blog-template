@@ -5,7 +5,7 @@ title: Customizing Your Site
 date: 2018-12-24
 description: Customize your site with CSS and JS
 categories: [configuration]
-cover_image: /assets/img/post-cover-image.svg
+featured: true
 ---
 
 ## Styles
