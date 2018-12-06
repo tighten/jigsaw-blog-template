@@ -12,9 +12,6 @@ return [
             'author' => 'Author Name', // Default author if not provided in given post
             'sort' => '-date',
             'path' => 'blog/{filename}',
-            'excerpt' => function ($page, $characters = 150) {
-                return substr(strip_tags($page->getContent()), 0, $characters);
-            },
         ],
         'categories' => [
             'path' => '/blog/categories/{filename}',
@@ -27,6 +24,11 @@ return [
     ],
 
     // helpers
+    'excerpt' => function ($page) {
+        $character_count = $page->excerpt_character_count_override ?: 255;
+
+        return preg_replace('/\s+?(\S+)?$/', '', strip_tags(substr($page->getContent(), 0, $character_count), '<code>')) . '...';
+    },
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
     },
