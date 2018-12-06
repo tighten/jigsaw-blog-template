@@ -24,10 +24,8 @@ return [
     ],
 
     // helpers
-    'excerpt' => function ($page) {
-        $character_count = $page->excerpt_character_count_override ?: 255;
-
-        return preg_replace('/\s+?(\S+)?$/', '', strip_tags(substr($page->getContent(), 0, $character_count), '<code>')) . '...';
+    'excerpt' => function ($page, $length = 255) {
+        return preg_replace('/\s+?(\S+)?$/', '', strip_tags(substr($page->getContent(), 0, $length), '<code>')) . '...';
     },
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
