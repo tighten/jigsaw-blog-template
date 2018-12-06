@@ -3,6 +3,7 @@
 return [
     'siteName' => 'Blog Starter Template',
     'siteDescription' => 'Generate an elegant blog with Jigsaw',
+    'siteAuthor' => 'Author Name',
     'title' => 'Blog powered by Jigsaw',
     'baseUrl' => 'http://jigsaw-blog-skeleton.test/',
     'production' => false,
