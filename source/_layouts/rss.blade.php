@@ -6,7 +6,7 @@
     <updated>{{ date(DATE_ATOM) }}</updated>
     <id>{{ $page->getUrl() }}</id>
     <author>
-        <name>{{ $page->siteName }}</name>
+        <name>{{ $page->siteAuthor }}</name>
     </author>
     @yield('entries')
 </feed>
