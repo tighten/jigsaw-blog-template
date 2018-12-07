@@ -25,7 +25,11 @@ return [
 
     // helpers
     'excerpt' => function ($page, $length = 255) {
-        return preg_replace('/\s+?(\S+)?$/', '', strip_tags(substr($page->getContent(), 0, $length), '<code>')) . '...';
+        $content = $page->getContent();
+
+        return (strlen($content) > $length) ?
+            preg_replace('/\s+?(\S+)?$/', '', strip_tags(substr($content, 0, $length), '<code>')) . '...' :
+            strip_tags($content, '<code>');
     },
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
