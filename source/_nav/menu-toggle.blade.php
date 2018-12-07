@@ -14,7 +14,7 @@
     </svg>
 </button>
 
-@section('scripts')
+@push('scripts')
 <script>
     const navMenu = {
         toggle() {
@@ -26,4 +26,4 @@
         },
     }
 </script>
-@endsection
+@endpush

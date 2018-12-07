@@ -2,8 +2,8 @@
 @tailwind components;
 
 // Code syntax highlighting,
-// https://highlightjs.org
-@import '~highlightjs/styles/default.css';
+// powered by https://highlightjs.org
+@import '~highlight.js/styles/a11y-light.css';
 
 @import 'base';
 @import 'navigation';

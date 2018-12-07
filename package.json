@@ -8,24 +8,19 @@
         "watch": "npm run local -- --watch"
     },
     "devDependencies": {
-        "ajv": "^6.5.4",
+        "axios": "^0.18.0",
         "browser-sync": "^2.23.6",
         "browser-sync-webpack-plugin": "^2.0.1",
         "cross-env": "^3.2.3",
+        "fuse.js": "^3.3.0",
         "hasbin": "^1.2.3",
-        "highlightjs": "^9.10.0",
-        "imagemin": "^5.3.1",
-        "laravel-mix": "^2.1.14",
+        "highlight.js": "^9.13.1",
+        "laravel-mix": "^3.0.0",
         "node-cmd": "^3.0.0",
         "on-build-webpack": "^0.1.0",
         "tailwindcss": "^0.7.2",
         "vue": "^2.5.17",
-        "vue-router": "^3.0.1",
         "webpack-watch": "^0.2.0",
         "yargs": "^4.6.0"
-    },
-    "dependencies": {
-        "axios": "^0.18.0",
-        "fuse.js": "^3.3.0"
     }
 }

@@ -31,15 +31,15 @@
     </div>
 
     <div class="flex {{ $page->getPrevious() ? 'justify-between' : 'justify-end' }}">
-        @if ($page->getPrevious())
-            <a href="{{ $page->url($page->getPrevious()->getPath()) }}" title="{{ $page->getPrevious()->title }}">
-                Previous Post
+        @if ($previous = $page->getPrevious())
+            <a href="{{ $page->url($previous->getPath()) }}" title="Previous Post: {{ $previous->title }}">
+                &LeftArrow; {{ $previous->title }}
             </a>
         @endif
 
-        @if ($page->getNext())
-            <a href="{{ $page->url($page->getNext()->getPath()) }}" title="{{ $page->getNext()->title }}">
-                Next Post
+        @if ($next = $page->getNext())
+            <a href="{{ $page->url($next->getPath()) }}" title="Next Post: {{ $next->title }}">
+                {{ $next->title }} &RightArrow;
             </a>
         @endif
     </div>

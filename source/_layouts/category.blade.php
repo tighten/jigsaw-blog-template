@@ -10,7 +10,7 @@
 @section('body')
     <h1>{{ $page->title }}</h1>
 
-    <div class="text-2xl border-b mb-8 pb-4">
+    <div class="text-2xl border-b border-blue-lighter mb-8 pb-4">
         @yield('content')
     </div>
 
