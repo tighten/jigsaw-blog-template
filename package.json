@@ -9,7 +9,7 @@
     },
     "devDependencies": {
         "axios": "^0.18.0",
-        "browser-sync": "^2.23.6",
+        "browser-sync": "^2.26.3",
         "browser-sync-webpack-plugin": "^2.0.1",
         "cross-env": "^3.2.3",
         "fuse.js": "^3.3.0",
