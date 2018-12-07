@@ -1,5 +1,6 @@
 /build_local/
+/build_staging/
+/build_production/
 /node_modules/
 /vendor/
-/source/assets/build/
-config.local.php
+.DS_Store
