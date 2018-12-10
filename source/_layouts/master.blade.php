@@ -39,9 +39,9 @@
                             <img class="h-8" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
                         </a>
 
-                        <h3 class="text-xl my-0">
+                        <h1 class="my-0">
                             <a href="/" title="Home" class="text-2xl text-blue-darker">{{ $page->siteName }}</a>
-                        </h3>
+                        </h1>
                     </div>
 
                     <div class="flex flex-1 justify-end items-center h-16">
