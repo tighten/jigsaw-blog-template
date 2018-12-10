@@ -20,7 +20,9 @@ pagination:
     @foreach ($pagination->items as $post)
         @include('_components.post-preview-inline')
 
-        <hr class="border-b my-6">
+        @if ($post != $pagination->items->last())
+            <hr class="border-b my-6">
+        @endif
     @endforeach
 
     @if ($pagination->pages->count() > 1)
