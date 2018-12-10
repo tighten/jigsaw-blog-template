@@ -26,7 +26,7 @@ pagination:
     @endforeach
 
     @if ($pagination->pages->count() > 1)
-        <div class="flex text-base my-8">
+        <nav class="flex text-base my-8">
             @if ($previous = $pagination->previous)
                 <a
                     href="{{ $page->url($previous) }}"
@@ -39,7 +39,7 @@ pagination:
                 <a
                     href="{{ $page->url($path) }}"
                     title="Go to Page {{ $pageNumber }}"
-                    class="bg-grey-lighter hover:bg-grey-light text-grey-darker hover:text-blue-dark rounded mr-3 px-5 py-3 {{ $pagination->currentPage == $pageNumber ? 'text-blue-dark' : '' }}"
+                    class="bg-grey-lighter hover:bg-grey-light text-blue-darker rounded mr-3 px-5 py-3 {{ $pagination->currentPage == $pageNumber ? 'text-blue-dark' : '' }}"
                 >{{ $pageNumber }}</a>
             @endforeach
 
@@ -50,6 +50,6 @@ pagination:
                     class="bg-grey-lighter hover:bg-grey-light rounded mr-3 px-5 py-3"
                 >&RightArrow;</a>
             @endif
-        </div>
+        </nav>
     @endif
 @stop
