@@ -60,14 +60,17 @@
         @yield('scripts')
 
         <footer class="bg-white text-center text-xs mt-12 py-4" role="contentinfo">
-            <p>
-                &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
-
-                <br class="md:hidden">
-
-                Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
-                and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
-            </p>
+            <nav>
+                <ul class="flex flex-col md:flex-row justify-center list-reset">
+                    <li class="md:mr-2">
+                        &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
+                    </li>
+                    <li>
+                        Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
+                        and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                    </li>
+                </ul>
+            </nav>
         </footer>
     </body>
 </html>
