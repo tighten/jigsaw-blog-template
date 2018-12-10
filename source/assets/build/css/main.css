@@ -630,8 +630,13 @@ table {
 }
 
 a {
+  font-weight: 600;
   text-decoration: none;
-  color: #3490dc;
+  color: #24548f;
+}
+
+a:hover {
+  color: #2779bd;
 }
 
 blockquote {

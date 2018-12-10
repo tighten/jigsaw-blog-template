@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
-    <body class="bg-grey-lightest text-grey-darker leading-normal text-lg font-sans font-normal">
+    <body class="bg-grey-lightest text-blue-darkest leading-normal text-lg font-sans">
         <div id="vue-app">
             <header class="bg-white border-b flex shadow-lg py-4" role="banner">
                 <div class="container max-w-4xl flex mx-auto px-4 lg:px-8">

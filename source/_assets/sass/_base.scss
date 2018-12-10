@@ -1,6 +1,11 @@
 a {
+    @apply .font-semibold;
     @apply .no-underline;
-    @apply .text-blue;
+    @apply .text-blue-darker;
+
+    &:hover {
+        @apply .text-blue-dark;
+    }
 }
 
 blockquote {

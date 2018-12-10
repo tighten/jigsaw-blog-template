@@ -20,7 +20,7 @@
                 </a>
             </h2>
 
-            <p class="font-light mt-0 mb-4">{!! $featuredPost->excerpt() !!}</p>
+            <p class="mt-0 mb-4">{!! $featuredPost->excerpt() !!}</p>
 
             <a href="{{ $page->url($featuredPost->getPath()) }}" title="Read - {{ $featuredPost->title }}"
                 class="mb-4 text-blue uppercase font-semibold tracking-wide">Read</a>

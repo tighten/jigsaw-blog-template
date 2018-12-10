@@ -11,7 +11,7 @@
         >{{ $post->title }}</a>
     </h2>
 
-    <p class="font-light mb-4 mt-0">{!! $post->excerpt() !!}</p>
+    <p class="mb-4 mt-0">{!! $post->excerpt() !!}</p>
 
     <a
         href="{{ $page->url($post->getPath()) }}"
