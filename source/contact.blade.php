@@ -64,7 +64,7 @@
         <input
             type="submit"
             value="Submit"
-            class="block bg-blue hover:bg-blue-dark text-white text-sm font-semibold tracking-wide uppercase shadow rounded-lg cursor-pointer transition px-8 py-4"
+            class="block bg-blue hover:bg-blue-dark text-white text-sm font-semibold tracking-wide uppercase shadow rounded-lg cursor-pointer px-6 py-3"
         >
     </div>
 </form>

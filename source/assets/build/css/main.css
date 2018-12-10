@@ -866,6 +866,10 @@ pre code {
   color: #fff;
 }
 
+#mc-embedded-subscribe:hover {
+  background-color: #2779bd;
+}
+
 @media (min-width: 768px) {
   .mc-field-group input {
     margin-bottom: .75rem;

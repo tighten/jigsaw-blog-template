@@ -52,6 +52,10 @@
     @apply .py-2;
     @apply .rounded;
     @apply .text-white;
+
+    &:hover {
+        @apply .bg-blue-dark;
+    }
 }
 
 @screen md {
