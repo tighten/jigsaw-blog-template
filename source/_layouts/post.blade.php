@@ -12,9 +12,9 @@
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
     @endif
 
-    <h1 class="mb-2 leading-none">{{ $page->title }}</h1>
+    <h1 class="leading-none mb-2">{{ $page->title }}</h1>
 
-    <p class="text-grey-dark text-xl">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
+    <p class="text-grey-dark text-xl md:mt-0">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
 
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)
