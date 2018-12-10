@@ -22,8 +22,9 @@
 
             <p class="mt-0 mb-4">{!! $featuredPost->excerpt() !!}</p>
 
-            <a href="{{ $page->url($featuredPost->getPath()) }}" title="Read - {{ $featuredPost->title }}"
-                class="mb-4 text-blue uppercase font-semibold tracking-wide">Read</a>
+            <a href="{{ $page->url($featuredPost->getPath()) }}" title="Read - {{ $featuredPost->title }}"class="uppercase tracking-wide mb-4">
+                Read
+            </a>
         </div>
 
         @if ($featuredPost != $featuredPosts->last())
