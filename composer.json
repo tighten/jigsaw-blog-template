@@ -18,7 +18,6 @@
         }
     ],
     "require": {
-        "tightenco/jigsaw": "^1.2.8",
         "samdark/sitemap": "^2.2"
     },
     "autoload": {
