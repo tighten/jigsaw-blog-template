@@ -25,7 +25,6 @@ return [
 
     // helpers
     'excerpt' => function ($page, $length = 255) {
-        $length = $page->excerpt_length ?? $length;
         $content = strip_tags($page->getContent(), '<code>');
 
         return (strlen($content) > $length) ?
