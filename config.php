@@ -25,11 +25,20 @@ return [
 
     // helpers
     'excerpt' => function ($page, $length = 255) {
-        $content = strip_tags($page->getContent(), '<code>');
+        $cleaned = strip_tags(
+            preg_replace('/<pre>[\w\W]*?<\/pre>/', '', $page->getContent()),
+            '<code>'
+        );
 
-        return (strlen($content) > $length) ?
-            preg_replace('/\s+?(\S+)?$/', '', substr($content, 0, $length)) . '...' :
-            $content;
+        $truncated = substr($cleaned, 0, $length);
+
+        if (substr_count($truncated, '<code>') > substr_count($truncated, '</code>')) {
+            $truncated .= '</code>';
+        }
+
+        return strlen($cleaned) > $length
+            ? preg_replace('/\s+?(\S+)?$/', '', $truncated) . '...'
+            : $cleaned;
     },
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
