@@ -1,4 +1,22 @@
 {
+    "name": "tightenco/jigsaw-blog-skeleton",
+    "description": "Blog starter template for Jigsaw static site generator by Tighten",
+    "keywords": ["blog", "starter", "template", "jigsaw", "static", "site", "generator"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anthony Terrell",
+            "email": "anthony@tighten.co"
+        },
+        {
+            "name": "Keith Damiani",
+            "email": "keith@tighten.co"
+        },
+        {
+            "name": "Matt Stauffer",
+            "email": "matt@tighten.co"
+        }
+    ],
     "require": {
         "tightenco/jigsaw": "^1.2.8",
         "samdark/sitemap": "^2.2"
