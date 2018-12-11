@@ -629,6 +629,10 @@ table {
   }
 }
 
+body {
+  font-size: 17px;
+}
+
 a {
   font-weight: 600;
   text-decoration: none;
@@ -838,10 +842,9 @@ pre code {
 
 #mc_embed_signup_scroll > h2:first-of-type {
   display: block;
-  font-weight: 900;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
-  color: #24548f;
+  color: #3e4852;
 }
 
 .mc-field-group input {

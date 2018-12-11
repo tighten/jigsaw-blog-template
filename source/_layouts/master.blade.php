@@ -26,12 +26,12 @@
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
-    <body class="bg-grey-lightest text-blue-darkest leading-normal text-lg font-sans">
+    <body class="bg-grey-lightest text-grey-darkest leading-normal font-sans">
         <div id="vue-app">
-            <header class="flex bg-white border-b shadow-lg py-4" role="banner">
+            <header class="flex bg-white border-b shadow py-4" role="banner">
                 <div class="flex container max-w-4xl mx-auto px-4 lg:px-8">
                     <div class="flex items-center">
-                        <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center font-bold">
+                        <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
                             <img class="h-8 md:h-10 mr-3" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
 
                             <h1 class="hidden md:block text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0">{{ $page->siteName }}</h1>
