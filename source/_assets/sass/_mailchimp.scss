@@ -11,8 +11,11 @@
         > div.mce_inline_error {
             @apply .bg-transparent;
             @apply .float-left;
-            @apply .font-medium;
+            @apply .font-semibold;
+            @apply .p-0;
             @apply .text-grey-darker;
+
+            clear: both;
         }
     }
 }
@@ -23,7 +26,7 @@
         @apply .font-black;
         @apply .mb-6;
         @apply .text-2xl;
-        @apply .text-grey-darker;
+        @apply .text-blue-darkest;
     }
 }
 

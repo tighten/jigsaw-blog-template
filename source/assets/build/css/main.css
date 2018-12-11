@@ -830,8 +830,10 @@ pre code {
 #mc_embed_signup div.mc-field-group > div.mce_inline_error {
   background-color: transparent;
   float: left;
-  font-weight: 500;
+  font-weight: 600;
+  padding: 0;
   color: #606f7b;
+  clear: both;
 }
 
 #mc_embed_signup_scroll > h2:first-of-type {
@@ -839,7 +841,7 @@ pre code {
   font-weight: 900;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
-  color: #606f7b;
+  color: #1c3e5a;
 }
 
 .mc-field-group input {
