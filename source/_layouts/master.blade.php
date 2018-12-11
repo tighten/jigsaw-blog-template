@@ -34,7 +34,7 @@
                         <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center font-bold">
                             <img class="h-8 md:h-10 mr-3" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
 
-                            <h1 class="hidden md:block text-2xl text-blue-darkest hover:text-blue-dark my-0">{{ $page->siteName }}</h1>
+                            <h1 class="hidden md:block text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0">{{ $page->siteName }}</h1>
                         </a>
                     </div>
 
