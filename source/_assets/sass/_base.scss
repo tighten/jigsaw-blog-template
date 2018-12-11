@@ -5,10 +5,10 @@ body {
 a {
     @apply .font-semibold;
     @apply .no-underline;
-    @apply .text-blue-darker;
+    @apply .text-blue-dark;
 
     &:hover {
-        @apply .text-blue-dark;
+        @apply .text-blue-darker;
     }
 }
 

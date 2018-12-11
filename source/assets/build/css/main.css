@@ -636,11 +636,11 @@ body {
 a {
   font-weight: 600;
   text-decoration: none;
-  color: #1a4d8c;
+  color: #0174d4;
 }
 
 a:hover {
-  color: #0174d4;
+  color: #1a4d8c;
 }
 
 blockquote {
