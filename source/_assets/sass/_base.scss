@@ -1,6 +1,15 @@
+body {
+    font-size: 17px;
+}
+
 a {
+    @apply .font-semibold;
     @apply .no-underline;
-    @apply .text-blue;
+    @apply .text-blue-dark;
+
+    &:hover {
+        @apply .text-blue-darker;
+    }
 }
 
 blockquote {

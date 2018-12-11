@@ -26,22 +26,16 @@
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
-    <body class="bg-grey-lightest text-grey-darker leading-normal text-lg font-sans font-normal">
+    <body class="bg-grey-lightest text-grey-darkest leading-normal font-sans">
         <div id="vue-app">
-            <header class="bg-white border-b flex shadow-lg py-4" role="banner">
-                <div class="flex container max-w-4xl mx-auto px-6 py-2">
+            <header class="flex bg-white border-b shadow py-4" role="banner">
+                <div class="flex container max-w-4xl mx-auto px-4 lg:px-8">
                     <div class="flex items-center">
-                        <a
-                            href="{{ $page->url('/') }}"
-                            title="{{ $page->siteName }} home"
-                            class="inline-flex items-center font-bold mr-3"
-                        >
-                            <img class="h-8" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
-                        </a>
+                        <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
+                            <img class="h-8 md:h-10 mr-3" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
 
-                        <h3 class="text-xl my-0">
-                            <a href="/" title="Home" class="text-2xl text-blue-darker">{{ $page->siteName }}</a>
-                        </h3>
+                            <h1 class="hidden md:block text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0">{{ $page->siteName }}</h1>
+                        </a>
                     </div>
 
                     <div class="flex flex-1 justify-end items-center h-16">
@@ -65,15 +59,18 @@
 
         @stack('scripts')
 
-        <footer class="bg-white text-center text-xs mt-12 py-4" role="contentinfo">
-            <p>
-                &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
-
-                <br class="md:hidden">
-
-                Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
-                and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
-            </p>
+        <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
+            <nav>
+                <ul class="flex flex-col md:flex-row justify-center list-reset">
+                    <li class="md:mr-2">
+                        &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
+                    </li>
+                    <li>
+                        Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
+                        and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                    </li>
+                </ul>
+            </nav>
         </footer>
     </body>
 </html>

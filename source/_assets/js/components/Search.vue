@@ -1,6 +1,8 @@
 <template>
     <div class="relative flex flex-col w-full items-end mr-4">
+        <label for="search" class="hidden">Search</label>
         <input
+            id="search"
             v-model="query"
             class="transition-fast w-1/2 focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer px-4 py-2"
             :class="{ 'transition-border': query }"
