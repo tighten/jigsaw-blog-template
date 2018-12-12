@@ -1,11 +1,16 @@
 <template>
     <div class="relative flex flex-col w-full items-end mr-4">
-        <div v-if="modal" class="relative md:hidden flex flex-col items-center overlay is-open pt-8 px-4">
+        <div v-if="modal" class="overlay relative md:hidden flex flex-col items-center pt-8 px-4">
            <portal-target name="search-1"></portal-target>
         </div>
 
-        <a href="#" @click.prevent="openModal" class="flex md:hidden justify-center items-center rounded-full h-10 bg-grey-lighter px-3">
-            <img src="/assets/img/magnifying-glass.svg" alt="search icon" class="inline h-4 w-4">
+        <a
+            href="#"
+            title="Start searching"
+            @click.prevent="openModal"
+            class="flex md:hidden bg-grey-lighter justify-center items-center border border-grey rounded-full h-10 px-3"
+        >
+            <img src="/assets/img/magnifying-glass.svg" alt="search icon" class="h-4 w-4">
         </a>
 
         <div v-if="! modal" class="hidden md:block w-full">
@@ -24,7 +29,7 @@
                 id="search"
                 v-model="query"
                 ref="search"
-                class="transition-fast relative block w-full md:w-1/2 md:focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer px-4 md:px-4 py-2"
+                class="transition-fast relative block w-full md:w-1/2 md:focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer px-4 py-2"
                 :class="{ 'transition-border': query }"
                 autocomplete="off"
                 name="search"
@@ -36,7 +41,7 @@
 
             <button
                 v-if="query"
-                class="absolute flex justify-end text-blue-darker text-xl appearance-none active:border-0 mt-2 mr-4 -ml-6"
+                class="absolute flex justify-end text-blue-darker text-xl appearance-none active:border-0 -ml-6 mt-2"
                 @click="reset"
             >x</button>
 
@@ -46,7 +51,7 @@
                         v-for="(result, index) in results"
                         :href="result.link"
                         :title="result.title"
-                        class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light text-xl cursor-pointer px-4 md:px-10 py-3"
+                        class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light text-xl cursor-pointer p-3"
                         :key="result.link"
                         :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
                         @mousedown.prevent
@@ -58,9 +63,9 @@
 
                     <div
                         v-if="! results.length"
-                        class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light rounded-b-lg shadow cursor-pointer px-6 py-3"
+                        class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light rounded-b-lg shadow cursor-pointer p-3"
                     >
-                        <p>No results for <strong>{{ query }}</strong></p>
+                        <p class="my-0">No results for <strong>{{ query }}</strong></p>
                     </div>
                 </div>
             </transition>
@@ -109,24 +114,15 @@ export default {
 </script>
 
 <style>
-
 .overlay {
-  position: fixed;
-  overflow: scroll;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
   background: rgba(250, 250, 250, 0.96);
-  opacity: 0;
-  transition: .3s linear;
-  transform: translateY(-100%);
-}
-.overlay.is-open {
+  height: 100%;
   opacity: 1;
+  overflow: scroll;
+  position: fixed;
   visibility: visible;
-  transform: translateY(0);
+  width: 100%;
+  z-index: 2;
 }
 
 input[name='search'] {
