@@ -22,5 +22,8 @@
         "vue": "^2.5.17",
         "webpack-watch": "^0.2.0",
         "yargs": "^4.6.0"
+    },
+    "dependencies": {
+        "portal-vue": "^1.5.0"
     }
 }

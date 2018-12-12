@@ -15,10 +15,12 @@ hljs.registerLanguage('php', require('highlight.js/lib/languages/php'));
 hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
 hljs.registerLanguage('yaml', require('highlight.js/lib/languages/yaml'));
 
+import PortalVue from 'portal-vue';
 import Search from './components/Search.vue';
 
 // Vue.js
 Vue.config.productionTip = false;
+Vue.use(PortalVue);
 
 new Vue({
     components: {
