@@ -63,7 +63,7 @@
 
                     <div
                         v-if="! results.length"
-                        class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light rounded-b-lg shadow cursor-pointer p-3"
+                        class="bg-white hover:bg-blue-lightest border-b border-blue-light rounded-b-lg shadow cursor-pointer p-3"
                     >
                         <p class="my-0">No results for <strong>{{ query }}</strong></p>
                     </div>
