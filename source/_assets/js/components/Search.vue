@@ -70,7 +70,6 @@
                 </div>
             </transition>
         </portal>
-
     </div>
 </template>
 
