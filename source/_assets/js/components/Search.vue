@@ -43,7 +43,7 @@
                 v-if="query"
                 class="absolute flex justify-end text-blue-darker text-xl appearance-none active:border-0 -ml-6 mt-2"
                 @click="reset"
-            >x</button>
+            >&times;</button>
 
             <transition name="fade">
                 <div v-if="query" class="absolute flex flex-col w-full md:w-3/4 bg-white border border-b-0 border-blue-light rounded-b-lg shadow mt-9">
