@@ -1,6 +1,6 @@
 <template>
     <div class="relative flex flex-col w-full items-end mr-4">
-        <div v-if="modal" class="overlay relative md:hidden flex flex-col items-center pt-8 px-4">
+        <div v-if="modal" class="overlay fixed md:hidden pin-t pin-l flex flex-col w-full h-full items-center overflow-scroll opacity-100 z-10 pt-8 px-4">
            <portal-target name="search-1"></portal-target>
         </div>
 
@@ -114,17 +114,6 @@ export default {
 </script>
 
 <style>
-.overlay {
-  background: rgba(250, 250, 250, 0.96);
-  height: 100%;
-  opacity: 1;
-  overflow: scroll;
-  position: fixed;
-  visibility: visible;
-  width: 100%;
-  z-index: 2;
-}
-
 input[name='search'] {
     background: url('/assets/img/magnifying-glass.svg') #eef3f7;
     background-position: 0.8em;
@@ -151,5 +140,9 @@ input[name='search'].transition-border {
 .fade-enter,
 .fade-leave-to {
     opacity: 0;
+}
+
+.overlay {
+  background: rgba(250, 250, 250, 0.96);
 }
 </style>
