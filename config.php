@@ -26,7 +26,7 @@ return [
     // helpers
     'excerpt' => function ($page, $length = 255) {
         $cleaned = strip_tags(
-            preg_replace('/<pre>[\w\W]*?<\/pre>/', '', $page->getContent()),
+            preg_replace(['/<pre>[\w\W]*?<\/pre>/', '/<h\d>[\w\W]*?<\/h\d>/'], '', $page->getContent()),
             '<code>'
         );
 
