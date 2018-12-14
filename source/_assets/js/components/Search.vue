@@ -40,7 +40,7 @@
             >
 
             <button
-                v-if="query"
+                v-if="query || modal"
                 class="absolute h-full font-light text-3xl text-blue hover:text-blue-dark focus:outline-none pr-3"
                 @click="reset"
             >&times;</button>
