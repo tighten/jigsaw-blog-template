@@ -43,7 +43,7 @@
                 v-if="query"
                 class="absolute flex justify-end text-blue-darker text-xl appearance-none active:border-0 -ml-6 mt-2"
                 @click="reset"
-            >x</button>
+            >&times;</button>
 
             <transition name="fade">
                 <div v-if="query" class="absolute flex flex-col w-full md:w-3/4 bg-white border border-b-0 border-blue-light rounded-b-lg shadow mt-9">
@@ -53,7 +53,7 @@
                         :title="result.title"
                         class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light text-xl cursor-pointer p-3"
                         :key="result.link"
-                        :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
+                        :class="{ 'rounded-b-lg': (index === results.length - 1) }"
                         @mousedown.prevent
                     >
                         {{ result.title }}
@@ -63,19 +63,17 @@
 
                     <div
                         v-if="! results.length"
-                        class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light rounded-b-lg shadow cursor-pointer p-3"
+                        class="bg-white hover:bg-blue-lightest border-b border-blue-light rounded-b-lg shadow cursor-pointer p-3"
                     >
                         <p class="my-0">No results for <strong>{{ query }}</strong></p>
                     </div>
                 </div>
             </transition>
         </portal>
-
     </div>
 </template>
 
 <script>
-
 export default {
     data() {
         return {
