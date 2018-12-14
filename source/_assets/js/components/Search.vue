@@ -1,7 +1,54 @@
 <template>
     <div class="relative flex flex-col w-full items-end mr-4">
-        <div v-if="modal" class="overlay fixed md:hidden pin-t pin-l flex flex-col w-full h-full items-center overflow-scroll opacity-100 z-10 pt-8 px-4">
-           <portal-target name="search-1"></portal-target>
+        <div :class="modal ? 'overlay fixed md:hidden pin-t pin-l flex flex-col w-full h-full items-center overflow-scroll opacity-100 z-10 pt-8 px-4' : 'hidden md:block w-full'">
+            <div class="relative flex flex-col w-full items-end">
+                <label for="search" class="hidden">Search</label>
+
+                <input
+                    id="search"
+                    v-model="query"
+                    ref="search"
+                    class="transition-fast relative block w-full md:w-1/2 md:focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer px-4 py-2"
+                    :class="{ 'transition-border': query }"
+                    autocomplete="off"
+                    name="search"
+                    placeholder="Search"
+                    type="text"
+                    @keyup.esc="reset"
+                    @blur="reset"
+                >
+
+                <button
+                    v-if="query || modal"
+                    class="absolute h-full font-light text-3xl text-blue hover:text-blue-dark focus:outline-none pr-3"
+                    @click="reset"
+                >&times;</button>
+
+                <transition name="fade">
+                    <div v-if="query" class="absolute flex flex-col w-full md:w-3/4 bg-white border border-b-0 border-blue-light rounded-b-lg shadow mt-9">
+                        <a
+                            v-for="(result, index) in results"
+                            :href="result.link"
+                            :title="result.title"
+                            class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light text-xl cursor-pointer p-3"
+                            :key="result.link"
+                            :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
+                            @mousedown.prevent
+                        >
+                            {{ result.title }}
+
+                            <span class="block text-grey-darker text-sm my-1" v-html="result.snippet"></span>
+                        </a>
+
+                        <div
+                            v-if="! results.length"
+                            class="bg-white hover:bg-blue-lightest border-b border-blue-light rounded-b-lg shadow cursor-pointer p-3"
+                        >
+                            <p class="my-0">No results for <strong>{{ query }}</strong></p>
+                        </div>
+                    </div>
+                </transition>
+            </div>
         </div>
 
         <a
@@ -12,64 +59,6 @@
         >
             <img src="/assets/img/magnifying-glass.svg" alt="search icon" class="h-4 w-4">
         </a>
-
-        <div v-if="! modal" class="hidden md:block w-full">
-            <portal-target name="search-2"></portal-target>
-        </div>
-
-        <portal
-            v-for="index in 2"
-            :key="index"
-            :to="'search-' + index"
-            target-class="relative flex flex-col w-full items-end"
-        >
-            <label for="search" class="hidden">Search</label>
-
-            <input
-                id="search"
-                v-model="query"
-                ref="search"
-                class="transition-fast relative block w-full md:w-1/2 md:focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer px-4 py-2"
-                :class="{ 'transition-border': query }"
-                autocomplete="off"
-                name="search"
-                placeholder="Search"
-                type="text"
-                @keyup.esc="reset"
-                @blur="reset"
-            >
-
-            <button
-                v-if="query || modal"
-                class="absolute h-full font-light text-3xl text-blue hover:text-blue-dark focus:outline-none pr-3"
-                @click="reset"
-            >&times;</button>
-
-            <transition name="fade">
-                <div v-if="query" class="absolute flex flex-col w-full md:w-3/4 bg-white border border-b-0 border-blue-light rounded-b-lg shadow mt-9">
-                    <a
-                        v-for="(result, index) in results"
-                        :href="result.link"
-                        :title="result.title"
-                        class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light text-xl cursor-pointer p-3"
-                        :key="result.link"
-                        :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
-                        @mousedown.prevent
-                    >
-                        {{ result.title }}
-
-                        <span class="block text-grey-darker text-sm my-1" v-html="result.snippet"></span>
-                    </a>
-
-                    <div
-                        v-if="! results.length"
-                        class="bg-white hover:bg-blue-lightest border-b border-blue-light rounded-b-lg shadow cursor-pointer p-3"
-                    >
-                        <p class="my-0">No results for <strong>{{ query }}</strong></p>
-                    </div>
-                </div>
-            </transition>
-        </portal>
     </div>
 </template>
 
@@ -93,7 +82,7 @@ export default {
             this.modal = true;
 
             this.$nextTick(() => {
-                this.$refs.search[0].focus();
+                this.$refs.search.focus();
             })
         },
         reset() {
