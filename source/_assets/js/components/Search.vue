@@ -25,10 +25,10 @@
                 >&times;</button>
 
                 <transition name="fade">
-                    <div v-if="query" class="absolute flex flex-col w-full md:w-3/4 bg-white border border-b-0 border-t-0 border-blue-light rounded-b-lg shadow-lg mt-10">
+                    <div v-if="query" class="absolute flex flex-col w-full md:w-3/4 bg-white border border-b-0 border-t-0 border-blue-light rounded-b-lg shadow-lg mt-10 mb-4">
                         <a
                             v-for="(result, index) in results"
-                            class="bg-white hover:bg-blue-lightest border-b border-blue-light text-xl cursor-pointer p-3"
+                            class="bg-white hover:bg-blue-lightest border-b border-blue-light text-xl cursor-pointer p-4"
                             :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
                             :href="result.link"
                             :title="result.title"
@@ -42,7 +42,7 @@
 
                         <div
                             v-if="! results.length"
-                            class="bg-white hover:bg-blue-lightest border-b border-blue-light rounded-b-lg shadow cursor-pointer p-3"
+                            class="bg-white hover:bg-blue-lightest border-b border-blue-light rounded-b-lg shadow cursor-pointer p-4"
                         >
                             <p class="my-0">No results for <strong>{{ query }}</strong></p>
                         </div>
