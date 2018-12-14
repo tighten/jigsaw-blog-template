@@ -4514,6 +4514,10 @@ pre code {
   max-width: 100%;
 }
 
+.max-w-none {
+  max-width: none;
+}
+
 .min-h-0 {
   min-height: 0;
 }
@@ -10747,6 +10751,10 @@ pre code {
     max-width: 100%;
   }
 
+  .sm\:max-w-none {
+    max-width: none;
+  }
+
   .sm\:min-h-0 {
     min-height: 0;
   }
@@ -16953,6 +16961,10 @@ pre code {
 
   .md\:max-w-full {
     max-width: 100%;
+  }
+
+  .md\:max-w-none {
+    max-width: none;
   }
 
   .md\:min-h-0 {
@@ -23163,6 +23175,10 @@ pre code {
     max-width: 100%;
   }
 
+  .lg\:max-w-none {
+    max-width: none;
+  }
+
   .lg\:min-h-0 {
     min-height: 0;
   }
@@ -29369,6 +29385,10 @@ pre code {
 
   .xl\:max-w-full {
     max-width: 100%;
+  }
+
+  .xl\:max-w-none {
+    max-width: none;
   }
 
   .xl\:min-h-0 {
