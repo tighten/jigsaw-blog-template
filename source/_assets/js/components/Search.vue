@@ -57,7 +57,7 @@
             class="flex md:hidden bg-grey-lighter justify-center items-center border border-grey rounded-full h-10 px-3"
             @click.prevent="openModal"
         >
-            <img src="/assets/img/magnifying-glass.svg" alt="search icon" class="h-4 w-4">
+            <img src="/assets/img/magnifying-glass.svg" alt="search icon" class="h-4 w-4 max-w-none">
         </a>
     </div>
 </template>
