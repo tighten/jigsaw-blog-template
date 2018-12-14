@@ -825,12 +825,6 @@ pre code {
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  #mc_embed_signup {
-    width: 50%;
-  }
-}
-
 #mc_embed_signup div.mc-field-group > div.mce_inline_error {
   background-color: transparent;
   float: left;
@@ -840,10 +834,17 @@ pre code {
   clear: both;
 }
 
+@media (min-width: 768px) {
+  #mc_embed_signup {
+    width: 50%;
+  }
+}
+
 #mc_embed_signup_scroll > h2:first-of-type {
   display: block;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+  text-align: center;
   color: #3e4852;
 }
 
@@ -856,8 +857,20 @@ pre code {
   padding-right: 1rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  border-radius: .25rem;
-  width: 100%;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+  width: 66.66667%;
+}
+
+@media (min-width: 768px) {
+  .mc-field-group input {
+    margin-bottom: .75rem;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 75%;
+  }
 }
 
 .mc-field-group label {
@@ -868,12 +881,14 @@ pre code {
   background-color: #3490dc;
   cursor: pointer;
   line-height: 1.6;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  border-radius: .25rem;
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
   color: #fff;
+  width: 33.33333%;
 }
 
 #mc-embedded-subscribe:hover {
@@ -881,20 +896,8 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .mc-field-group input {
-    margin-bottom: .75rem;
-    border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    width: 66.66667%;
-  }
-
   #mc-embedded-subscribe {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem;
+    width: 25%;
   }
 }
 
