@@ -8,7 +8,7 @@
 @endpush
 
 @section('body')
-    @foreach ($featuredPosts = $posts->where('featured', true) as $featuredPost)
+    @foreach ($posts->where('featured', true) as $featuredPost)
         <div class="w-full mb-6">
             @if ($featuredPost->cover_image)
                 <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image">
@@ -27,7 +27,7 @@
             </a>
         </div>
 
-        @if ($featuredPost != $featuredPosts->last())
+        @if (! $loop->last)
             <hr class="border-b my-6">
         @endif
     @endforeach
@@ -40,9 +40,15 @@
                 <div class="w-full md:w-1/2 md:mx-6">
                     @include('_components.post-preview-inline')
                 </div>
+
+                @if (! $loop->last)
+                    <hr class="block md:hidden w-full border-b mt-2 mb-6">
+                @endif
             @endforeach
         </div>
 
-        <hr class="border-b my-6">
+        @if (! $loop->last)
+            <hr class="w-full border-b mt-2 mb-6">
+        @endif
     @endforeach
 @stop
