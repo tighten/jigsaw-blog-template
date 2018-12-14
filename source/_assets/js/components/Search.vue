@@ -53,7 +53,7 @@
                         :title="result.title"
                         class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light text-xl cursor-pointer p-3"
                         :key="result.link"
-                        :class="{ 'rounded-b-lg': (index === results.length - 1) }"
+                        :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
                         @mousedown.prevent
                     >
                         {{ result.title }}
@@ -89,6 +89,7 @@ export default {
     },
     methods: {
         openModal() {
+            document.body.classList.add("fixed");
             this.modal = true;
 
             this.$nextTick(() => {
@@ -98,6 +99,8 @@ export default {
         reset() {
             this.query = '';
             this.modal = false;
+
+            document.body.classList.remove("fixed");
         },
     },
     created() {
