@@ -144,6 +144,6 @@ input[name='search'].transition-border {
 }
 
 .overlay {
-  background: rgba(250, 250, 250, 0.96);
+    background: rgba(250, 250, 250, 0.96);
 }
 </style>
