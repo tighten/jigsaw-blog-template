@@ -7,8 +7,8 @@
         <a
             href="#"
             title="Start searching"
-            @click.prevent="openModal"
             class="flex md:hidden bg-grey-lighter justify-center items-center border border-grey rounded-full h-10 px-3"
+            @click.prevent="openModal"
         >
             <img src="/assets/img/magnifying-glass.svg" alt="search icon" class="h-4 w-4">
         </a>
@@ -58,7 +58,7 @@
                     >
                         {{ result.title }}
 
-                        <span class="block text-grey-dark text-sm my-1">{{ result.snippet }}</span>
+                        <span class="block text-grey-darker text-sm my-1" v-html="result.snippet"></span>
                     </a>
 
                     <div
