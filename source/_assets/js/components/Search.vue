@@ -1,6 +1,6 @@
 <template>
     <div class="relative flex flex-col w-full items-end mr-4">
-        <div :class="modal ? 'overlay fixed md:hidden pin-t pin-l flex flex-col w-full h-full items-center overflow-scroll opacity-100 z-10 pt-8 px-4' : 'hidden md:block w-full'">
+        <div :class="modal ? 'overlay fixed md:hidden pin-t pin-l flex flex-col w-full h-full items-center overflow-scroll opacity-100 z-10 pt-7 px-4' : 'hidden md:block w-full'">
             <div class="relative flex flex-col w-full items-end">
                 <label for="search" class="hidden">Search</label>
 
@@ -8,7 +8,7 @@
                     id="search"
                     v-model="query"
                     ref="search"
-                    class="transition-fast relative block h-10 w-full md:w-1/2 md:focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer px-4 py-2"
+                    class="transition-fast relative block h-10 w-full md:w-1/2 md:focus:w-3/4 bg-grey-lightest border border-grey focus:border-blue-light outline-none cursor-pointer px-4 py-2"
                     :class="{ 'transition-border': query }"
                     autocomplete="off"
                     name="search"
@@ -51,14 +51,14 @@
             </div>
         </div>
 
-        <a
-            href="#"
+        <button
             title="Start searching"
-            class="flex md:hidden bg-grey-lighter justify-center items-center border border-grey rounded-full h-10 px-3"
+            type="button"
+            class="flex md:hidden bg-grey-lightest hover:bg-blue-lightest justify-center items-center border border-grey rounded-full h-10 px-3"
             @click.prevent="openModal"
         >
             <img src="/assets/img/magnifying-glass.svg" alt="search icon" class="h-4 w-4 max-w-none">
-        </a>
+        </button>
     </div>
 </template>
 
@@ -78,9 +78,8 @@ export default {
     },
     methods: {
         openModal() {
-            document.body.classList.add("fixed");
+            document.body.classList.add('fixed');
             this.modal = true;
-
             this.$nextTick(() => {
                 this.$refs.search.focus();
             })
@@ -88,8 +87,7 @@ export default {
         reset() {
             this.query = '';
             this.modal = false;
-
-            document.body.classList.remove("fixed");
+            document.body.classList.remove('fixed');
         },
     },
     created() {
@@ -105,7 +103,7 @@ export default {
 
 <style>
 input[name='search'] {
-    background: url('/assets/img/magnifying-glass.svg') #eef3f7;
+    background-image: url('/assets/img/magnifying-glass.svg');
     background-position: 0.8em;
     background-repeat: no-repeat;
     border-radius: 25px;
@@ -133,6 +131,6 @@ input[name='search'].transition-border {
 }
 
 .overlay {
-    background: rgba(250, 250, 250, 0.96);
+    background: rgba(250, 250, 250, 0.94);
 }
 </style>
