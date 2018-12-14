@@ -8,7 +8,7 @@
                     id="search"
                     v-model="query"
                     ref="search"
-                    class="transition-fast relative block w-full md:w-1/2 md:focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer px-4 py-2"
+                    class="transition-fast relative block h-10 w-full md:w-1/2 md:focus:w-3/4 bg-grey-lighter border border-grey focus:border-blue-light outline-none cursor-pointer px-4 py-2"
                     :class="{ 'transition-border': query }"
                     autocomplete="off"
                     name="search"
@@ -20,24 +20,24 @@
 
                 <button
                     v-if="query || modal"
-                    class="absolute h-full font-light text-3xl text-blue hover:text-blue-dark focus:outline-none pr-3"
+                    class="absolute h-full font-light text-3xl text-blue hover:text-blue-dark focus:outline-none -mt-px pr-3"
                     @click="reset"
                 >&times;</button>
 
                 <transition name="fade">
-                    <div v-if="query" class="absolute flex flex-col w-full md:w-3/4 bg-white border border-b-0 border-blue-light rounded-b-lg shadow mt-9">
+                    <div v-if="query" class="absolute flex flex-col w-full md:w-3/4 bg-white border border-b-0 border-t-0 border-blue-light rounded-b-lg shadow-lg mt-10">
                         <a
                             v-for="(result, index) in results"
+                            class="bg-white hover:bg-blue-lightest border-b border-blue-light text-xl cursor-pointer p-3"
+                            :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
                             :href="result.link"
                             :title="result.title"
-                            class="transition-fast bg-white hover:bg-grey-lightest border-b border-blue-light text-xl cursor-pointer p-3"
                             :key="result.link"
-                            :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
                             @mousedown.prevent
                         >
                             {{ result.title }}
 
-                            <span class="block text-grey-darker text-sm my-1" v-html="result.snippet"></span>
+                            <span class="block font-normal text-grey-darker text-sm my-1" v-html="result.snippet"></span>
                         </a>
 
                         <div
