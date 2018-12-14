@@ -783,9 +783,9 @@ pre code {
   margin-left: -2rem;
   margin-right: -2rem;
   background-color: #ecf0f3;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  padding-top: 2rem;
+  margin-bottom: 0;
+  padding-bottom: .5rem;
+  padding-top: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
@@ -815,7 +815,7 @@ pre code {
   list-style: none;
   padding: 0;
   text-decoration: none;
-  margin-bottom: .75rem;
+  margin-bottom: 1rem;
   margin-top: 0;
   color: #606f7b;
   font-size: .925rem;
