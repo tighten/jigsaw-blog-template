@@ -41,7 +41,7 @@
 
             <button
                 v-if="query"
-                class="absolute flex justify-end text-blue-darker text-xl appearance-none active:border-0 -ml-6 mt-2"
+                class="absolute h-full font-light text-3xl text-blue hover:text-blue-dark focus:outline-none pr-3"
                 @click="reset"
             >&times;</button>
 
