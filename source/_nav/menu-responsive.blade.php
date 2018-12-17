@@ -1,5 +1,5 @@
 <nav id="js-nav-menu" class="nav-menu hidden lg:hidden">
-    <ul class="list-reset my-0 px-8">
+    <ul class="list-reset my-0">
         <li class="pl-4">
             <a
                 title="{{ $page->siteName }} Blog"

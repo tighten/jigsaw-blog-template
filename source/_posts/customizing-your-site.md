@@ -8,8 +8,6 @@ categories: [configuration]
 featured: true
 ---
 
-## Styles
-
 This starter template comes pre-loaded with [Tailwind CSS](https://tailwindcss.com), a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS. There are also a few base Sass files in the `/source/_assets/sass` folder, set up with the expectation that you can add any custom CSS into `_blog.scss`.
 
 > You can also re-work the architecture of the Sass files any way you’d like; just make sure to keep the `@tailwind` references in your final `main.scss` file.

@@ -12,16 +12,16 @@
         <img src="{{ $page->cover_image }}" alt="{{ $page->title }} cover image" class="mb-2">
     @endif
 
-    <h1 class="mb-2 leading-none">{{ $page->title }}</h1>
+    <h1 class="leading-none mb-2">{{ $page->title }}</h1>
 
-    <p class="text-grey-dark text-xl">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
+    <p class="text-grey-darker text-xl md:mt-0">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
 
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)
             <a
                 href="{{ $page->url('/blog/categories/' . $category) }}"
                 title="View posts in {{ $category }}"
-                class="inline-block bg-blue-lighter leading-loose tracking-wide text-blue-darker uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+                class="inline-block bg-grey-light hover:bg-blue-lighter leading-loose tracking-wide text-grey-darkest uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
             >{{ $category }}</a>
         @endforeach
     @endif
