@@ -16,6 +16,10 @@
     }
 
     @screen md {
+        @apply .w-2/3;
+    }
+
+    @screen lg {
         @apply .w-1/2;
     }
 }
