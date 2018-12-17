@@ -28,7 +28,7 @@
 
     <body class="bg-grey-lightest text-grey-darkest leading-normal font-sans">
         <div id="vue-app">
-            <header class="flex bg-white border-b shadow py-4" role="banner">
+            <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4" role="banner">
                 <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
                     <div class="flex items-center">
                         <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
@@ -38,7 +38,7 @@
                         </a>
                     </div>
 
-                    <div class="flex flex-1 justify-end items-center h-16">
+                    <div class="flex flex-1 justify-end items-center">
                         <search></search>
 
                         @include('_nav.menu')

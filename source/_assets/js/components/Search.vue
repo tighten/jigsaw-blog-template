@@ -8,7 +8,7 @@
                     id="search"
                     v-model="query"
                     ref="search"
-                    class="transition-fast relative block h-10 w-full md:w-1/2 md:focus:w-3/4 bg-grey-lightest border border-grey focus:border-blue-light outline-none cursor-pointer px-4 py-2"
+                    class="transition-fast relative block h-10 w-full md:w-1/2 md:focus:w-3/4 bg-grey-lightest border border-grey focus:border-blue-light outline-none cursor-pointer text-grey-darker px-4 pb-0"
                     :class="{ 'transition-border': query }"
                     autocomplete="off"
                     name="search"
