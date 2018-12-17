@@ -5,7 +5,6 @@ return [
     'siteDescription' => 'Generate an elegant blog with Jigsaw',
     'siteAuthor' => 'Author Name',
     'title' => 'Blog powered by Jigsaw',
-    'baseUrl' => 'http://jigsaw-blog-skeleton.test/',
     'production' => false,
     'collections' => [
         'posts' => [
@@ -24,6 +23,9 @@ return [
     ],
 
     // helpers
+    'getDate' => function ($page) {
+        return Datetime::createFromFormat('U', $page->date);
+    },
     'excerpt' => function ($page, $length = 255) {
         $cleaned = strip_tags(
             preg_replace(['/<pre>[\w\W]*?<\/pre>/', '/<h\d>[\w\W]*?<\/h\d>/'], '', $page->getContent()),
@@ -39,9 +41,6 @@ return [
         return strlen($cleaned) > $length
             ? preg_replace('/\s+?(\S+)?$/', '', $truncated) . '...'
             : $cleaned;
-    },
-    'getDate' => function ($page) {
-        return Datetime::createFromFormat('U', $page->date);
     },
     'isActive' => function ($page, $path) {
         return ends_with(trimPath($page->getPath()), trimPath($path));

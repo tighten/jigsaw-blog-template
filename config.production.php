@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'baseUrl' => 'https://tightenco.github.io/jigsaw-blog-skeleton/',
+    'baseUrl' => 'https://my-jigsaw-blog.com',
     'production' => true,
 ];
