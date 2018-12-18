@@ -6,9 +6,11 @@ return [
     'siteName' => 'Blog Starter Template',
     'siteDescription' => 'Generate an elegant blog with Jigsaw',
     'siteAuthor' => 'Author Name',
+
+    // collections
     'collections' => [
         'posts' => [
-            'author' => 'Author Name', // Default author if not provided in given post
+            'author' => 'Author Name', // Default author, if not provided in a post
             'sort' => '-date',
             'path' => 'blog/{filename}',
         ],
