@@ -18,7 +18,8 @@
         }
     ],
     "require": {
-        "samdark/sitemap": "^2.2"
+        "samdark/sitemap": "^2.2",
+        "tightenco/jigsaw": "dev-master"
     },
     "autoload": {
         "psr-4": {
