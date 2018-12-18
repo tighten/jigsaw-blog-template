@@ -18,7 +18,7 @@ class GenerateSitemap
         $baseUrl = $jigsaw->getConfig('baseUrl');
 
         if (! $baseUrl) {
-            echo("To generate a sitemap.xml file, please specify a 'baseUrl' in config.php.\n");
+            echo("\nTo generate a sitemap.xml file, please specify a 'baseUrl' in config.php.\n\n");
 
             return;
         }
