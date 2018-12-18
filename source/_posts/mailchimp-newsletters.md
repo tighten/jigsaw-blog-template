@@ -39,4 +39,4 @@ To begin accepting subscribers, simply add your list URL to the form `action` in
 
 <img src="/assets/img/newsletter.png">
 
-[See how to get your Mailchimp list URL](https://mailchimp.com/help/host-your-own-signup-forms/#Edit_your_Custom_Signup_Form)
+[See how to get your Mailchimp list URL.](https://mailchimp.com/help/host-your-own-signup-forms/#Edit_your_Custom_Signup_Form)
