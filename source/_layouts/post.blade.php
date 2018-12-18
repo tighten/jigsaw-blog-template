@@ -30,17 +30,21 @@
         @yield('content')
     </div>
 
-    <nav class="clearfix">
-        @if ($next = $page->getNext())
-            <a href="{{ $page->url($next->getPath()) }}" title="Next Post: {{ $next->title }}" class="float-left text-sm md:text-base">
-                &LeftArrow; {{ $next->title }}
-            </a>
-        @endif
+    <nav class="flex justify-between text-sm md:text-base">
+        <div>
+            @if ($next = $page->getNext())
+                <a href="{{ $page->url($next->getPath()) }}" title="Older Post: {{ $next->title }}">
+                    &LeftArrow; {{ $next->title }}
+                </a>
+            @endif
+        </div>
 
-        @if ($previous = $page->getPrevious())
-            <a href="{{ $page->url($previous->getPath()) }}" title="Previous Post: {{ $previous->title }}"class="float-right text-sm md:text-base">
-                {{ $previous->title }} &RightArrow;
-            </a>
-        @endif
+        <div>
+            @if ($previous = $page->getPrevious())
+                <a href="{{ $page->url($previous->getPath()) }}" title="Newer Post: {{ $previous->title }}">
+                    {{ $previous->title }} &RightArrow;
+                </a>
+            @endif
+        </div>
     </nav>
 @endsection
