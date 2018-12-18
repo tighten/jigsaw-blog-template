@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
-    <body class="bg-grey-lightest text-grey-darkest leading-normal font-sans">
+    <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
         <div id="vue-app">
             <header class="flex items-center shadow bg-white border-b h-24 py-4" role="banner">
                 <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
@@ -50,7 +50,7 @@
 
             @include('_nav.menu-responsive')
 
-            <main role="main" class="w-full min-h-screen container max-w-xl mx-auto pt-16 px-6">
+            <main role="main" class="w-full flex-auto container max-w-xl mx-auto py-16 px-6">
                 @yield('body')
             </main>
         </div>
@@ -59,7 +59,7 @@
 
         @stack('scripts')
 
-        <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
+        <footer class="bg-white text-center text-sm py-4" role="contentinfo">
             <nav>
                 <ul class="flex flex-col md:flex-row justify-center list-reset">
                     <li class="md:mr-2">
