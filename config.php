@@ -1,11 +1,11 @@
 <?php
 
 return [
+    'baseUrl' => '',
+    'production' => false,
     'siteName' => 'Blog Starter Template',
     'siteDescription' => 'Generate an elegant blog with Jigsaw',
     'siteAuthor' => 'Author Name',
-    'title' => 'Blog powered by Jigsaw',
-    'production' => false,
     'collections' => [
         'posts' => [
             'author' => 'Author Name', // Default author if not provided in given post

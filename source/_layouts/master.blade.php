@@ -5,12 +5,12 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="{{ $page->meta_description or $page->siteDescription }}">
 
-        <meta property="og:title" content="{{ $page->siteName }}" />
+        <meta property="og:title" content="{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}"/>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
         <meta property="og:description" content="{{ $page->siteDescription }}" />
 
-        <title>{{ $page->siteName }} | {{ $page->title }}</title>
+        <title>{{ $page->siteName }}{{ $page->title ? ' | ' . $page->title : '' }}</title>
 
         <link rel="home" href="{{ $page->baseUrl }}">
         <link rel="icon" href="{{ $page->url('favicon.ico') }}">
