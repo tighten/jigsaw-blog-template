@@ -66,7 +66,7 @@ Now that you’ve edited your configuration variables and know how to customize 
 
 ```bash
 # build static files with Jigsaw
-$ ./vendor/bin/jigsaw build
+./vendor/bin/jigsaw build
 
 # compile assets with Laravel Mix
 # options: dev, staging, production
