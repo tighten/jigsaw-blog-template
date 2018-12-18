@@ -19,14 +19,14 @@
             </p>
 
             <h2 class="text-3xl mt-0">
-                <a href="{{ $page->url($featuredPost->getPath()) }}" title="Read {{ $featuredPost->title }}" class="text-black font-extrabold">
+                <a href="{{ $featuredPost->getUrl() }}" title="Read {{ $featuredPost->title }}" class="text-black font-extrabold">
                     {{ $featuredPost->title }}
                 </a>
             </h2>
 
             <p class="mt-0 mb-4">{!! $featuredPost->excerpt() !!}</p>
 
-            <a href="{{ $page->url($featuredPost->getPath()) }}" title="Read - {{ $featuredPost->title }}"class="uppercase tracking-wide mb-4">
+            <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}"class="uppercase tracking-wide mb-4">
                 Read
             </a>
         </div>

@@ -5,7 +5,7 @@
 
     <h2 class="text-3xl mt-0">
         <a
-            href="{{ $page->url($post->getPath()) }}"
+            href="{{ $post->getUrl() }}"
             title="Read more - {{ $post->title }}"
             class="text-black font-extrabold"
         >{{ $post->title }}</a>
@@ -14,7 +14,7 @@
     <p class="mb-4 mt-0">{!! $post->excerpt(200) !!}</p>
 
     <a
-        href="{{ $page->url($post->getPath()) }}"
+        href="{{ $post->getUrl() }}"
         title="Read more - {{ $post->title }}"
         class="uppercase font-semibold tracking-wide mb-2"
     >Read</a>

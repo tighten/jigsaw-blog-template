@@ -19,7 +19,7 @@
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)
             <a
-                href="{{ $page->url('/blog/categories/' . $category) }}"
+                href="{{ '/blog/categories/' . $category }}"
                 title="View posts in {{ $category }}"
                 class="inline-block bg-grey-light hover:bg-blue-lighter leading-loose tracking-wide text-grey-darkest uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
             >{{ $category }}</a>
@@ -32,13 +32,13 @@
 
     <div class="flex {{ $page->getPrevious() ? 'justify-between' : 'justify-end' }}">
         @if ($previous = $page->getPrevious())
-            <a href="{{ $page->url($previous->getPath()) }}" title="Previous Post: {{ $previous->title }}">
+            <a href="{{ $previous->getUrl() }}" title="Previous Post: {{ $previous->title }}">
                 &LeftArrow; {{ $previous->title }}
             </a>
         @endif
 
         @if ($next = $page->getNext())
-            <a href="{{ $page->url($next->getPath()) }}" title="Next Post: {{ $next->title }}">
+            <a href="{{ $next->getUrl() }}" title="Next Post: {{ $next->title }}">
                 {{ $next->title }} &RightArrow;
             </a>
         @endif

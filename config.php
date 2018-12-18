@@ -47,7 +47,4 @@ return [
     'isActive' => function ($page, $path) {
         return ends_with(trimPath($page->getPath()), trimPath($path));
     },
-    'url' => function ($page, $path) {
-        return rtrim($page->baseUrl, '/') . '/' . ltrim($path, '/');
-    },
 ];
