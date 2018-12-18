@@ -15,7 +15,7 @@
     can accept the submission and redirect to a thank you page.
 </p>
 
-<form action="https://fieldgoal.io/" class="mb-12">
+<form action="/" class="mb-12">
     <div class="flex flex-wrap mb-6 -mx-3">
         <div class="w-full md:w-1/2 mb-6 md:mb-0 px-3">
             <label class="block mb-2 text-grey-darkest text-sm font-semibold" for="contact-name">
@@ -28,6 +28,7 @@
                 placeholder="Jane Doe"
                 name="name"
                 class="block w-full border shadow rounded-lg outline-none mb-2 p-4"
+                required
             >
         </div>
 
@@ -37,11 +38,12 @@
             </label>
 
             <input
-                type="text"
+                type="email"
                 id="contact-email"
                 placeholder="email@domain.com"
                 name="email"
                 class="block w-full border shadow rounded-lg outline-none mb-2 p-4"
+                required
             >
         </div>
     </div>
@@ -57,6 +59,7 @@
             name="message"
             class="block w-full border shadow rounded-lg outline-none appearance-none mb-2 px-4 py-6"
             placeholder="A lovely message here."
+            required
         ></textarea>
     </div>
 
