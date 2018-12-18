@@ -26,21 +26,21 @@
         @endforeach
     @endif
 
-    <div class="border-b border-blue-lighter mb-10 py-4" v-pre>
+    <div class="border-b border-blue-lighter mb-10 pb-4" v-pre>
         @yield('content')
     </div>
 
-    <div class="flex {{ $page->getPrevious() ? 'justify-between' : 'justify-end' }}">
-        @if ($previous = $page->getPrevious())
-            <a href="{{ $page->url($previous->getPath()) }}" title="Previous Post: {{ $previous->title }}">
-                &LeftArrow; {{ $previous->title }}
+    <nav class="clearfix">
+        @if ($next = $page->getNext())
+            <a href="{{ $page->url($next->getPath()) }}" title="Next Post: {{ $next->title }}" class="float-left text-sm md:text-base">
+                &LeftArrow; {{ $next->title }}
             </a>
         @endif
 
-        @if ($next = $page->getNext())
-            <a href="{{ $page->url($next->getPath()) }}" title="Next Post: {{ $next->title }}">
-                {{ $next->title }} &RightArrow;
+        @if ($previous = $page->getPrevious())
+            <a href="{{ $page->url($previous->getPath()) }}" title="Previous Post: {{ $previous->title }}"class="float-right text-sm md:text-base">
+                {{ $previous->title }} &RightArrow;
             </a>
         @endif
-    </div>
+    </nav>
 @endsection
