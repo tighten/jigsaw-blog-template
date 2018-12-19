@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'baseUrl' => 'https://jigsaw-blog-staging.tighten.co',
+    'baseUrl' => 'http://jigsaw-blog-staging.tighten.co',
     'production' => false,
 ];
