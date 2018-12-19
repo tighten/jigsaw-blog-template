@@ -119,7 +119,7 @@ input[name='search'].transition-border {
 }
 
 .fade-enter-active {
-    transition: opacity .9s;
+    transition: opacity .5s;
 }
 
 .fade-leave-active {
