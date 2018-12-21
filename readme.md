@@ -2,8 +2,6 @@
 
 This is a starter template for creating a beautiful, customizable blog in Jigsaw with minimal effort. You’ll only have to change a few settings and you’re ready to go.
 
-![Blog starter template screenshot](https://user-images.githubusercontent.com/357312/50345466-355c7700-04fd-11e9-83dd-f4e13ecdc97c.png)
-
 ## Installation
 
 After installing Jigsaw, run the following command from your project directory:
@@ -23,6 +21,10 @@ This starter template includes samples of common page types, and comes pre-confi
 - A component for accepting signups for a [Mailchimp](https://mailchimp.com/) newsletter
 - A sample contact form
 - A search bar powered by [Fuse.js](http://fusejs.io/) and [Vue.js](https://vuejs.org/), which indexes your content automatically and requires zero configuration
+
+---
+
+![Blog starter template screenshot](https://user-images.githubusercontent.com/357312/50345466-355c7700-04fd-11e9-83dd-f4e13ecdc97c.png)
 
 ---
 
@@ -77,7 +79,7 @@ Files that don't require processing (such as images and fonts) can be added dire
 
 ---
 
-## Building Your Site {#getting-started-building-your-site}
+## Building Your Site
 
 Now that you’ve edited your configuration variables and know how to customize your styles and content, let’s build the site.
 
