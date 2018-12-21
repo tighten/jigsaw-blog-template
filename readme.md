@@ -2,6 +2,8 @@
 
 This is a starter template for creating a beautiful, customizable blog in Jigsaw with minimal effort. You’ll only have to change a few settings and you’re ready to go.
 
+[View a preview of the blog template.](http://jigsaw-blog-staging.tighten.co/)
+
 ## Installation
 
 After installing Jigsaw, run the following command from your project directory:
