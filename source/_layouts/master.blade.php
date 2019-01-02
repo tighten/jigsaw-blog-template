@@ -27,37 +27,31 @@
     </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-grey-lightest text-grey-darkest leading-normal font-sans">
-        <div id="vue-app">
-            <header class="flex items-center shadow bg-white border-b h-24 py-4" role="banner">
-                <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
-                    <div class="flex items-center">
-                        <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
-                            <img class="h-8 md:h-10 mr-3" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
+        <header class="flex items-center shadow bg-white border-b h-24 py-4" role="banner">
+            <div class="container flex items-center max-w-4xl mx-auto px-4 lg:px-8">
+                <div class="flex items-center">
+                    <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
+                        <img class="h-8 md:h-10 mr-3" src="/assets/img/logo.svg" alt="{{ $page->siteName }} logo" />
 
-                            <h1 class="text-lg md:text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0">{{ $page->siteName }}</h1>
-                        </a>
-                    </div>
-
-                    <div class="flex flex-1 justify-end items-center">
-                        <search></search>
-
-                        @include('_nav.menu')
-
-                        @include('_nav.menu-toggle')
-                    </div>
+                        <h1 class="text-lg md:text-2xl text-blue-darkest font-semibold hover:text-blue-dark my-0">{{ $page->siteName }}</h1>
+                    </a>
                 </div>
-            </header>
 
-            @include('_nav.menu-responsive')
+                <div id="vue-search" class="flex flex-1 justify-end items-center">
+                    <search></search>
 
-            <main role="main" class="flex-auto w-full container max-w-xl mx-auto py-16 px-6">
-                @yield('body')
-            </main>
-        </div>
+                    @include('_nav.menu')
 
-        <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
+                    @include('_nav.menu-toggle')
+                </div>
+            </div>
+        </header>
 
-        @stack('scripts')
+        @include('_nav.menu-responsive')
+
+        <main role="main" class="flex-auto w-full container max-w-xl mx-auto py-16 px-6">
+            @yield('body')
+        </main>
 
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center list-reset">
@@ -71,5 +65,9 @@
                 </li>
             </ul>
         </footer>
+
+        <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
+
+        @stack('scripts')
     </body>
 </html>
