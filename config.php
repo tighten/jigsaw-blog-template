@@ -28,7 +28,7 @@ return [
     'getDate' => function ($page) {
         return Datetime::createFromFormat('U', $page->date);
     },
-    'excerpt' => function ($page, $length = 255) {
+    'getExcerpt' => function ($page, $length = 255) {
         $cleaned = strip_tags(
             preg_replace(['/<pre>[\w\W]*?<\/pre>/', '/<h\d>[\w\W]*?<\/h\d>/'], '', $page->getContent()),
             '<code>'
