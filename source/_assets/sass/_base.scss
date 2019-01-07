@@ -132,3 +132,7 @@ pre {
         @apply .p-0;
     }
 }
+
+::selection {
+    @apply .bg-indigo-lightest
+    }
