@@ -4,7 +4,7 @@
     <meta property="og:title" content="{{ $page->siteName }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ $page->getUrl() }}"/>
-    <meta property="og:description" content="{{ $page->blogDescription }}" />
+    <meta property="og:description" content="{{ $page->siteDescription }}" />
 @endpush
 
 @section('body')
