@@ -13,7 +13,7 @@ class GenerateIndex
                 'title' => $page->title,
                 'categories' => $page->categories,
                 'link' => rightTrimPath($jigsaw->getConfig('baseUrl')) . $page->getPath(),
-                'snippet' => $page->excerpt(),
+                'snippet' => $page->getExcerpt(),
             ];
         })->values());
 
