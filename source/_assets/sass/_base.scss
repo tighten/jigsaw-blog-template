@@ -132,3 +132,8 @@ pre {
         @apply .p-0;
     }
 }
+
+::selection {
+    @apply .bg-blue;
+    @apply .text-white;
+    }
