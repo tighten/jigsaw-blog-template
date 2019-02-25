@@ -29,7 +29,7 @@ return [
         return Datetime::createFromFormat('U', $page->date);
     },
     'getExcerpt' => function ($page, $length = 255) {
-        $content = $page->excerpt ?? $page->getContent();
+        $content = $page->excerpt ?? rtrim(preg_split('/^<!-- more -->$/m', $page->getContent(), 2)[0]);
         $cleaned = strip_tags(
             preg_replace(['/<pre>[\w\W]*?<\/pre>/', '/<h\d>[\w\W]*?<\/h\d>/'], '', $content),
             '<code>'
