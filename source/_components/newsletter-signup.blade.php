@@ -1,4 +1,4 @@
-<div class="flex justify-center lg:-mx-12 my-12 p-6 md:px-12 bg-grey-lighter border border-grey-light text-sm md:rounded shadow">
+<div class="flex justify-center lg:-mx-12 my-12 p-6 md:px-12 bg-gray-200 border border-gray-400 text-sm md:rounded shadow">
     <!-- Begin Mailchimp Signup Form -->
     <div id="mc_embed_signup">
         <form action="https://your-mail-chimp-list-manage-url" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
