@@ -24,7 +24,7 @@ blockquote {
 }
 
 code {
-    @apply .bg-gray-400;
+    @apply .bg-gray-300;
     @apply .px-2;
     @apply .py-px;
     @apply .rounded;
@@ -134,6 +134,6 @@ pre {
 }
 
 ::selection {
-    @apply .bg-blue;
+    @apply .bg-blue-500;
     @apply .text-white;
-    }
+}

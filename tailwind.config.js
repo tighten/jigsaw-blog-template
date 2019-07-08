@@ -1,32 +1,13 @@
-const { colors } = require('tailwindcss/defaultTheme')
-
 module.exports = {
   theme: {
     extend: {
-      colors: {
-        gray: {
-          ...colors.gray,
-          '100': '#f9f9f9',
-          '200': '#ecf0f3',
-          '400': '#e2e8ee',
-          '800': '#3e4852',
-          '900': '#1f2e41'
-        },
-        blue: {
-          ...colors.blue,
-          '100': '#eff8ff',
-          '200': '#bcdefa',
-          '400': '#6cb2eb',
-          '500': '#3490dc',
-          '600': '#0174d4',
-          '800': '#1a4d8c',
-          '900': '#24548f'
-        }
-      },
       fontFamily: {
         sans: [
           'Nunito Sans'
-        ]
+        ],
+        mono: [
+          'monospace',
+        ],
       },
       lineHeight: {
         normal: '1.6',
@@ -56,10 +37,6 @@ module.exports = {
       '4xl': '2.125rem',
       '5xl': '2.625rem',
       '6xl': '10rem',
-    },
-    lineHeight: {
-      normal: '1.6',
-      loose: '1.75',
     },
   },
   variants: {
