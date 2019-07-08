@@ -26,7 +26,7 @@
                 id="contact-name"
                 placeholder="Jane Doe"
                 name="name"
-                class="block w-full border shadow rounded-lg outline-none mb-2 p-4"
+                class="block w-full border shadow rounded-lg outline-none mb-2 px-4 py-3"
                 required
             >
         </div>
@@ -41,7 +41,7 @@
                 id="contact-email"
                 placeholder="email@domain.com"
                 name="email"
-                class="block w-full border shadow rounded-lg outline-none mb-2 p-4"
+                class="block w-full border shadow rounded-lg outline-none mb-2 px-4 py-3"
                 required
             >
         </div>
@@ -56,7 +56,7 @@
             id="contact-message"
             rows="4"
             name="message"
-            class="block w-full border shadow rounded-lg outline-none appearance-none mb-2 px-4 py-6"
+            class="block w-full border shadow rounded-lg outline-none appearance-none mb-2 px-4 py-3"
             placeholder="A lovely message here."
             required
         ></textarea>
@@ -66,7 +66,7 @@
         <input
             type="submit"
             value="Submit"
-            class="block bg-blue hover:bg-blue-600 text-white text-sm font-semibold tracking-wide uppercase shadow rounded-lg cursor-pointer px-6 py-3"
+            class="block bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold leading-snug tracking-wide uppercase shadow rounded-lg cursor-pointer px-6 py-3"
         >
     </div>
 </form>
