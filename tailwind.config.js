@@ -57,10 +57,6 @@ module.exports = {
       '5xl': '2.625rem',
       '6xl': '10rem',
     },
-    lineHeight: {
-      normal: '1.6',
-      loose: '1.75',
-    },
   },
   variants: {
     borderRadius: ['responsive', 'focus'],
