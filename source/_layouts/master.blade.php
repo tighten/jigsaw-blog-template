@@ -55,7 +55,7 @@
         </main>
 
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
-            <ul class="flex flex-col md:flex-row justify-center list-reset">
+            <ul class="flex flex-col md:flex-row justify-center">
                 <li class="md:mr-2">
                     &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> {{ date('Y') }}.
                 </li>
