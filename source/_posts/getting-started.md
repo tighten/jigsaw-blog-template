@@ -9,7 +9,7 @@ featured: true
 categories: [configuration]
 ---
 
-This is a starter template for creating a beautiful, customizable blog with minimal effort. You’ll only have to change a few settings and you’re ready to go.
+This is a starter template for creating a beautiful, customizable blog with minimal effort. You’ll only have to change a few settings and you’re ready to go.<!-- more -->
 
 ## Configuration
 
