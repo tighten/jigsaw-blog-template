@@ -9,6 +9,6 @@
     </author>
     <summary type="html">{{ $entry->getExcerpt() }}...</summary>
     <content type="html"><![CDATA[
-        @include('_posts.' . $entry->getFilename())
+        @includeFirst(['_posts.' . $entry->getFilename(), '_posts._tmp.' . $entry->getFilename()])
     ]]></content>
 </entry>
