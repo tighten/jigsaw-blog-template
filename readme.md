@@ -26,7 +26,7 @@ This starter template includes samples of common page types, and comes pre-confi
 
 ---
 
-![Blog starter template screenshot](https://user-images.githubusercontent.com/357312/50345466-355c7700-04fd-11e9-83dd-f4e13ecdc97c.png)
+![Blog dark starter template screenshot](https://user-images.githubusercontent.com/20649108/74672987-460e8880-51a6-11ea-96c4-43a395d8be26.png)
 
 ---
 
