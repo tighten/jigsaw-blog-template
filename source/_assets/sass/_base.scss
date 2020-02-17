@@ -8,7 +8,7 @@ a {
     @apply .text-blue-600;
 
     &:hover {
-        @apply .text-blue-800;
+        @apply .text-blue-500;
     }
 }
 
@@ -19,12 +19,12 @@ blockquote {
     @apply .italic;
     @apply .my-8;
     @apply .pl-6;
-    @apply .text-gray-800;
+    @apply .text-gray-300;
     @apply .text-lg;
 }
 
 code {
-    @apply .bg-gray-300;
+    @apply .bg-gray-600;
     @apply .px-2;
     @apply .py-px;
     @apply .rounded;
@@ -52,7 +52,7 @@ h6 {
     @apply .leading-tight;
     @apply .mb-4;
     @apply .mt-8;
-    @apply .text-gray-900;
+    @apply .text-white;
 
     &:first-child {
         @apply .mt-0;
