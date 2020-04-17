@@ -14,7 +14,7 @@
         "highlight.js": "^9.13.1",
         "laravel-mix": "^4.0.0||^5.0.0",
         "laravel-mix-jigsaw": "^1.0.0",
-        "laravel-mix-purgecss": "^3.0.0",
+        "laravel-mix-purgecss": "^4.0.0||^5.0.0",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
         "tailwindcss": "^1.0.4",
