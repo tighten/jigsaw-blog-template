@@ -1,16 +1,11 @@
 ---
+title: Blog
+description: The list of blog posts for the site
 pagination:
     collection: posts
     perPage: 4
 ---
 @extends('_layouts.master')
-
-@push('meta')
-    <meta property="og:title" content="{{ $page->siteName }} Blog" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ $page->getUrl() }}"/>
-    <meta property="og:description" content="The list of blog posts for {{ $page->siteName }}" />
-@endpush
 
 @section('body')
     <h1>Blog</h1>
