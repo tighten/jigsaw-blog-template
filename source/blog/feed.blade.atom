@@ -1,3 +1,7 @@
+---
+site_path: blog
+---
+
 @extends('_layouts.rss')
 
 @section('entries')
