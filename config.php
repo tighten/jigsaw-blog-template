@@ -44,7 +44,7 @@ return [
         );
 
         if (count($content) > 1) {
-            return $content[0];
+            return $cleaned;
         }
 
         $truncated = substr($cleaned, 0, $length);
