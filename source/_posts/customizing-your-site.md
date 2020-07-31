@@ -46,6 +46,14 @@ Here’s a quick preview of what some of the basic type styles will look like in
 
 The quick brown fox jumps over the lazy dog
 
+- The quick brown fox
+    - jumps over
+        - the lazy dog
+
+1. The quick brown fox
+    1. jumps over
+        1. the lazy dog
+
 <s>The quick brown fox jumps over the lazy dog</s>
 
 <u>The quick brown fox jumps over the lazy dog</u>
