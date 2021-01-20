@@ -8,7 +8,7 @@
         "watch": "npm run local -- --watch"
     },
     "devDependencies": {
-        "axios": "^0.18.0",
+        "axios": "^0.21.1",
         "cross-env": "^3.2.3",
         "fuse.js": "^3.3.0",
         "highlight.js": "^9.13.1",
