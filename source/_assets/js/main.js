@@ -3,7 +3,7 @@ window.fuse = require('fuse.js');
 window.Vue = require('vue');
 
 import Search from './components/Search.vue';
-import hljs from 'highlight.js/lib/highlight';
+import hljs from 'highlight.js/lib/core';
 
 // Syntax highlighting
 hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'));
