@@ -1,17 +1,17 @@
 .nav-menu {
-    @apply .bg-gray-200;
-    @apply .pb-2;
-    @apply .pt-6;
-    @apply .px-2;
-    @apply .shadow;
-    @apply .w-auto;
+    @apply bg-gray-200;
+    @apply pb-2;
+    @apply pt-6;
+    @apply px-2;
+    @apply shadow;
+    @apply w-auto;
 }
 
 .nav-menu__item {
-    @apply .block;
-    @apply .no-underline;
-    @apply .mb-4;
-    @apply .mt-0;
-    @apply .text-gray-800;
-    @apply .text-sm;
+    @apply block;
+    @apply no-underline;
+    @apply mb-4;
+    @apply mt-0;
+    @apply text-gray-800;
+    @apply text-sm;
 }
