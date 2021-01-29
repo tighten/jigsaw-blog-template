@@ -1,23 +1,23 @@
 {
     "private": true,
     "scripts": {
-        "local": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --env=local --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "staging": "cross-env NODE_ENV=staging node_modules/webpack/bin/webpack.js --progress --hide-modules --env=staging --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --env=production --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "dev": "npm run local",
-        "watch": "npm run local -- --watch"
+        "dev": "mix",
+        "watch": "mix watch",
+        "staging": "NODE_ENV=staging mix",
+        "prod": "mix --production"
     },
     "devDependencies": {
         "axios": "^0.21.1",
-        "cross-env": "^7.0.3",
         "fuse.js": "^6.4.6",
         "highlight.js": "^10.5.0",
-        "laravel-mix": "^4.0.0||^5.0.9",
+        "laravel-mix": "^6.0.11",
         "laravel-mix-jigsaw": "^1.5.0",
+        "postcss": "^8.2.4",
         "sass": "^1.32.5",
         "sass-loader": "^10.1.1",
         "tailwindcss": "^1.9.6",
         "vue": "^2.6.12",
+        "vue-loader": "^15.9.6",
         "vue-template-compiler": "^2.6.12"
     }
 }
