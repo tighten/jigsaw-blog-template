@@ -106,6 +106,7 @@
     font-weight: bold;
   }
 }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -19557,7 +19558,6 @@ pre code {
 .select-all{
   -webkit-user-select: all;
      -moz-user-select: all;
-      -ms-user-select: all;
           user-select: all;
 }
 
@@ -41780,7 +41780,6 @@ pre code {
   .sm\:select-all{
     -webkit-user-select: all;
        -moz-user-select: all;
-        -ms-user-select: all;
             user-select: all;
   }
 
@@ -63930,7 +63929,6 @@ pre code {
   .md\:select-all{
     -webkit-user-select: all;
        -moz-user-select: all;
-        -ms-user-select: all;
             user-select: all;
   }
 
@@ -86080,7 +86078,6 @@ pre code {
   .lg\:select-all{
     -webkit-user-select: all;
        -moz-user-select: all;
-        -ms-user-select: all;
             user-select: all;
   }
 
@@ -108230,7 +108227,6 @@ pre code {
   .xl\:select-all{
     -webkit-user-select: all;
        -moz-user-select: all;
-        -ms-user-select: all;
             user-select: all;
   }
 
