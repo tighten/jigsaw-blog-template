@@ -1,7 +1,5 @@
 window.axios = require('axios');
-window.fuse = require('fuse.js');
-window.Vue = require('vue');
-
+import Vue from 'vue';
 import Search from './components/Search.vue';
 import hljs from 'highlight.js/lib/core';
 
