@@ -32,15 +32,15 @@
                         <a
                             v-for="(result, index) in results"
                             class="bg-white hover:bg-blue-100 border-b border-blue-400 text-xl cursor-pointer p-4"
-                            :class="{ 'rounded-b-lg' : (index === results.length - 1) }"
-                            :href="result.link"
-                            :title="result.title"
+                            :class="{ 'rounded-b-lg': (index === results.length - 1) }"
+                            :href="result.item.link"
+                            :title="result.item.title"
                             :key="result.link"
                             @mousedown.prevent
                         >
-                            {{ result.title }}
+                            {{ result.item.title }}
 
-                            <span class="block font-normal text-gray-700 text-sm my-1" v-html="result.snippet"></span>
+                            <span class="block font-normal text-gray-700 text-sm my-1" v-html="result.item.snippet"></span>
                         </a>
 
                         <div
@@ -66,6 +66,8 @@
 </template>
 
 <script>
+import Fuse from 'fuse.js';
+
 export default {
     data() {
         return {
@@ -93,7 +95,7 @@ export default {
     },
     created() {
         axios('/index.json').then(response => {
-            this.fuse = new fuse(response.data, {
+            this.fuse = new Fuse(response.data, {
                 minMatchCharLength: 6,
                 keys: ['title', 'snippet', 'categories'],
             });
