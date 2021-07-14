@@ -1,8 +1,7 @@
 #mc_embed_signup {
     @apply w-full;
 
-    // increase selector specificity for
-    // in-line errors
+    /* increase selector specificity for in-line errors */
     div.mc-field-group {
         > div.mce_inline_error {
             @apply bg-transparent;
