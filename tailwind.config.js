@@ -26,7 +26,7 @@ module.exports = {
                 '8xl': '88rem',
             },
             boxShadow: {
-                lg: '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
+                search: '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
             },
         },
         fontSize: {
