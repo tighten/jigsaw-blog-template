@@ -5,10 +5,10 @@ body {
 a {
     @apply font-semibold;
     @apply no-underline;
-    @apply text-blue-600;
+    @apply text-blue-500;
 
     &:hover {
-        @apply text-blue-800;
+        @apply text-blue-700;
     }
 }
 
