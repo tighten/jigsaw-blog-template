@@ -6,38 +6,35 @@ a {
     @apply font-semibold;
     @apply no-underline;
     @apply text-blue-500;
-
-    &:hover {
-        @apply text-blue-700;
-    }
+    @apply hover:text-blue-700;
 }
 
 blockquote {
-    @apply border-blue-400;
-    @apply border-l-4;
+    @apply pl-6;
+    @apply my-8;
+    @apply text-lg;
     @apply font-normal;
     @apply italic;
-    @apply my-8;
-    @apply pl-6;
     @apply text-gray-800;
-    @apply text-lg;
+    @apply border-l-4;
+    @apply border-blue-400;
 }
 
 code {
-    @apply bg-gray-300;
     @apply px-2;
     @apply py-px;
-    @apply rounded;
     @apply text-sm;
+    @apply bg-gray-300;
+    @apply rounded;
 }
 
 code.hljs {
-    @apply bg-transparent;
     @apply p-0;
+    @apply bg-transparent;
 
-    .hljs-comment,
-    .hljs-keyword,
-    .hljs-meta {
+    & .hljs-comment,
+    & .hljs-keyword,
+    & .hljs-meta {
         @apply font-normal;
         @apply not-italic;
     }
@@ -49,10 +46,10 @@ h3,
 h4,
 h5,
 h6 {
-    @apply leading-tight;
-    @apply mb-4;
     @apply mt-8;
+    @apply mb-4;
     @apply text-gray-900;
+    @apply leading-tight;
 
     &:first-child {
         @apply mt-0;
@@ -60,47 +57,47 @@ h6 {
 }
 
 h1 {
-    @apply font-extrabold;
     @apply text-5xl;
+    @apply font-extrabold;
 }
 
 h2 {
-    @apply font-bold;
     @apply text-4xl;
+    @apply font-bold;
 }
 
 h3 {
-    @apply font-bold;
     @apply text-3xl;
+    @apply font-bold;
 }
 
 h4 {
-    @apply font-normal;
     @apply text-2xl;
+    @apply font-normal;
 }
 
 h5 {
-    @apply font-normal;
     @apply text-xl;
+    @apply font-normal;
 }
 
 h6 {
-    @apply font-light;
     @apply text-lg;
+    @apply font-light;
 }
 
 hr {
+    @apply my-12;
     @apply border-b;
     @apply border-blue-200;
-    @apply my-12;
     @apply rounded-full;
 }
 
 li {
-    ul,
-    ol {
-        @apply my-0;
+    & ul,
+    & ol {
         @apply ml-8;
+        @apply my-0;
     }
 }
 
@@ -126,23 +123,23 @@ p {
 }
 
 pre {
+    @apply p-4;
+    @apply my-6;
+    @apply text-base;
     @apply bg-gray-200;
     @apply leading-loose;
-    @apply my-6;
-    @apply overflow-x-auto;
-    @apply p-4;
     @apply rounded;
     @apply shadow;
-    @apply text-base;
+    @apply overflow-x-auto;
 
-    code {
-        @apply bg-transparent;
+    & code {
         @apply block;
         @apply p-0;
+        @apply bg-transparent;
     }
 }
 
 ::selection {
-    @apply bg-blue-500;
     @apply text-white;
+    @apply bg-blue-400;
 }
