@@ -69,6 +69,6 @@ Now that you’ve edited your configuration variables and know how to customize 
 ./vendor/bin/jigsaw build
 
 # compile assets with Laravel Mix
-# options: dev, staging, prod
+# options: dev, prod
 npm run dev
 ```

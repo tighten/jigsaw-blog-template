@@ -2,7 +2,7 @@
 
 This is a starter template for creating a beautiful, customizable blog in Jigsaw with minimal effort. You’ll only have to change a few settings and you’re ready to go.
 
-[View a preview of the blog template.](http://jigsaw-blog-staging.tighten.co/)
+[View a preview of the blog template.](http://jigsaw-blog-template.tighten.co/)
 
 ## Installation
 
@@ -90,6 +90,6 @@ Now that you’ve edited your configuration variables and know how to customize 
 ./vendor/bin/jigsaw build
 
 # compile assets with Laravel Mix
-# options: dev, staging, prod
+# options: dev, prod
 npm run dev
 ```
