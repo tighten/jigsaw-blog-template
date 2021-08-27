@@ -3,7 +3,6 @@
     "scripts": {
         "dev": "mix",
         "watch": "mix watch",
-        "staging": "NODE_ENV=staging mix",
         "prod": "mix --production"
     },
     "devDependencies": {
