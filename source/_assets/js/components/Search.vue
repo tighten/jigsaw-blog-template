@@ -10,7 +10,7 @@
                 id="search"
                 v-model="query"
                 ref="search"
-                class="transition-fast relative block h-10 w-full lg:w-1/2 lg:focus:w-3/4 bg-gray-100 border border-gray-500 focus:border-blue-400 outline-none cursor-pointer text-gray-700 px-4 pb-0 pt-px"
+                class="relative block h-10 w-full lg:w-1/2 lg:focus:w-3/4 bg-gray-100 border border-gray-500 focus:border-blue-400 outline-none cursor-pointer text-gray-700 px-4 pb-0 pt-px transition-all duration-200 ease-out"
                 :class="{ 'transition-border': query }"
                 autocomplete="off"
                 name="search"
@@ -28,7 +28,7 @@
 
             <transition name="fade">
                 <div v-if="query" class="absolute left-0 right-0 md:inset-auto w-full lg:w-3/4 text-left mb-4 md:mt-10">
-                    <div class="flex flex-col bg-white border border-b-0 border-t-0 border-blue-400 rounded-b-lg shadow-lg mx-4 md:mx-0">
+                    <div class="flex flex-col bg-white border border-b-0 border-t-0 border-blue-400 rounded-b-lg shadow-search mx-4 md:mx-0">
                         <a
                             v-for="(result, index) in results"
                             class="bg-white hover:bg-blue-100 border-b border-blue-400 text-xl cursor-pointer p-4"

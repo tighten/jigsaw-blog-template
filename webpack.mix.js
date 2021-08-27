@@ -4,16 +4,17 @@ require('laravel-mix-jigsaw');
 mix.disableSuccessNotifications();
 mix.setPublicPath('source/assets/build');
 
-mix.js('source/_assets/js/main.js', 'js').vue()
-    .sass('source/_assets/sass/main.scss', 'css/main.css')
-    .jigsaw({
-        watch: ['config.php', 'source/**/*.md', 'source/**/*.php', 'source/**/*.scss'],
-    })
-    .options({
-        processCssUrls: false,
-        postCss: [
-            require('tailwindcss'),
-        ],
+mix.jigsaw()
+    .js('source/_assets/js/main.js', 'js').vue()
+    .css('source/_assets/css/main.css', 'css/main.css', [
+        require('postcss-import'),
+        require('tailwindcss/nesting'),
+        require('tailwindcss'),
+    ])
+    .options({ processCssUrls: false })
+    .browserSync({
+        server: 'build_local',
+        files: ['build_local/**'],
     })
     .sourceMaps()
     .version();

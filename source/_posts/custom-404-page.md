@@ -12,7 +12,7 @@ This starter template includes a custom __404 Not Found__ error page, located at
 ```html
 <!-- source/404.blade.php -->
 
-@extends('_layouts.master')
+@extends('_layouts.main')
 
 @section('body')
     <div class="flex flex-col items-center text-gray-700 mt-32">

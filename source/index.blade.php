@@ -1,4 +1,4 @@
-@extends('_layouts.master')
+@extends('_layouts.main')
 
 @section('body')
     @foreach ($posts->where('featured', true) as $featuredPost)

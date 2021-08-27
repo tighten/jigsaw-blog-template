@@ -2,7 +2,7 @@
 title: Contact
 description: Get in touch with us
 ---
-@extends('_layouts.master')
+@extends('_layouts.main')
 
 @section('body')
 <h1>Contact</h1>

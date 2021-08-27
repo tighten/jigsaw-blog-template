@@ -5,7 +5,7 @@ pagination:
     collection: posts
     perPage: 4
 ---
-@extends('_layouts.master')
+@extends('_layouts.main')
 
 @section('body')
     <h1>Blog</h1>
