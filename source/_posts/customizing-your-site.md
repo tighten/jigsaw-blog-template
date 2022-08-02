@@ -2,7 +2,7 @@
 extends: _layouts.post
 section: content
 title: Customizing Your Site
-date: 2018-12-24
+date: 2022-08-01
 description: Customize your site with CSS and JS
 categories: [configuration]
 featured: true

@@ -2,7 +2,7 @@
 extends: _layouts.post
 section: content
 title: Mailchimp Newsletters
-date: 2018-11-21
+date: 2022-07-26
 categories: [feature]
 description: Mailchimp newsletter signups, just add a url.
 cover_image: /assets/img/post-cover-image-1.png

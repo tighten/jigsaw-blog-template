@@ -2,7 +2,7 @@
 extends: _layouts.post
 section: content
 title: Fuse Search
-date: 2018-12-22
+date: 2022-07-29
 description: Fast local search powered by FuseJS
 cover_image: /assets/img/post-cover-image-1.png
 categories: [feature]
