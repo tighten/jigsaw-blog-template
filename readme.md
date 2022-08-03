@@ -26,7 +26,7 @@ This starter template includes samples of common page types, and comes pre-confi
 
 ---
 
-![Blog starter template screenshot](https://user-images.githubusercontent.com/357312/50345466-355c7700-04fd-11e9-83dd-f4e13ecdc97c.png)
+![Blog starter template screenshot](/.github/screenshots/template-blog.png)
 
 ---
 
@@ -60,7 +60,7 @@ The top of each content page contains a YAML header that specifies how it should
 extends: _layouts.post
 section: content
 title: Getting Started
-date: 2018-12-25
+date: 2022-08-02
 description: Getting started with the Jigsaw blog starter template
 cover_image: /assets/img/post-cover-image-2.png
 featured: true
