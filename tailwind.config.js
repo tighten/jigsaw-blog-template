@@ -40,9 +40,4 @@ module.exports = {
             '6xl': '10rem',
         },
     },
-    variants: {
-        extend: {
-            width: ['focus'],
-        },
-    },
 };
