@@ -1,22 +1,20 @@
-window.axios = require('axios');
-import Vue from 'vue';
+import Vue from 'vue/dist/vue.esm.js';
 import Search from './components/Search.vue';
 import hljs from 'highlight.js/lib/core';
+import bash from 'highlight.js/lib/languages/bash'
+import xml from 'highlight.js/lib/languages/xml'
+import php from 'highlight.js/lib/languages/php'
+import scss from 'highlight.js/lib/languages/scss'
+import yaml from 'highlight.js/lib/languages/yaml'
 
 // Syntax highlighting
-hljs.registerLanguage('bash', require('highlight.js/lib/languages/bash'));
-hljs.registerLanguage('css', require('highlight.js/lib/languages/css'));
-hljs.registerLanguage('html', require('highlight.js/lib/languages/xml'));
-hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
-hljs.registerLanguage('json', require('highlight.js/lib/languages/json'));
-hljs.registerLanguage('markdown', require('highlight.js/lib/languages/markdown'));
-hljs.registerLanguage('php', require('highlight.js/lib/languages/php'));
-hljs.registerLanguage('scss', require('highlight.js/lib/languages/scss'));
-hljs.registerLanguage('yaml', require('highlight.js/lib/languages/yaml'));
+hljs.registerLanguage('bash', bash);
+hljs.registerLanguage('html', xml);
+hljs.registerLanguage('php', php);
+hljs.registerLanguage('scss', scss);
+hljs.registerLanguage('yaml', yaml);
 
-document.querySelectorAll('pre code').forEach((block) => {
-    hljs.highlightElement(block);
-});
+document.querySelectorAll('pre code').forEach((block) => hljs.highlightElement(block));
 
 Vue.config.productionTip = false;
 
@@ -26,3 +24,4 @@ new Vue({
     },
 }).$mount('#vue-search');
 
+import '../css/main.css'
