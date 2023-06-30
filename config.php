@@ -4,7 +4,6 @@ use Illuminate\Http\Client\Factory;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 
-
 function vite()
 {
     $dev = false;

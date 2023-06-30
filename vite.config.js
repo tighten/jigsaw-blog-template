@@ -1,4 +1,4 @@
-import { spawn, exec } from 'child_process';
+import { exec, spawn } from 'child_process';
 import { createLogger, defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue2'
 
@@ -7,13 +7,14 @@ const log = createLogger(undefined, { prefix: '[jigsaw]' });
 function jigsaw() {
     const jigsaw = spawn('vendor/bin/jigsaw', ['build', 'local', '-q']);
     const lines = (data) => String(data).trim().split('\n');
-    jigsaw.stdout.on('data', (data) => lines(data).map((line) => log.info(line, { timestamp: true })))
-    jigsaw.stderr.on('data', (data) => lines(data).map((line) => log.error(line, { timestamp: true })))
-    jigsaw.on('close', (code) => log.info(`Jigsaw build finished with exit code ${code}.`, { timestamp: true }))
+    jigsaw.stdout.on('data', (data) => lines(data).map((line) => log.info(line, { timestamp: true })));
+    jigsaw.stderr.on('data', (data) => lines(data).map((line) => log.error(line, { timestamp: true })));
+    jigsaw.on('close', (code) => log.info(`Jigsaw build finished with exit code ${code}.`, { timestamp: true }));
 }
 
 export default defineConfig(({ command }) => ({
-    publicDir: 'source/assets', // served at / in dev, copied to root of outDir in build
+    // Served at / in dev, copied to root of outDir in build
+    publicDir: 'source/assets',
     build: {
         outDir: 'source/assets/build',
         manifest: true,
