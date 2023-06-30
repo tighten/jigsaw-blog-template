@@ -19,7 +19,9 @@
     ],
     "require": {
         "samdark/sitemap": "^2.2.1",
-        "tightenco/jigsaw": "^1.6"
+        "tightenco/jigsaw": "^1.6",
+        "illuminate/http": "^9.52",
+        "guzzlehttp/guzzle": "^7.7"
     },
     "autoload": {
         "psr-4": {

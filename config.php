@@ -1,6 +1,36 @@
 <?php
 
+use Illuminate\Http\Client\Factory;
+use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
+
+
+function vite()
+{
+    $dev = false;
+
+    if (! app('config')->get('production')) {
+        try {
+            (new Factory)->get('http://localhost:5173');
+            $dev = true;
+        } catch (Exception) {
+        }
+    }
+
+    if ($dev) {
+        return new HtmlString(<<<HTML
+            <script type="module" src="http://localhost:5173/@vite/client"></script>
+            <script type="module" src="http://localhost:5173/source/_assets/js/main.js"></script>
+        HTML);
+    }
+
+    $manifest = json_decode(file_get_contents(__DIR__ . '/source/assets/build/manifest.json'), true);
+
+    return new HtmlString(<<<HTML
+        <script type="module" src="/assets/build/{$manifest['source/_assets/js/main.js']['file']}"></script>
+        <link rel="stylesheet" href="/assets/build/{$manifest['source/_assets/js/main.js']['css'][0]}">
+    HTML);
+}
 
 return [
     'baseUrl' => '',
