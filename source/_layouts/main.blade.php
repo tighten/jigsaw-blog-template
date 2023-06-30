@@ -22,7 +22,7 @@
         @endif
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
-        {!! vite() !!}
+        {{ vite() }}
     </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
