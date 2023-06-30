@@ -1,9 +1,10 @@
 {
     "private": true,
     "scripts": {
-        "dev": "mix",
-        "watch": "mix watch",
-        "prod": "mix --production"
+        "dev": "run-p dev:*",
+        "dev:build": "vite",
+        "dev:serve": "php -q -S localhost:8000 -t build_local",
+        "prod": "vite build"
     },
     "devDependencies": {
         "@vitejs/plugin-vue2": "^2.2.0",
