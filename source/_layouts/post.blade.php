@@ -1,7 +1,7 @@
 @extends('_layouts.main')
 
 @php
-    $page->type = 'article';
+    $page->put('type', 'article');
 @endphp
 
 @section('body')
