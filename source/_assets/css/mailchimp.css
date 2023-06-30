@@ -12,13 +12,8 @@
         clear: both;
     }
 
-    @screen md {
-        @apply w-2/3;
-    }
-
-    @screen lg {
-        @apply w-1/2;
-    }
+    @apply md:w-2/3;
+    @apply lg:w-1/2;
 }
 
 #mc_embed_signup_scroll > h2:first-of-type {
@@ -40,12 +35,10 @@
         @apply rounded-l;
         @apply outline-none;
 
-        @screen md {
-            @apply w-3/4;
-            @apply mb-3;
-            @apply rounded-l;
-            @apply rounded-r-none;
-        }
+        @apply md:w-3/4;
+        @apply md:mb-3;
+        @apply md:rounded-l;
+        @apply md:rounded-r-none;
     }
 
     & label {
@@ -67,7 +60,5 @@
         @apply bg-blue-500;
     }
 
-    @screen md {
-        @apply w-1/4;
-    }
+    @apply md:w-1/4;
 }
