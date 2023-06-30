@@ -60,7 +60,7 @@
             class="flex md:hidden bg-gray-100 hover:bg-blue-100 justify-center items-center border border-gray-500 rounded-full focus:outline-none h-10 px-3"
             @click.prevent="showInput"
         >
-            <img src="/assets/img/magnifying-glass.svg" alt="search icon" class="h-4 w-4 max-w-none">
+            <img :src="`${baseUrl}assets/img/magnifying-glass.svg`" alt="search icon" class="h-4 w-4 max-w-none">
         </button>
     </div>
 </template>
@@ -75,6 +75,7 @@ export default {
             fuse: null,
             searching: false,
             query: '',
+            baseUrl: import.meta.env.BASE_URL,
         };
     },
     computed: {
