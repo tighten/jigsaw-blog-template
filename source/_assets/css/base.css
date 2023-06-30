@@ -116,10 +116,7 @@ ul {
 
 p {
     @apply my-3;
-
-    @screen md {
-        @apply my-6;
-    }
+    @apply md:my-6;
 }
 
 pre {
