@@ -3,8 +3,8 @@
     "scripts": {
         "dev": "run-p dev:*",
         "dev:build": "vite",
-        "dev:serve": "php -q -S localhost:8000 -t build_local",
-        "prod": "vite build"
+        "dev:serve": "php --server localhost:8000 --no-header --docroot build_local",
+        "build": "vite build"
     },
     "devDependencies": {
         "@vitejs/plugin-vue2": "^2.2.0",
