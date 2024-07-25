@@ -37,7 +37,7 @@
                 </div>
 
                 <div id="vue-search" class="flex flex-1 justify-end items-center">
-                    <search></search>
+                    @include('_components.search')
 
                     @include('_nav.menu')
 
