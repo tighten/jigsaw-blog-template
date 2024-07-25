@@ -22,7 +22,7 @@ This starter template includes samples of common page types, and comes pre-confi
 - A custom 404 page
 - A component for accepting signups for a [Mailchimp](https://mailchimp.com/) newsletter
 - A sample contact form
-- A search bar powered by [Fuse.js](http://fusejs.io/) and [Vue.js](https://vuejs.org/), which indexes your content automatically and requires zero configuration
+- A search bar powered by [Fuse.js](http://fusejs.io/) and [Alpine.js](https://alpinejs.dev/), which indexes your content automatically and requires zero configuration
 
 ---
 
