@@ -1,12 +1,13 @@
 <div x-data="{
         init(){
-            window.axios('/index.json')
-                .then(response => {
-                    this.fuse = new window.Fuse(response.data, {
-                            minMatchCharLength: 6,
-                            keys: ['title', 'snippet', 'categories'],
-                        });
+            fetch('/index.json')
+                .then(response => response.json())
+                .then(data => {
+                    this.fuse = new window.Fuse(data, {
+                        minMatchCharLength: 6,
+                        keys: ['title', 'snippet', 'categories'],
                     });
+                });
         },
         get results() {
             return this.query ? this.fuse.search(this.query) : [];
@@ -27,7 +28,7 @@
             this.query = '';
             this.searching = false;
         },
-    }" 
+    }"
     x-cloak
     class="flex flex-1 justify-end items-center text-right px-4"
 >
