@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "prod": "vite build --mode production"
     },
     "devDependencies": {
         "fuse.js": "^6.4.6",
