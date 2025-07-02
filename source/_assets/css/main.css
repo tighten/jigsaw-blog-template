@@ -31,7 +31,20 @@
   }
 }
 
+/* Syntax Highlight by Prism */
+/* https://prismjs.com/ */
+
+/* You can customize the theme of the Prism syntax highlighter below. Adjust colors, backgrounds, and styles as needed for your site. */
+
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: #e5e7eb;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: transparent;
 }
