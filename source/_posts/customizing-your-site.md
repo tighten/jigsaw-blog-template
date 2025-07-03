@@ -9,26 +9,13 @@ featured: true
 excerpt: This starter template comes pre-loaded with Tailwind CSS, a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS.
 ---
 
-This starter template comes pre-loaded with [Tailwind CSS](https://tailwindcss.com), a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS. There are also a few base Sass files in the `/source/_assets/sass` folder, set up with the expectation that you can add any custom CSS into `_blog.scss`.
+This starter template comes pre-loaded with [Tailwind CSS](https://tailwindcss.com), a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS. There are also a few base CSS files in the `/source/_assets/css` folder, set up with the expectation that you can add any custom CSS into `_blog.css`.
 
-> You can also re-work the architecture of the Sass files any way you’d like; just make sure to keep the `@tailwind` references in your final `main.scss` file.
+```css
+@import "tailwindcss";
 
-```scss
-// source/_assets/sass/main.scss
-
-@tailwind preflight;
-@tailwind components;
-
-// Code syntax highlighting,
-// https://highlightjs.org
-@import '~highlightjs/styles/default';
-
-@import 'base';
-@import 'navigation';
-@import 'mailchimp';
-@import 'blog';
-
-@tailwind utilities;
+@import './base.css' layer(components);
+@import './blog.css' layer(components);
 ```
 
 ---

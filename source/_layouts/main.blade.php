@@ -22,7 +22,11 @@
         @endif
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
-        <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
+        <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+
+        @viteRefresh()
+        <link rel="stylesheet" href="{{ vite('source/_assets/css/main.css') }}">
+        <script defer type="module" src="{{ vite('source/_assets/js/main.js') }}"></script>
     </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
@@ -65,8 +69,8 @@
             </ul>
         </footer>
 
-        <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
         @stack('scripts')
     </body>
 </html>

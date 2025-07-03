@@ -16,11 +16,9 @@ This starter template includes samples of common page types, and comes pre-confi
 
 - A fully responsive navigation bar
 - [Tailwind CSS](https://tailwindcss.com/), a utility CSS framework that allows you to customize your design without touching a line of CSS
-- [Purgecss](https://www.purgecss.com/) to remove unused selectors from your CSS, resulting in smaller CSS files
-- Syntax highlighting using [highlight.js](https://highlightjs.org/)
+- Syntax highlighting using [Prism](https://prismjs.com/)
 - A script that automatically generates a `sitemap.xml` file
 - A custom 404 page
-- A component for accepting signups for a [Mailchimp](https://mailchimp.com/) newsletter
 - A sample contact form
 - A search bar powered by [Fuse.js](http://fusejs.io/) and [Alpine.js](https://alpinejs.dev/), which indexes your content automatically and requires zero configuration
 
@@ -71,13 +69,11 @@ featured: true
 
 ### Adding Assets
 
-Any assets that need to be compiled (such as JavaScript, Less, or Sass files) can be added to the `source/_assets/` directory, and Laravel Mix will process them when running `npm run dev` or `npm run prod`. The processed assets will be stored in `/source/assets/build/` (note there is no underscore on this second `assets` directory).
-
-Then, when Jigsaw builds your site, the entire `/source/assets/` directory containing your built files (and any other directories containing static assets, such as images or fonts, that you choose to store there) will be copied to the destination build folders (`build_local`, on your local machine).
+Any assets that need to be compiled, such as JavaScript or CSS using Tailwind, can be added to the `source/_assets/` directory. Vite will process them when running `npm run dev` or `npm run build`, and the processed assets will be stored in `/build_local` or `/build_production`, respectively.
 
 Files that don't require processing (such as images and fonts) can be added directly to `/source/assets/`.
 
-[Read more about compiling assets in Jigsaw using Laravel Mix.](http://jigsaw.tighten.co/docs/compiling-assets/)
+[Read more about compiling assets in Jigsaw using Vite.](http://jigsaw.tighten.co/docs/compiling-assets/)
 
 ---
 
@@ -86,10 +82,9 @@ Files that don't require processing (such as images and fonts) can be added dire
 Now that you’ve edited your configuration variables and know how to customize your styles and content, let’s build the site.
 
 ```bash
-# build static files with Jigsaw
-./vendor/bin/jigsaw build
-
-# compile assets with Laravel Mix
-# options: dev, prod
+# run development server
 npm run dev
+
+# build static files with Vite
+npm run build
 ```

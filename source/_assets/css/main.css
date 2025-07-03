@@ -1,11 +1,50 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
+@import "tailwindcss";
 
-/* Code syntax highlighting, powered by https://highlightjs.org */
-@import 'highlight.js/styles/a11y-light.css';
+@import './base.css' layer(components);
+@import './blog.css' layer(components);
 
-@import 'base';
-@import 'mailchimp';
-@import 'blog';
+@layer base {
+  :root {
+    --font-sans: "Nunito Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-@import 'tailwindcss/utilities';
+    --shadow-search: 0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .shadow-search {
+    box-shadow: var(--shadow-search);
+  }
+}
+
+/* Syntax Highlight by Prism */
+/* https://prismjs.com/ */
+
+/* You can customize the theme of the Prism syntax highlighter below. Adjust colors, backgrounds, and styles as needed for your site. */
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #e5e7eb;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: transparent;
+}

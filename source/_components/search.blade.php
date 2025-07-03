@@ -1,12 +1,13 @@
 <div x-data="{
         init(){
-            window.axios('/index.json')
-                .then(response => {
-                    this.fuse = new window.Fuse(response.data, {
-                            minMatchCharLength: 6,
-                            keys: ['title', 'snippet', 'categories'],
-                        });
+            fetch('/index.json')
+                .then(response => response.json())
+                .then(data => {
+                    this.fuse = new window.Fuse(data, {
+                        minMatchCharLength: 6,
+                        keys: ['title', 'snippet', 'categories'],
                     });
+                });
         },
         get results() {
             return this.query ? this.fuse.search(this.query) : [];
@@ -27,7 +28,7 @@
             this.query = '';
             this.searching = false;
         },
-    }" 
+    }"
     x-cloak
     class="flex flex-1 justify-end items-center text-right px-4"
 >
@@ -41,8 +42,9 @@
             id="search"
             x-model="query"
             x-ref="search"
-            class="relative block h-10 w-full lg:w-1/2 lg:focus:w-3/4 bg-gray-100 border border-gray-500 focus:border-blue-400 outline-none cursor-pointer text-gray-700 px-4 pb-0 pt-px transition-all duration-200 ease-out bg-[url('/assets/img/magnifying-glass.svg')] bg-no-repeat bg-[0.8rem] indent-[1.2em]"
+            class="relative block h-10 w-full lg:w-1/2 lg:focus:w-3/4 bg-gray-100 border border-gray-500 focus:border-blue-400 outline-none cursor-pointer text-gray-700 px-4 pb-0 pt-px transition-all duration-200 ease-out bg-no-repeat bg-[0.8rem] indent-[1.2em]"
             :class="{ 'rounded-b-none rounded-t-lg': query, 'rounded-3xl': !query }"
+            style="background-image: url('/assets/img/magnifying-glass.svg')"
             autocomplete="off"
             name="search"
             placeholder="Search"
