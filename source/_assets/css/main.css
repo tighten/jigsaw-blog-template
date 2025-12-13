@@ -38,7 +38,9 @@
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #e5e7eb;
+  @apply bg-[#e5e7eb];
+  @apply dark:bg-[#1f2937];
+  @apply dark:text-white;
 }
 
 .token.operator,

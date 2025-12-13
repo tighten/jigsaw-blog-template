@@ -1,4 +1,4 @@
-<nav id="js-nav-menu" class="w-auto px-2 pt-6 pb-2 bg-gray-200 shadow hidden lg:hidden">
+<nav id="js-nav-menu" class="w-auto px-2 pt-6 pb-2 shadow hidden lg:hidden">
     <ul class="my-0">
         <li class="pl-4">
             <a
