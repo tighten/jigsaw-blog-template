@@ -88,3 +88,11 @@ npm run dev
 # build static files with Vite
 npm run build
 ```
+
+## Local Server
+
+To start your site locally, run the following:
+
+```bash
+composer dev
+```
