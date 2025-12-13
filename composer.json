@@ -25,5 +25,11 @@
         "psr-4": {
             "App\\Listeners\\": "listeners/"
         }
+    },
+    "scripts": {
+        "dev": [
+             "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"vendor/bin/jigsaw serve\" \"npm run dev\""
+        ]
     }
 }
